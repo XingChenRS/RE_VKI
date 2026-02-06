@@ -2,13 +2,7 @@
 # 触发: 手动 workflow_dispatch，或 push 到 main/master 时自动构建
 # 产物: Image, Image.gz, Image.lz4 上传为 Artifacts；可选创建 Release
 #
-# 参考:
-#   - Google android14-6.1 发布 build: https://source.android.com/docs/core/architecture/kernel/gki-android14-6_1-release-builds
-#   - mcxiaochenn/Action_OKI_KernelSU_SUSFS: 使用 apt.llvm.org 安装固定版本 Clang（非 AOSP prebuilts），
-#     repo init 拉取厂商 manifest 后 Bazel 构建；本 workflow 采用其「apt 安装 LLVM」方式，用 LLVM 18 编译 AOSP GKI 源码树。
-# 上游链接:
-#   - KernelSU: https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh
-#   - LLVM 18: apt.llvm.org llvm-toolchain-jammy-18（与 mcxiaochenn 用 clang-19 思路一致，固定工具链版本）
+# 支持两种仓库结构：内核在仓库根目录，或在内层子目录（如 android_16.0_kernel_MT6989）
 name: Build GKI Kernel
 
 on:
@@ -35,7 +29,7 @@ jobs:
     runs-on: ubuntu-22.04
     timeout-minutes: 120
     permissions:
-      contents: write  # 用于 Create Release 步骤
+      contents: write
 
     steps:
       - name: Checkout kernel source
@@ -43,9 +37,33 @@ jobs:
         with:
           fetch-depth: 0
 
+      # 解决「远程有文件但 workflow 找不到」：仓库根可能是父目录，内核在子目录
+      - name: Detect kernel root
+        id: kernel_root
+        run: |
+          root="$GITHUB_WORKSPACE"
+          if [ -f "$root/arch/arm64/configs/gki_defconfig" ]; then
+            echo "kernel_root=$root" >> $GITHUB_OUTPUT
+            echo "KERNEL_ROOT=$root" >> $GITHUB_ENV
+            echo "Kernel root: repo root ($root)"
+            exit 0
+          fi
+          for subdir in android_16.0_kernel_MT6989 kernel source .; do
+            [ "$subdir" = "." ] && continue
+            if [ -f "$root/$subdir/arch/arm64/configs/gki_defconfig" ]; then
+              echo "kernel_root=$root/$subdir" >> $GITHUB_OUTPUT
+              echo "KERNEL_ROOT=$root/$subdir" >> $GITHUB_ENV
+              echo "Kernel root: $root/$subdir"
+              exit 0
+            fi
+          done
+          echo "::error::arch/arm64/configs/gki_defconfig not found under $root (and checked subdirs: android_16.0_kernel_MT6989, kernel, source)"
+          ls -la "$root" 2>/dev/null || true
+          exit 1
+
       - name: Verify build-required files
         run: |
-          cd "$GITHUB_WORKSPACE"
+          cd "$KERNEL_ROOT"
           echo "Commit: $(git rev-parse HEAD)"
           echo "Contents of arch/arm64/configs/:"
           ls -la arch/arm64/configs/ 2>/dev/null || true
@@ -75,21 +93,19 @@ jobs:
           sudo apt-get install -y -qq --no-install-recommends \
             build-essential libncurses-dev flex bison libssl-dev bc \
             python3 libelf-dev gcc-aarch64-linux-gnu wget ca-certificates gnupg
-          # 参考 mcxiaochenn/Action_OKI_KernelSU_SUSFS：用 apt.llvm.org 固定 Clang 版本，避免 AOSP prebuilts 无法下载
           wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/llvm-snapshot.gpg
           echo "deb [signed-by=/usr/share/keyrings/llvm-snapshot.gpg] http://apt.llvm.org/$(lsb_release -cs)/ llvm-toolchain-$(lsb_release -cs)-18 main" | sudo tee /etc/apt/sources.list.d/llvm.list
           sudo apt-get update -qq
           sudo apt-get install -y -qq --no-install-recommends clang-18 lld-18 llvm-18
-          # 供后续步骤使用
           echo "LLVM18_BIN=/usr/lib/llvm-18/bin" >> $GITHUB_ENV
 
       - name: Setup KernelSU (optional)
         if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.with_kernelsu == 'true' }}
         timeout-minutes: 5
         run: |
-          cd "$GITHUB_WORKSPACE"
+          cd "$KERNEL_ROOT"
           if [ ! -d "drivers" ]; then
-            echo "::warning::\"drivers/\" not found in repo root, skipping KernelSU (build without KernelSU)."
+            echo "::warning::\"drivers/\" not found in kernel root, skipping KernelSU."
             exit 0
           fi
           if [ -d "./KernelSU" ]; then rm -rf ./KernelSU; fi
@@ -99,15 +115,13 @@ jobs:
       - name: Merge defconfig and build kernel
         run: |
           set -e
-          cd "$GITHUB_WORKSPACE"
-          # 使用 apt.llvm.org 安装的 LLVM 18（与 mcxiaochenn 用 clang-19 思路一致）
+          cd "$KERNEL_ROOT"
           export PATH="$LLVM18_BIN:$PATH"
           export CC=clang-18
           export CLANG_TRIPLE=aarch64-linux-gnu-
           export CROSS_COMPILE=aarch64-linux-gnu-
           echo "Using Clang 18 from apt.llvm.org: $(which clang-18) $(clang-18 --version | head -1)"
           mkdir -p "$OUT_DIR"
-          # 合并 gki_defconfig + vivo_restore_gki.fragment（无 merge_config.sh 时用 cat 回退）
           if [ -f scripts/kconfig/merge_config.sh ]; then
             KCONFIG_CONFIG="$OUT_DIR/.config" scripts/kconfig/merge_config.sh -m -r \
               arch/arm64/configs/gki_defconfig \
@@ -117,7 +131,6 @@ jobs:
             cat arch/arm64/configs/gki_defconfig arch/arm64/configs/vivo_restore_gki.fragment > "$OUT_DIR/.config"
           fi
           make O="$OUT_DIR" ARCH=arm64 olddefconfig
-          # 构建 Image, Image.gz, Image.lz4, modules
           make O="$OUT_DIR" ARCH=arm64 \
             CROSS_COMPILE="$CROSS_COMPILE" \
             LLVM=1 LLVM_IAS=1 \
