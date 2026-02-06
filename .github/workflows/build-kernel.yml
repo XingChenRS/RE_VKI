@@ -5,8 +5,8 @@
 # 上游链接核对（本 workflow 实际使用的可访问 URL）:
 #   - KernelSU setup: https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh （有效）
 #   - KernelSU 仓库: https://github.com/tiann/KernelSU （有效）
-#   - AOSP Clang 归档: android.googlesource.com/.../+archive/.../r487747c.tar.gz 可能 404 或需代理，
-#     已设 continue-on-error，失败时使用系统 clang + lld。
+#   - AOSP Clang 归档: 使用子目录归档格式 +archive/refs/heads/main/clang-r487747c.tar.gz
+#     （android14-6.1 分支在 prebuilts 仓库不存在；子目录名须为 clang-r487747c 非 r487747c）。失败时用系统 clang。
 #   - apt 源: GitHub 托管 runner 默认 Ubuntu 源，若卡住可重跑或见步骤 timeout。
 name: Build GKI Kernel
 
@@ -70,16 +70,21 @@ jobs:
         id: clang
         continue-on-error: true
         run: |
-          # 尝试从 googlesource 下载；该链接在某些网络下可能 404，失败时用系统 clang
+          # 有效归档格式：+archive/ref/子目录.tar.gz，子目录名为 clang-r487747c；prebuilts 用 main/master 非 android14-6.1
           mkdir -p prebuilts/clang
-          CLANG_URL="https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/android14-6.1/${{ env.CLANG_VERSION }}.tar.gz"
-          if curl -fsSL --connect-timeout 30 --max-time 300 "$CLANG_URL" | tar -xzf - -C prebuilts/clang && [ -x prebuilts/clang/bin/clang ]; then
-            echo "clang_path=prebuilts/clang/bin" >> $GITHUB_OUTPUT
-            echo "using=aosp" >> $GITHUB_OUTPUT
-          else
-            echo "clang_path=" >> $GITHUB_OUTPUT
-            echo "using=system" >> $GITHUB_OUTPUT
-          fi
+          CURL_OPTS="--connect-timeout 30 --max-time 300 -fsSL"
+          for BRANCH in main master; do
+            CLANG_URL="https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/${BRANCH}/clang-r487747c.tar.gz"
+            if curl $CURL_OPTS "$CLANG_URL" | tar -xzf - -C prebuilts/clang 2>/dev/null && [ -x prebuilts/clang/bin/clang ]; then
+              echo "clang_path=prebuilts/clang/bin" >> $GITHUB_OUTPUT
+              echo "using=aosp" >> $GITHUB_OUTPUT
+              echo "AOSP clang from branch: $BRANCH"
+              exit 0
+            fi
+            rm -rf prebuilts/clang/*
+          done
+          echo "clang_path=" >> $GITHUB_OUTPUT
+          echo "using=system" >> $GITHUB_OUTPUT
 
       - name: Setup KernelSU (optional)
         if: ${{ github.event.inputs.with_kernelsu != 'false' && github.event_name != 'pull_request' }}
