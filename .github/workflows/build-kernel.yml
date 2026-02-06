@@ -1,0 +1,136 @@
+# 在 GitHub Actions 中编译本仓库的 GKI 内核（可选集成 KernelSU）
+# 触发: 手动 workflow_dispatch，或 push 到 main/master 时自动构建
+# 产物: Image, Image.gz, Image.lz4 上传为 Artifacts；可选创建 Release
+name: Build GKI Kernel
+
+on:
+  workflow_dispatch:
+    inputs:
+      with_kernelsu:
+        description: 'Integrate KernelSU (run setup.sh in kernel root)'
+        required: false
+        default: true
+        type: boolean
+      use_system_clang:
+        description: 'Use system clang if AOSP clang download fails'
+        required: false
+        default: true
+        type: boolean
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+env:
+  OUT_DIR: ${{ github.workspace }}/out
+  ARCH: arm64
+  CLANG_VERSION: r487747c
+
+jobs:
+  build:
+    name: Build kernel (arm64)
+    runs-on: ubuntu-22.04
+    timeout-minutes: 120
+    permissions:
+      contents: write  # 用于 Create Release 步骤
+
+    steps:
+      - name: Checkout kernel source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@master
+        with:
+          root-reserve-mb: 4096
+          remove-dotnet: 'true'
+          remove-android: 'true'
+          remove-haskell: 'true'
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq \
+            build-essential libncurses-dev flex bison libssl-dev bc \
+            python3 libelf-dev \
+            gcc-aarch64-linux-gnu
+
+      - name: Download AOSP Clang (optional)
+        id: clang
+        continue-on-error: true
+        run: |
+          # 尝试从 googlesource 下载；失败时后续步骤用系统 clang（或 aarch64-gcc）
+          mkdir -p prebuilts/clang
+          CLANG_URL="https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/android14-6.1/${{ env.CLANG_VERSION }}.tar.gz"
+          if curl -fsSL --connect-timeout 60 "$CLANG_URL" | tar -xzf - -C prebuilts/clang && [ -x prebuilts/clang/bin/clang ]; then
+            echo "clang_path=prebuilts/clang/bin" >> $GITHUB_OUTPUT
+            echo "using=aosp" >> $GITHUB_OUTPUT
+          else
+            echo "clang_path=" >> $GITHUB_OUTPUT
+            echo "using=system" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup KernelSU (optional)
+        if: ${{ github.event.inputs.with_kernelsu != 'false' && github.event_name != 'pull_request' }}
+        run: |
+          if [ -d "./KernelSU" ]; then rm -rf ./KernelSU; fi
+          if [ -d "./drivers/kernelsu" ]; then rm -rf ./drivers/kernelsu; fi
+          curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
+
+      - name: Merge defconfig and build kernel
+        env:
+          CLANG_BIN: ${{ steps.clang.outputs.clang_path }}
+          USE_SYSTEM_CLANG: ${{ github.event.inputs.use_system_clang != 'false' }}
+        run: |
+          set -e
+          WS="${{ github.workspace }}"
+          if [ -n "$CLANG_BIN" ] && [ -x "$WS/$CLANG_BIN/clang" ]; then
+            export PATH="$WS/$CLANG_BIN:$PATH"
+            export CC=clang
+            echo "Using AOSP clang: $CLANG_BIN"
+          elif [ "$USE_SYSTEM_CLANG" = "true" ] && command -v clang >/dev/null 2>&1; then
+            export CC=clang
+            export CLANG_TRIPLE=aarch64-linux-gnu-
+            echo "Using system clang"
+          else
+            export CC=aarch64-linux-gnu-gcc
+            echo "Using aarch64-linux-gnu-gcc"
+          fi
+          export CROSS_COMPILE=aarch64-linux-gnu-
+          mkdir -p "$OUT_DIR"
+          # 合并 gki_defconfig + vivo_restore_gki.fragment
+          KCONFIG_CONFIG="$OUT_DIR/.config" scripts/kconfig/merge_config.sh -m -r \
+            arch/arm64/configs/gki_defconfig \
+            arch/arm64/configs/vivo_restore_gki.fragment
+          make O="$OUT_DIR" ARCH=arm64 olddefconfig
+          # 构建 Image, Image.gz, Image.lz4, modules
+          make O="$OUT_DIR" ARCH=arm64 \
+            CROSS_COMPILE="$CROSS_COMPILE" \
+            LLVM=1 LLVM_IAS=1 \
+            Image Image.gz Image.lz4 modules \
+            -j"$(nproc)"
+
+      - name: Upload kernel artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: kernel-${{ github.run_number }}-${{ github.sha }}
+          path: |
+            ${{ env.OUT_DIR }}/arch/arm64/boot/Image
+            ${{ env.OUT_DIR }}/arch/arm64/boot/Image.gz
+            ${{ env.OUT_DIR }}/arch/arm64/boot/Image.lz4
+          retention-days: 7
+
+      - name: Create Release (manual run only)
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        continue-on-error: true
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: build-${{ github.run_number }}
+          name: "GKI build ${{ github.run_number }}"
+          files: |
+            ${{ env.OUT_DIR }}/arch/arm64/boot/Image
+            ${{ env.OUT_DIR }}/arch/arm64/boot/Image.gz
+            ${{ env.OUT_DIR }}/arch/arm64/boot/Image.lz4
+          generate_release_notes: true
+          draft: false

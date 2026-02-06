@@ -1,0 +1,31 @@
+# Build output
+/out
+*.o
+*.a
+*.ko
+*.mod
+*.mod.c
+*.symvers
+modules.order
+Module.markers
+.tmp_*
+.vmlinux*
+/System.map
+/arch/arm64/boot/Image
+/arch/arm64/boot/Image.gz
+/arch/arm64/boot/Image.lz4
+*.dtb
+*.dtbo
+
+# Local device extract (large binaries & images; keep locally)
+/device_extract/
+
+# Logs
+AOSP_KERNEL_BUILD_LOG.txt
+
+# Editor / OS
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

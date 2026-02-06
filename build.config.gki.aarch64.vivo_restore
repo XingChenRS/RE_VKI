@@ -1,0 +1,11 @@
+# vivo 内核还原 / 自定义 GKI 构建：在 gki_defconfig 基础上关闭 CONFIG_MODULE_SIG_PROTECT，
+# 便于与设备原有 vendor_dlkm 中的未签名模块兼容。
+# 使用: 在 AOSP/ACK 构建环境中指定 BUILD_CONFIG=build.config.gki.aarch64.vivo_restore 后执行构建脚本。
+
+. ${ROOT_DIR}/${KERNEL_DIR}/build.config.gki.aarch64
+
+DEFCONFIG=vivo_restore_gki_defconfig
+FRAGMENT_CONFIG=${KERNEL_DIR}/arch/arm64/configs/vivo_restore_gki.fragment
+
+PRE_DEFCONFIG_CMDS="mkdir -p \${OUT_DIR}/arch/arm64/configs/ && KCONFIG_CONFIG=\${OUT_DIR}/arch/arm64/configs/\${DEFCONFIG} \${ROOT_DIR}/\${KERNEL_DIR}/scripts/kconfig/merge_config.sh -m -r \${ROOT_DIR}/\${KERNEL_DIR}/arch/arm64/configs/gki_defconfig \${ROOT_DIR}/\${FRAGMENT_CONFIG}"
+POST_DEFCONFIG_CMDS=""

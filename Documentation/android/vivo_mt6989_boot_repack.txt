@@ -1,0 +1,29 @@
+vivo X100 Pro (MT6989) Boot 镜像重打包参考
+============================================
+本文件为使用自编译 GKI 内核重打包 boot 镜像时的参数参考，数据来自设备
+device_extract/imgread 解包结果。详见 device_extract/imgread/log.txt。
+
+--- boot 分区 (boot_b.img) ---
+HEADER_VER      4
+PAGESIZE        4096
+KERNEL_FMT      lz4_legacy
+KERNEL_SZ       17333337 (字节)
+RAMDISK_SZ      0
+OS_VERSION      14.0.0
+OS_PATCH_LEVEL  2025-09
+CMDLINE         (boot 内为空，实际由 vendor_boot 提供)
+
+--- vendor_boot 分区 (vendor_boot_b.img) ---
+HEADER_VER      4
+PAGESIZE        4096
+RAMDISK_SZ      117883787
+DTB_SZ          447258
+CMDLINE         bootopt=64S3,32N2,64N2 erofs.reserved_pages=256 \
+                product.version=PD2324_A_15.1.9.55.W10 \
+                fingerprint.abbr=14/UP1A.231005.007 region_ver=W10 \
+                product.solution=MTK
+
+--- 编译与打包注意 ---
+1. 内核镜像需使用 lz4_legacy 格式（与 KERNEL_FMT 一致）。
+2. 重打包时保持 HEADER_VER=4、PAGESIZE=4096。
+3. 首次测试务必使用 fastboot boot 临时引导，勿直接 flash。
