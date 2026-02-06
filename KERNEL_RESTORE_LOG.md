@@ -274,6 +274,9 @@ vivoboot.bootreason=reboot vivolog_flag=0 ... bootconfig
 - **本仓库内已就绪**：
   - `BUILD_CONFIG=build.config.gki.aarch64.vivo_restore`：合并 gki_defconfig 与 vivo_restore_gki.fragment（关闭 CONFIG_MODULE_SIG_PROTECT），生成 `vivo_restore_gki_defconfig` 并编译。
   - 编译产物预期包含：`arch/arm64/boot/Image.lz4`、`Image.gz` 等（见 build.config.gki.aarch64）。
+- **参数配置指定（2026-02-07）**：
+  - 配置来源仅两项：**gki_defconfig**（基础）+ **vivo_restore_gki.fragment**（本项目指定覆盖）。fragment 内当前仅显式关闭 **CONFIG_MODULE_SIG_PROTECT**，以与设备运行配置一致并允许厂商未签名模块加载。
+  - 完整说明、可选修改方式及“不加入 CONFIG_VIVO_*”等约定见 **`Documentation/android/VIVO_RESTORE_CONFIG.md`**。后续若需调整参数，只改 fragment 并同步该文档即可。
 - **WSL 构建（2026-02-07 补充）**：
   - 已添加 **`build_wsl_standalone.sh`**：不依赖 kernel/build 仓库，仅需 Android clang（r487747c）与 WSL 下 make/flex/bison 等。脚本会合并 gki_defconfig + vivo_restore_gki.fragment 生成 .config，再执行 `make Image Image.gz Image.lz4 modules`。用法见 **`Documentation/android/WSL_BUILD.md`**。
   - 已添加 **`build_wsl.sh`**：会克隆 kernel/build 并链接 `common` 到本内核树，需在工作区内提供 `prebuilts/clang/host/linux-x86/clang-r487747c`；当前 kernel/build main 分支以 Bazel 为主，传统 make 入口可能缺失，建议优先用 `build_wsl_standalone.sh`。
@@ -296,10 +299,11 @@ vivoboot.bootreason=reboot vivolog_flag=0 ... bootconfig
 
 - **目的**：不依赖本地 AOSP/repo 与镜像，用 GitHub Actions 在云端编译内核，可选集成 KernelSU。
 - **已添加**：
-  - **`.github/workflows/build-kernel.yml`**：单 job，checkout 本仓库 → 可选下载 AOSP clang → 可选运行 KernelSU `setup.sh` → 合并 `gki_defconfig` + `vivo_restore_gki.fragment` → `make Image Image.gz Image.lz4 modules` → 上传 Artifacts，手动运行时可选创建 Release。
+  - **`.github/workflows/build-kernel.yml`**：单 job，checkout 本仓库 → 从 **apt.llvm.org** 安装 **LLVM 18**（参考 [mcxiaochenn/Action_OKI_KernelSU_SUSFS](https://github.com/mcxiaochenn/Action_OKI_KernelSU_SUSFS)）→ 可选运行 KernelSU `setup.sh` → 合并 `gki_defconfig` + `vivo_restore_gki.fragment` → `make Image Image.gz Image.lz4 modules` → 上传 Artifacts，手动运行时可选创建 Release。
   - **`Documentation/android/GITHUB_ACTIONS_BUILD.md`**：新建仓库、推送源码、启用 Actions、获取产物与打包刷机说明。
-- **用法**：将本内核树推送到新 GitHub 仓库，在 Actions 页运行 “Build GKI Kernel”，从 Artifacts 下载 Image/Image.gz/Image.lz4；AOSP clang 下载失败时可勾选使用系统 clang。
-- **参考**：KernelSU 官方 [how-to-build](https://kernelsu.org/guide/how-to-build.html)、[ChopinKernels/kernel-builder-chopin](https://github.com/ChopinKernels/kernel-builder-chopin)、[feicong/android-kernel-build-action](https://github.com/feicong/android-kernel-build-action)。
+- **用法**：将本内核树推送到新 GitHub 仓库，在 Actions 页运行 “Build GKI Kernel”，从 Artifacts 下载 Image/Image.gz/Image.lz4。CI 使用 **apt.llvm.org 的 LLVM 18** 编译（不下载 AOSP clang）。
+- **不用 AOSP clang 的影响与可选方案**：见 **`Documentation/android/SYSTEM_CLANG_IMPACT_AND_ALTERNATIVES.md`**（兼容性风险、先 fastboot boot 测试、本地 repo sync 获取 prebuilts、参考 p0.ee 博客与 mcxiaochenn/Action_OKI_KernelSU_SUSFS 等）。
+- **参考**：KernelSU 官方 [how-to-build](https://kernelsu.org/guide/how-to-build.html)、[ChopinKernels/kernel-builder-chopin](https://github.com/ChopinKernels/kernel-builder-chopin)、[feicong/android-kernel-build-action](https://github.com/feicong/android-kernel-build-action)、[p0.ee 利用 GitHub Action 编译安卓内核驱动](https://blog.p0.ee/2024/11/10/%E5%AE%89%E5%8D%93/%E5%88%A9%E7%94%A8github-Action%E7%BC%96%E8%AF%91%E5%AE%89%E5%8D%93%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/)、[mcxiaochenn/Action_OKI_KernelSU_SUSFS](https://github.com/mcxiaochenn/Action_OKI_KernelSU_SUSFS)（一加/OPPO，思路可参考）。
 
 **推送到 RE_VKI（2026-02-07）**：
 - **仓库**：https://github.com/XingChenRS/RE_VKI ，分支 `main`。

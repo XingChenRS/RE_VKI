@@ -2,12 +2,13 @@
 # 触发: 手动 workflow_dispatch，或 push 到 main/master 时自动构建
 # 产物: Image, Image.gz, Image.lz4 上传为 Artifacts；可选创建 Release
 #
-# 上游链接核对（本 workflow 实际使用的可访问 URL）:
-#   - KernelSU setup: https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh （有效）
-#   - KernelSU 仓库: https://github.com/tiann/KernelSU （有效）
-#   - AOSP Clang: 本地/CI 实测 +archive/refs/heads/main/clang-r487747c.tar.gz 返回 400（googlesource 不支持子目录归档）；
-#     仅 +archive/refs/heads/main.tar.gz 为 200 但整仓过大，故 CI 不下载 AOSP clang，统一用系统 clang+lld。
-#   - apt 源: GitHub 托管 runner 默认 Ubuntu 源，若卡住可重跑或见步骤 timeout。
+# 参考:
+#   - Google android14-6.1 发布 build: https://source.android.com/docs/core/architecture/kernel/gki-android14-6_1-release-builds
+#   - mcxiaochenn/Action_OKI_KernelSU_SUSFS: 使用 apt.llvm.org 安装固定版本 Clang（非 AOSP prebuilts），
+#     repo init 拉取厂商 manifest 后 Bazel 构建；本 workflow 采用其「apt 安装 LLVM」方式，用 LLVM 18 编译 AOSP GKI 源码树。
+# 上游链接:
+#   - KernelSU: https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh
+#   - LLVM 18: apt.llvm.org llvm-toolchain-jammy-18（与 mcxiaochenn 用 clang-19 思路一致，固定工具链版本）
 name: Build GKI Kernel
 
 on:
@@ -15,11 +16,6 @@ on:
     inputs:
       with_kernelsu:
         description: 'Integrate KernelSU (run setup.sh in kernel root)'
-        required: false
-        default: true
-        type: boolean
-      use_system_clang:
-        description: 'Use system clang if AOSP clang download fails'
         required: false
         default: true
         type: boolean
@@ -55,23 +51,22 @@ jobs:
           remove-android: 'true'
           remove-haskell: 'true'
 
-      - name: Install build dependencies
-        timeout-minutes: 10
+      - name: Install dependencies and LLVM 18 (apt.llvm.org)
+        timeout-minutes: 15
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq --no-install-recommends \
             build-essential libncurses-dev flex bison libssl-dev bc \
-            python3 libelf-dev \
-            gcc-aarch64-linux-gnu lld
-
-      - name: Set toolchain (use system clang)
-        id: clang
-        run: |
-          # AOSP 子目录归档 URL 返回 400，整仓归档过大；CI 统一使用系统 clang+lld（已在上一步安装）
-          echo "clang_path=" >> $GITHUB_OUTPUT
-          echo "using=system" >> $GITHUB_OUTPUT
+            python3 libelf-dev gcc-aarch64-linux-gnu wget ca-certificates gnupg
+          # 参考 mcxiaochenn/Action_OKI_KernelSU_SUSFS：用 apt.llvm.org 固定 Clang 版本，避免 AOSP prebuilts 无法下载
+          wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/llvm-snapshot.gpg
+          echo "deb [signed-by=/usr/share/keyrings/llvm-snapshot.gpg] http://apt.llvm.org/$(lsb_release -cs)/ llvm-toolchain-$(lsb_release -cs)-18 main" | sudo tee /etc/apt/sources.list.d/llvm.list
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends clang-18 lld-18 llvm-18
+          # 供后续步骤使用
+          echo "LLVM18_BIN=/usr/lib/llvm-18/bin" >> $GITHUB_ENV
 
       - name: Setup KernelSU (optional)
         if: ${{ github.event.inputs.with_kernelsu != 'false' && github.event_name != 'pull_request' }}
@@ -82,25 +77,14 @@ jobs:
           curl -LSs --connect-timeout 15 --max-time 120 "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
 
       - name: Merge defconfig and build kernel
-        env:
-          CLANG_BIN: ${{ steps.clang.outputs.clang_path }}
-          USE_SYSTEM_CLANG: ${{ github.event.inputs.use_system_clang != 'false' }}
         run: |
           set -e
-          WS="${{ github.workspace }}"
-          if [ -n "$CLANG_BIN" ] && [ -x "$WS/$CLANG_BIN/clang" ]; then
-            export PATH="$WS/$CLANG_BIN:$PATH"
-            export CC=clang
-            echo "Using AOSP clang: $CLANG_BIN"
-          elif [ "$USE_SYSTEM_CLANG" = "true" ] && command -v clang >/dev/null 2>&1; then
-            export CC=clang
-            export CLANG_TRIPLE=aarch64-linux-gnu-
-            echo "Using system clang"
-          else
-            export CC=aarch64-linux-gnu-gcc
-            echo "Using aarch64-linux-gnu-gcc"
-          fi
+          # 使用 apt.llvm.org 安装的 LLVM 18（与 mcxiaochenn 用 clang-19 思路一致）
+          export PATH="$LLVM18_BIN:$PATH"
+          export CC=clang-18
+          export CLANG_TRIPLE=aarch64-linux-gnu-
           export CROSS_COMPILE=aarch64-linux-gnu-
+          echo "Using Clang 18 from apt.llvm.org: $(which clang-18) $(clang-18 --version | head -1)"
           mkdir -p "$OUT_DIR"
           # 合并 gki_defconfig + vivo_restore_gki.fragment
           KCONFIG_CONFIG="$OUT_DIR/.config" scripts/kconfig/merge_config.sh -m -r \

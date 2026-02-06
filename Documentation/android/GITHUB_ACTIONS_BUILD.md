@@ -2,6 +2,8 @@
 
 本仓库已包含用 **GitHub Actions** 在云端编译 GKI 内核的 workflow，支持**可选集成 KernelSU**。无需本地拉取 AOSP、无需 WSL，把改好的源码推到 GitHub 即可在 Action 里编译出 `Image` / `Image.gz` / `Image.lz4`。
 
+**工具链说明**：CI 中**不下载 AOSP Clang**（归档 URL 不可用），采用 [mcxiaochenn/Action_OKI_KernelSU_SUSFS](https://github.com/mcxiaochenn/Action_OKI_KernelSU_SUSFS) 的做法，从 **apt.llvm.org** 安装 **LLVM 18**（clang-18、lld-18）作为固定工具链编译。对刷机兼容性的影响及可选方案见 [SYSTEM_CLANG_IMPACT_AND_ALTERNATIVES.md](SYSTEM_CLANG_IMPACT_AND_ALTERNATIVES.md)。
+
 ## 1. 新建仓库并推送源码
 
 1. 在 GitHub 新建一个**空仓库**（例如 `vivo-x100pro-gki`），不要勾选 README（避免首次 push 冲突）。
@@ -25,8 +27,8 @@ git push -u origin main
 3. 运行方式二选一：
    - **手动运行**：点击 **Run workflow**，选择分支（如 `main`），可选：
      - **Integrate KernelSU**：勾选则会在构建前执行 KernelSU 的 `setup.sh`（推荐）。
-     - **Use system clang if AOSP clang download fails**：勾选则当无法下载 AOSP clang 时自动用系统 clang 继续编译。
-   - **自动运行**：每次向 `main` / `master` 分支 push（或对这两个分支的 PR）都会自动触发一次构建。
+   - **自动运行**：每次向 `main` / `master` 分支 push（或对这两个分支的 PR）都会自动触发一次构建。  
+   （当前 CI 使用 apt.llvm.org 的 LLVM 18 编译，与 [Google android14-6.1 发布说明](https://source.android.com/docs/core/architecture/kernel/gki-android14-6_1-release-builds) 对应同一内核线，工具链为固定版本、非 AOSP prebuilts。）
 
 ## 3. 获取构建产物
 
@@ -45,9 +47,11 @@ git push -u origin main
 - **KernelSU 集成**：[KernelSU - How to build](https://kernelsu.org/guide/how-to-build.html)（本 workflow 通过 `setup.sh` 自动打补丁）。
 - **Chopin 风格多仓库构建**：[ChopinKernels/kernel-builder-chopin](https://github.com/ChopinKernels/kernel-builder-chopin)（从配置文件拉取多个内核仓库并编译，可选 KernelSU）。
 - **仅构建内核模块**：[feicong/android-kernel-build-action](https://github.com/feicong/android-kernel-build-action)（针对 GKI 模块 ko，非完整内核镜像）。
+- **repo sync 在 CI 中拉完整内核+prebuilts**：[利用 GitHub Action 编译安卓内核驱动](https://blog.p0.ee/2024/11/10/%E5%AE%89%E5%8D%93/%E5%88%A9%E7%94%A8github-Action%E7%BC%96%E8%AF%91%E5%AE%89%E5%8D%93%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/)（思路：CI 里 repo init/sync 后用 build.sh，prebuilts 随树拉取）。
+- **一加 KernelSU 多分支 CI（使用 apt LLVM 19）**：[mcxiaochenn/Action_OKI_KernelSU_SUSFS](https://github.com/mcxiaochenn/Action_OKI_KernelSU_SUSFS)（设备为 OPPO/一加，vivo 不兼容；可参考其用系统/LLVM 官方 clang 的做法）。
 
 ## 6. 常见问题
 
-- **AOSP clang 下载失败**：Runner 所在网络可能无法访问 `android.googlesource.com`。勾选 “Use system clang if AOSP clang download fails” 即可用 Ubuntu 自带的 clang 继续编译（ABI 可能与官方 GKI 略有差异，一般可启动）。
+- **为何不用 AOSP clang**：googlesource 子目录归档返回 400，整仓过大；CI 改用 **apt.llvm.org 的 LLVM 18**（参考 mcxiaochenn 的 apt 安装 Clang 方式）。对兼容性影响及本地用 AOSP clang 的替代方案见 [SYSTEM_CLANG_IMPACT_AND_ALTERNATIVES.md](SYSTEM_CLANG_IMPACT_AND_ALTERNATIVES.md)。
 - **构建超时**：默认 120 分钟；若仍不够，可在 `.github/workflows/build-kernel.yml` 中增大 `timeout-minutes`。
 - **Release 403**：在仓库 **Settings → Actions → General** 中，将 **Workflow permissions** 设为 **Read and write permissions**，保存后重新运行 workflow。
