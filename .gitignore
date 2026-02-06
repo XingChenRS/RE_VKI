@@ -20,7 +20,7 @@ Module.markers
 # Local device extract (large binaries & images; keep locally)
 /device_extract/
 
-# Logs
+# Logs (local only; RE_VKI_PUSH_LOG.md 可提交)
 AOSP_KERNEL_BUILD_LOG.txt
 
 # Editor / OS

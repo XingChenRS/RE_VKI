@@ -301,6 +301,12 @@ vivoboot.bootreason=reboot vivolog_flag=0 ... bootconfig
 - **用法**：将本内核树推送到新 GitHub 仓库，在 Actions 页运行 “Build GKI Kernel”，从 Artifacts 下载 Image/Image.gz/Image.lz4；AOSP clang 下载失败时可勾选使用系统 clang。
 - **参考**：KernelSU 官方 [how-to-build](https://kernelsu.org/guide/how-to-build.html)、[ChopinKernels/kernel-builder-chopin](https://github.com/ChopinKernels/kernel-builder-chopin)、[feicong/android-kernel-build-action](https://github.com/feicong/android-kernel-build-action)。
 
+**推送到 RE_VKI（2026-02-07）**：
+- **仓库**：https://github.com/XingChenRS/RE_VKI ，分支 `main`。
+- **整理**：新增根目录 `.gitignore`（排除 `out/`、`device_extract/`、构建日志等）、根目录 `README.md`（仓库说明与构建入口）。
+- **推送**：`git init` → `git add .` → `git commit` → `git remote add origin` → 首次 push 因 GitHub 邮箱隐私（GH007）被拒 → 设置 `user.email=XingChenRS@users.noreply.github.com` 并 `git commit --amend --reset-author` 后推送成功。
+- **Action**：push 到 `main` 会自动触发 “Build GKI Kernel”；详见 **`RE_VKI_PUSH_LOG.md`**。
+
 ### 9. 日志与复盘
 
 - 上述 1～8 已全部记入本日志；关键决策（dtc 用 dgibson/dtc、Meson 构建 dtc、DTBO 非必须、反 su 排查前提、新增 boot 重打包参考文档、内核构建需 AOSP/ACK 环境、repo 拉取失败与镜像/独立构建方案）均可在本段回溯。
