@@ -46,12 +46,15 @@ jobs:
       - name: Verify build-required files
         run: |
           cd "$GITHUB_WORKSPACE"
+          echo "Commit: $(git rev-parse HEAD)"
+          echo "Contents of arch/arm64/configs/:"
+          ls -la arch/arm64/configs/ 2>/dev/null || true
           missing=
           [ -f arch/arm64/configs/gki_defconfig ] || missing="arch/arm64/configs/gki_defconfig"
           [ -f arch/arm64/configs/vivo_restore_gki.fragment ] || missing="$missing arch/arm64/configs/vivo_restore_gki.fragment"
           if [ -n "$missing" ]; then
             echo "::error::Missing in repo:$missing"
-            echo "Push full kernel tree (or at least arch/arm64/configs/ and scripts/kconfig/). See .gitignore negations."
+            echo "Ensure these files are on this branch (merge main or push arch/arm64/configs/). Then re-run workflow."
             exit 1
           fi
 
