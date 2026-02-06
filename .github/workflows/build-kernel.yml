@@ -84,6 +84,7 @@ jobs:
       - name: Merge defconfig and build kernel
         run: |
           set -e
+          cd "$GITHUB_WORKSPACE"
           # 使用 apt.llvm.org 安装的 LLVM 18（与 mcxiaochenn 用 clang-19 思路一致）
           export PATH="$LLVM18_BIN:$PATH"
           export CC=clang-18
@@ -91,10 +92,15 @@ jobs:
           export CROSS_COMPILE=aarch64-linux-gnu-
           echo "Using Clang 18 from apt.llvm.org: $(which clang-18) $(clang-18 --version | head -1)"
           mkdir -p "$OUT_DIR"
-          # 合并 gki_defconfig + vivo_restore_gki.fragment
-          KCONFIG_CONFIG="$OUT_DIR/.config" scripts/kconfig/merge_config.sh -m -r \
-            arch/arm64/configs/gki_defconfig \
-            arch/arm64/configs/vivo_restore_gki.fragment
+          # 合并 gki_defconfig + vivo_restore_gki.fragment（无 merge_config.sh 时用 cat 回退）
+          if [ -f scripts/kconfig/merge_config.sh ]; then
+            KCONFIG_CONFIG="$OUT_DIR/.config" scripts/kconfig/merge_config.sh -m -r \
+              arch/arm64/configs/gki_defconfig \
+              arch/arm64/configs/vivo_restore_gki.fragment
+          else
+            echo "::warning::scripts/kconfig/merge_config.sh not found, merging with cat + olddefconfig"
+            cat arch/arm64/configs/gki_defconfig arch/arm64/configs/vivo_restore_gki.fragment > "$OUT_DIR/.config"
+          fi
           make O="$OUT_DIR" ARCH=arm64 olddefconfig
           # 构建 Image, Image.gz, Image.lz4, modules
           make O="$OUT_DIR" ARCH=arm64 \
