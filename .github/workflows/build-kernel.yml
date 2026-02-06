@@ -43,6 +43,18 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Verify build-required files
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          missing=
+          [ -f arch/arm64/configs/gki_defconfig ] || missing="arch/arm64/configs/gki_defconfig"
+          [ -f arch/arm64/configs/vivo_restore_gki.fragment ] || missing="$missing arch/arm64/configs/vivo_restore_gki.fragment"
+          if [ -n "$missing" ]; then
+            echo "::error::Missing in repo:$missing"
+            echo "Push full kernel tree (or at least arch/arm64/configs/ and scripts/kconfig/). See .gitignore negations."
+            exit 1
+          fi
+
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
         with:

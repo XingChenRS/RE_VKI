@@ -1,1 +1,12 @@
+# vivo 自定义 GKI 配置片段
+# 与 arch/arm64/configs/gki_defconfig 通过 merge_config.sh 合并使用。
+# 构建入口: build_wsl_standalone.sh 或 BUILD_CONFIG=build.config.gki.aarch64.vivo_restore
+#
+# 参数说明（均由本项目指定，勿随意增删 CONFIG_VIVO_* 等无源码选项）:
+# -----------------------------------------------------------------------
+# CONFIG_MODULE_SIG_PROTECT is not set
+#   关闭 GKI 模块保护。设备上 vivo 厂商模块（vendor_dlkm/*.ko）非 GKI 签名，
+#   若不关闭则加载会报 -EACCES。与设备运行配置一致（设备也为 not set）。
+# -----------------------------------------------------------------------
+
 # CONFIG_MODULE_SIG_PROTECT is not set

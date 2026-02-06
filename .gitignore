@@ -20,7 +20,7 @@ Module.markers
 # Local device extract (large binaries & images; keep locally)
 /device_extract/
 
-# Logs (local only; RE_VKI_PUSH_LOG.md 可提交)
+# Logs
 AOSP_KERNEL_BUILD_LOG.txt
 
 # Editor / OS
@@ -29,3 +29,8 @@ AOSP_KERNEL_BUILD_LOG.txt
 *~
 .DS_Store
 Thumbs.db
+
+# Keep build-required paths tracked (do not ignore)
+!/arch/arm64/configs/gki_defconfig
+!/arch/arm64/configs/vivo_restore_gki.fragment
+!/scripts/kconfig/merge_config.sh
