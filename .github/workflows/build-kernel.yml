@@ -17,7 +17,7 @@ on:
       with_kernelsu:
         description: 'Integrate KernelSU (run setup.sh in kernel root)'
         required: false
-        default: true
+        default: false
         type: boolean
   push:
     branches: [ main, master ]
@@ -69,9 +69,14 @@ jobs:
           echo "LLVM18_BIN=/usr/lib/llvm-18/bin" >> $GITHUB_ENV
 
       - name: Setup KernelSU (optional)
-        if: ${{ github.event.inputs.with_kernelsu != 'false' && github.event_name != 'pull_request' }}
+        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.with_kernelsu == 'true' }}
         timeout-minutes: 5
         run: |
+          cd "$GITHUB_WORKSPACE"
+          if [ ! -d "drivers" ]; then
+            echo "::warning::\"drivers/\" not found in repo root, skipping KernelSU (build without KernelSU)."
+            exit 0
+          fi
           if [ -d "./KernelSU" ]; then rm -rf ./KernelSU; fi
           if [ -d "./drivers/kernelsu" ]; then rm -rf ./drivers/kernelsu; fi
           curl -LSs --connect-timeout 15 --max-time 120 "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
