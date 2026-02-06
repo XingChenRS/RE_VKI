@@ -1,6 +1,13 @@
 # 在 GitHub Actions 中编译本仓库的 GKI 内核（可选集成 KernelSU）
 # 触发: 手动 workflow_dispatch，或 push 到 main/master 时自动构建
 # 产物: Image, Image.gz, Image.lz4 上传为 Artifacts；可选创建 Release
+#
+# 上游链接核对（本 workflow 实际使用的可访问 URL）:
+#   - KernelSU setup: https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh （有效）
+#   - KernelSU 仓库: https://github.com/tiann/KernelSU （有效）
+#   - AOSP Clang 归档: android.googlesource.com/.../+archive/.../r487747c.tar.gz 可能 404 或需代理，
+#     已设 continue-on-error，失败时使用系统 clang + lld。
+#   - apt 源: GitHub 托管 runner 默认 Ubuntu 源，若卡住可重跑或见步骤 timeout。
 name: Build GKI Kernel
 
 on:
@@ -49,21 +56,24 @@ jobs:
           remove-haskell: 'true'
 
       - name: Install build dependencies
+        timeout-minutes: 10
+        env:
+          DEBIAN_FRONTEND: noninteractive
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq \
+          sudo apt-get install -y -qq --no-install-recommends \
             build-essential libncurses-dev flex bison libssl-dev bc \
             python3 libelf-dev \
-            gcc-aarch64-linux-gnu
+            gcc-aarch64-linux-gnu lld
 
       - name: Download AOSP Clang (optional)
         id: clang
         continue-on-error: true
         run: |
-          # 尝试从 googlesource 下载；失败时后续步骤用系统 clang（或 aarch64-gcc）
+          # 尝试从 googlesource 下载；该链接在某些网络下可能 404，失败时用系统 clang
           mkdir -p prebuilts/clang
           CLANG_URL="https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/android14-6.1/${{ env.CLANG_VERSION }}.tar.gz"
-          if curl -fsSL --connect-timeout 60 "$CLANG_URL" | tar -xzf - -C prebuilts/clang && [ -x prebuilts/clang/bin/clang ]; then
+          if curl -fsSL --connect-timeout 30 --max-time 300 "$CLANG_URL" | tar -xzf - -C prebuilts/clang && [ -x prebuilts/clang/bin/clang ]; then
             echo "clang_path=prebuilts/clang/bin" >> $GITHUB_OUTPUT
             echo "using=aosp" >> $GITHUB_OUTPUT
           else
@@ -73,10 +83,11 @@ jobs:
 
       - name: Setup KernelSU (optional)
         if: ${{ github.event.inputs.with_kernelsu != 'false' && github.event_name != 'pull_request' }}
+        timeout-minutes: 5
         run: |
           if [ -d "./KernelSU" ]; then rm -rf ./KernelSU; fi
           if [ -d "./drivers/kernelsu" ]; then rm -rf ./drivers/kernelsu; fi
-          curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
+          curl -LSs --connect-timeout 15 --max-time 120 "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
 
       - name: Merge defconfig and build kernel
         env:
