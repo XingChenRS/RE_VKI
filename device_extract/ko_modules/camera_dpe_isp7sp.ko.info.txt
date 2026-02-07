@@ -1,0 +1,15 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/camera_dpe_isp7sp.ko
+license:        GPL
+license:        GPL
+license:        GPL
+author:         MM3SW5
+author:         MM3SW2
+author:         Pawel Osciak <pawel@osciak.com>
+description:    Stand Alone Engine Request
+description:    Camera DPE driver
+description:    DMA-contig memory handling routines for videobuf2
+depends:        mtk-cmdq-drv-ext,mtk-mmdvfs-v3
+name:           camera_dpe_isp7sp
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           dpe_egn_debug: activates debug info
+parmtype:       dpe_egn_debug:uint

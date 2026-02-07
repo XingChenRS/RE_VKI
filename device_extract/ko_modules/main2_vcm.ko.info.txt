@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/main2_vcm.ko
+license:        GPL
+author:         Po-Hao Huang <Po-Hao.Huang@mediatek.com>
+description:    MAIN2_VCM VCM driver
+alias:          i2c:main2_vcm
+alias:          of:N*T*Cmediatek,main2_vcm
+alias:          of:N*T*Cmediatek,main2_vcmC*
+depends:        
+name:           main2_vcm
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/r8153_ecm.ko
+license:        GPL
+author:         Hayes Wang
+description:    Realtek USB ECM device
+alias:          usb:v0BDAp8153d*dc*dsc*dp*ic02isc06ip00in*
+alias:          usb:v17EFp721Ed*dc*dsc*dp*ic02isc06ip00in*
+depends:        cdc_ether,usbnet,r8152
+intree:         Y
+name:           r8153_ecm
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

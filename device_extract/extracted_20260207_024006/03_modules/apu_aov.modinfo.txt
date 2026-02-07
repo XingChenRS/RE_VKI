@@ -1,0 +1,11 @@
+filename:       /vendor_dlkm/lib/modules/apu_aov.ko
+license:        GPL
+alias:          of:N*T*Cmediatek,apusys_aov-v1
+alias:          of:N*T*Cmediatek,apusys_aov-v1C*
+alias:          of:N*T*Cmediatek,apusys_aov
+alias:          of:N*T*Cmediatek,apusys_aovC*
+alias:          of:N*T*Cmediatek,apusys_aov-v2
+alias:          of:N*T*Cmediatek,apusys_aov-v2C*
+depends:        scp,mtk_tinysys_ipi,mtk_slbc,apu_top,apusys
+name:           apu_aov
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

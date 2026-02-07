@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-sp-spk-amp.ko
+license:        GPL v2
+author:         Shane Chien <shane.chien@mediatek.com>
+description:    Mediatek speaker amp register driver
+alias:          i2c:speaker_amp
+alias:          of:N*T*Cmediatek,speaker_amp
+alias:          of:N*T*Cmediatek,speaker_ampC*
+depends:        snd-soc-audiodsp-common,audio_ipi
+name:           mtk_sp_spk_amp
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/scp.ko
+license:        GPL
+author:         Mediatek
+description:    MEDIATEK Module SCP driver
+depends:        mtk_tinysys_ipi,mtk-mbox,mtk-afe-external,aee_aed,clk-common
+name:           scp
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

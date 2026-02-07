@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/can-bcm.ko
+license:        Dual BSD/GPL
+author:         Oliver Hartkopp <oliver.hartkopp@volkswagen.de>
+description:    PF_CAN broadcast manager protocol
+alias:          can-proto-2
+depends:        can
+intree:         Y
+name:           can_bcm
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

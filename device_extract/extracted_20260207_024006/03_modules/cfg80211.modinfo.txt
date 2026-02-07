@@ -1,0 +1,17 @@
+filename:       /vendor_dlkm/lib/modules/cfg80211.ko
+license:        GPL
+author:         Johannes Berg
+description:    wireless configuration support
+firmware:       regulatory.db.p7s
+firmware:       regulatory.db
+alias:          net-pf-16-proto-16-family-nl80211
+depends:        rfkill
+intree:         Y
+name:           cfg80211
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           cfg80211_disable_40mhz_24ghz:Disable 40MHz support in the 2.4GHz band
+parm:           ieee80211_regdom:IEEE 802.11 regulatory domain code
+parm:           bss_entries_limit:limit to number of scan BSS entries (per wiphy, default 1000)
+parmtype:       cfg80211_disable_40mhz_24ghz:bool
+parmtype:       ieee80211_regdom:charp
+parmtype:       bss_entries_limit:int

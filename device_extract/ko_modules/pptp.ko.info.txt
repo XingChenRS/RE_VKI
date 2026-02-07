@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/pptp.ko
+license:        GPL
+author:         D. Kozlov (xeb@mail.ru)
+description:    Point-to-Point Tunneling Protocol
+alias:          net-pf-24-proto-2
+depends:        pppox,ppp_generic
+intree:         Y
+name:           pptp
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

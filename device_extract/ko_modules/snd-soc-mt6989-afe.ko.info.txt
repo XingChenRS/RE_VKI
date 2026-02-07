@@ -1,0 +1,12 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/snd-soc-mt6989-afe.ko
+license:        GPL
+license:        GPL
+author:         Shane Chien <shane.chien@mediatek.com>
+author:         yiwen chiou<yiwen.chiou@mediatek.com>
+description:    Mediatek ALSA SoC AFE platform driver for 6989
+description:    Mediatek afe cm
+alias:          of:N*T*Cmediatek,mt6989-sound
+alias:          of:N*T*Cmediatek,mt6989-soundC*
+depends:        snd-soc-mtk-common,vivo-audio-ktv,aee_aed,snd-soc-audiodsp-common,snd-soc-mtk-scp-ultra,mtk_peak_power_budget
+name:           snd_soc_mt6989_afe
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

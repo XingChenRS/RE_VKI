@@ -1,36 +1,12 @@
-# Build output
-/out
-*.o
-*.a
-*.ko
-*.mod
-*.mod.c
-*.symvers
-modules.order
-Module.markers
-.tmp_*
-.vmlinux*
-/System.map
-/arch/arm64/boot/Image
-/arch/arm64/boot/Image.gz
-/arch/arm64/boot/Image.lz4
-*.dtb
-*.dtbo
+# 本仓库根目录 .gitignore（与内核自带的各子目录 .gitignore 并存）
 
-# Local device extract (large binaries & images; keep locally)
-/device_extract/
+# 构建输出（产物在 out/arch/arm64/boot/Image 等）
+/out/
 
-# Logs
-AOSP_KERNEL_BUILD_LOG.txt
+# 实机提取时产生的较大二进制（保留 extracted_*/ 下的 config/dtb 即可复现）
+/device_extract/imgread/
+/device_extract/ko_modules/*.ko
+/device_extract/dtc/builddir/
 
-# Editor / OS
-*.swp
-*.swo
-*~
-.DS_Store
-Thumbs.db
-
-# Keep build-required paths tracked (do not ignore)
-!/arch/arm64/configs/gki_defconfig
-!/arch/arm64/configs/vivo_restore_gki.fragment
-!/scripts/kconfig/merge_config.sh
+# 可选：若将 aospclang 放在仓库外则无需忽略
+# /aospclang/

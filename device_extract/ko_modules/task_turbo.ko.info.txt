@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/task_turbo.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    MediaTek task-turbo
+depends:        cpufreq_sugov_ext
+name:           task_turbo
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           feats:enable task turbo features if needed
+parm:           turbo_pid:set turbo task by pid
+parm:           unset_turbo_pid:unset turbo task by pid

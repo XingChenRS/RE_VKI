@@ -1,0 +1,35 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_imgsys_cmdq.ko
+license:        GPL v2
+description:    Mediatek imgsys cmdq driver
+alias:          of:N*T*Cmediatek,imgsys-cmdq-71
+alias:          of:N*T*Cmediatek,imgsys-cmdq-71C*
+alias:          of:N*T*Cmediatek,imgsys-cmdq-7s
+alias:          of:N*T*Cmediatek,imgsys-cmdq-7sC*
+alias:          of:N*T*Cmediatek,imgsys-cmdq-7sp
+alias:          of:N*T*Cmediatek,imgsys-cmdq-7spC*
+depends:        mtk-mmdvfs-v3,mtk-cmdq-drv-ext,mtk-smi-dbg,mtk-icc-core,cmdq-sec-drv,aee_aed,vcp_status
+name:           mtk_imgsys_cmdq
+name:           %s, bw=%llu
+
+name:           %s, bw=%lld
+
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           query_qof_status:query_qof_status
+parm:           qof_gce_set_reg:test for gce_set_reg_ops
+parm:           qof_dbg_ctrl:qof_dbg_ctrl
+parmtype:       imgsys_cmdq_ftrace_en:int
+parmtype:       imgsys_cmdq_ts_en:int
+parmtype:       imgsys_wpe_bwlog_en:int
+parmtype:       imgsys_cmdq_ts_dbg_en:int
+parmtype:       imgsys_cmdq_dbg_en:int
+parmtype:       imgsys_dvfs_dbg_en:int
+parmtype:       imgsys_qos_dbg_en:int
+parmtype:       imgsys_qos_update_freq:int
+parmtype:       imgsys_qos_blank_int:int
+parmtype:       imgsys_qos_factor:int
+parmtype:       imgsys_quick_onoff_en:int
+parmtype:       imgsys_fence_dbg_en:int
+parmtype:       imgsys_fine_grain_dvfs_en:int
+parmtype:       imgsys_iova_dbg_en:int
+parmtype:       imgsys_iova_dbg_port_en:int
+parmtype:       imgsys_ftrace_en:int

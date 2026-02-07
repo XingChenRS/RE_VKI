@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/btqca.ko
+license:        GPL
+author:         Ben Young Tae Kim <ytkim@qca.qualcomm.com>
+description:    Bluetooth support for Qualcomm Atheros family ver 0.1
+srcversion:     583E8309B6197B175B82288
+depends:        bluetooth
+intree:         Y
+name:           btqca
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

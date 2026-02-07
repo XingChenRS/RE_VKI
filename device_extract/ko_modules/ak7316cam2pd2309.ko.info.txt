@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/ak7316cam2pd2309.ko
+license:        GPL v2
+author:         Po-Hao Huang <Po-Hao.Huang@mediatek.com>
+description:    AK7316CAM2PD2309 VCM driver
+alias:          i2c:ak7316cam2pd2309
+alias:          of:N*T*Cmediatek,ak7316cam2pd2309
+alias:          of:N*T*Cmediatek,ak7316cam2pd2309C*
+depends:        actuator_core_vivo
+name:           ak7316cam2pd2309
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

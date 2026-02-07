@@ -1,0 +1,52 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-vcodec-dec-v2.ko
+license:        GPL v2
+license:        GPL v2
+description:    Mediatek video codec V4L2 decoder driver
+alias:          of:N*T*Cmediatek,mt8173-vcodec-dec
+alias:          of:N*T*Cmediatek,mt8173-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt2712-vcodec-dec
+alias:          of:N*T*Cmediatek,mt2712-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt8167-vcodec-dec
+alias:          of:N*T*Cmediatek,mt8167-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt6771-vcodec-dec
+alias:          of:N*T*Cmediatek,mt6771-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt6885-vcodec-dec
+alias:          of:N*T*Cmediatek,mt6885-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt6873-vcodec-dec
+alias:          of:N*T*Cmediatek,mt6873-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt6853-vcodec-dec
+alias:          of:N*T*Cmediatek,mt6853-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt6983-vcodec-dec
+alias:          of:N*T*Cmediatek,mt6983-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt6879-vcodec-dec
+alias:          of:N*T*Cmediatek,mt6879-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt6895-vcodec-dec
+alias:          of:N*T*Cmediatek,mt6895-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt6855-vcodec-dec
+alias:          of:N*T*Cmediatek,mt6855-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt6985-vcodec-dec
+alias:          of:N*T*Cmediatek,mt6985-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt6886-vcodec-dec
+alias:          of:N*T*Cmediatek,mt6886-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt8195-vcodec-dec
+alias:          of:N*T*Cmediatek,mt8195-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt6835-vcodec-dec
+alias:          of:N*T*Cmediatek,mt6835-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt6897-vcodec-dec
+alias:          of:N*T*Cmediatek,mt6897-vcodec-decC*
+alias:          of:N*T*Cmediatek,mt6989-vcodec-dec
+alias:          of:N*T*Cmediatek,mt6989-vcodec-decC*
+alias:          of:N*T*Cmediatek,vdec_gcon
+alias:          of:N*T*Cmediatek,vdec_gconC*
+depends:        mtk-vcodec-common,mtk-icc-core,vcp,scheduler,mtk_tinysys_ipi,emi,mtk-mmdvfs-v3,vcp_status,system_heap,mtk-smi-dbg,iommu_debug,mtk_slbc
+name:           mtk_vcodec_dec_v2
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       mtk_v4l2_dbg_level:int
+parmtype:       mtk_vdec_lpw_level:int
+parmtype:       mtk_vcodec_dbg:bool
+parmtype:       mtk_vcodec_perf:bool
+parmtype:       mtk_vdec_trace_enable:bool
+parmtype:       mtk_vcodec_vcp:int
+parmtype:       mtk_vdec_lpw_limit:int
+parmtype:       mtk_vdec_lpw_timeout:int
+parmtype:       mtk_vdec_slc_enable:bool

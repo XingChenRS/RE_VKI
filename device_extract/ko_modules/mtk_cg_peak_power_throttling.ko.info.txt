@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_cg_peak_power_throttling.ko
+license:        GPL
+author:         Clouds Lee
+description:    MTK cg peak power throttling driver
+alias:          of:N*T*Cmediatek,cgppt
+alias:          of:N*T*Cmediatek,cgpptC*
+depends:        mtk_gpu_hal
+name:           mtk_cg_peak_power_throttling
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

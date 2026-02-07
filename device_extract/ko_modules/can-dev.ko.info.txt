@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/can-dev.ko
+license:        GPL v2
+author:         Wolfgang Grandegger <wg@grandegger.com>
+description:    CAN device driver interface
+alias:          rtnl-link-can
+depends:        
+intree:         Y
+name:           can_dev
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

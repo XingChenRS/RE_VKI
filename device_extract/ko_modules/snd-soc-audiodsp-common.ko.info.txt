@@ -1,0 +1,12 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/snd-soc-audiodsp-common.ko
+license:        GPL v2
+license:        GPL v2
+author:         Chipeng Chang <Chipeng.Chang@mediatek.com>
+author:         chipeng Chang <chipeng.chang@mediatek.com>
+description:    Mediatek ALSA SoC dsp platform driver for audio dsp
+description:    Mediatek dsp platform driver
+alias:          of:N*T*Cmediatek,snd-audio-dsp
+alias:          of:N*T*Cmediatek,snd-audio-dspC*
+depends:        aee_aed,audio_ipi,adsp,mtk-afe-external
+name:           snd_soc_audiodsp_common
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

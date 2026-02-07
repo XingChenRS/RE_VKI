@@ -1,0 +1,12 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_mbraink.ko
+license:        GPL
+author:         <Wei-chin.Tsai@mediatek.com>
+description:    MBrainK Linux Device Driver
+srcversion:     95588F75F249AD24E52883C
+depends:        mtk-lpm-dbg-common-v2,mtk-swpm,ccci_md_all,mtk-dvfsrc-helper,mtk_fpsgo
+name:           %s
+
+name:           %s
+
+name:           mtk_mbraink
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

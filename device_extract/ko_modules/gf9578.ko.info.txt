@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/gf9578.ko
+license:        GPL
+author:         Jiangtao Yi, <yijiangtao@goodix.com>
+description:    goodix fingerprint sensor device driver
+depends:        fp_id,vfp_spi
+name:           gf9578
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

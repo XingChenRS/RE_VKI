@@ -1,0 +1,6 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_aie_debug_7sp_1.ko
+license:        GPL v2
+author:         Ming-Hsuan Chaing <ming-hsuan.chiang@mediatek.com>
+depends:        iommu_debug,mtk_aie
+name:           mtk_aie_debug_7sp_1
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

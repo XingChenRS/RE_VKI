@@ -1,0 +1,12 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/v4l2_ocp81373.ko
+license:        GPL
+license:        GPL
+author:         Roger-HY Wang <roger-hy.wang@mediatek.com>
+description:    Texas Instruments flash common driver
+description:    Texas Instruments OCP81373 LED flash driver
+alias:          i2c:ocp81373
+alias:          of:N*T*Cmediatek,ocp81373
+alias:          of:N*T*Cmediatek,ocp81373C*
+depends:        flashlight
+name:           v4l2_ocp81373
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

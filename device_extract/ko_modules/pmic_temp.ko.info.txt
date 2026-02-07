@@ -1,0 +1,21 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/pmic_temp.ko
+license:        GPL v2
+author:         Henry Huang <henry.huang@mediatek.com>
+description:    Mediatek pmic temp sensor driver
+alias:          of:N*T*Cmediatek,mt6359-pmic-temp
+alias:          of:N*T*Cmediatek,mt6359-pmic-tempC*
+alias:          of:N*T*Cmediatek,mt6363-pmic-temp
+alias:          of:N*T*Cmediatek,mt6363-pmic-tempC*
+alias:          of:N*T*Cmediatek,mt6366-pmic-temp
+alias:          of:N*T*Cmediatek,mt6366-pmic-tempC*
+alias:          of:N*T*Cmediatek,mt6368-pmic-temp
+alias:          of:N*T*Cmediatek,mt6368-pmic-tempC*
+alias:          of:N*T*Cmediatek,mt6369-pmic-temp
+alias:          of:N*T*Cmediatek,mt6369-pmic-tempC*
+alias:          of:N*T*Cmediatek,mt6373-pmic-temp
+alias:          of:N*T*Cmediatek,mt6373-pmic-tempC*
+alias:          of:N*T*Cmediatek,mt6338-pmic-temp
+alias:          of:N*T*Cmediatek,mt6338-pmic-tempC*
+depends:        
+name:           pmic_temp
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

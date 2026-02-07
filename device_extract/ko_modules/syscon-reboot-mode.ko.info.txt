@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/syscon-reboot-mode.ko
+license:        GPL v2
+author:         Andy Yan <andy.yan@rock-chips.com
+description:    SYSCON reboot mode driver
+alias:          of:N*T*Csyscon-reboot-mode
+alias:          of:N*T*Csyscon-reboot-modeC*
+depends:        reboot-mode
+intree:         Y
+name:           syscon_reboot_mode
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

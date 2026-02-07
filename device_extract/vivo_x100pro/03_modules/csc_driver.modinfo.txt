@@ -1,0 +1,8 @@
+filename:       /vendor_dlkm/lib/modules/csc_driver.ko
+license:        GPL
+author:         xieminsheng
+description:    csc_driver
+depends:        
+intree:         Y
+name:           csc_driver
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

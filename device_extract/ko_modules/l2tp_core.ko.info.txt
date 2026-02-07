@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/l2tp_core.ko
+license:        GPL
+author:         James Chapman <jchapman@katalix.com>
+description:    L2TP core
+srcversion:     B94C74C337A77EE21F8F6EE
+depends:        
+intree:         Y
+name:           l2tp_core
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

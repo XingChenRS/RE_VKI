@@ -1,0 +1,19 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mac80211.ko
+license:        GPL
+description:    IEEE 802.11 subsystem
+depends:        cfg80211,libarc4
+intree:         Y
+name:           mac80211
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           ieee80211_default_rc_algo:Default rate control algorithm for mac80211 to use
+parm:           max_nullfunc_tries:Maximum nullfunc tx tries before disconnecting (reason 4).
+parm:           max_probe_tries:Maximum probe tries before disconnecting (reason 4).
+parm:           beacon_loss_count:Number of beacon intervals before we decide beacon was lost.
+parm:           probe_wait_ms:Maximum time(ms) to wait for probe response before disconnecting (reason 4).
+parm:           minstrel_vht_only:Use only VHT rates when VHT is supported by sta.
+parmtype:       ieee80211_default_rc_algo:charp
+parmtype:       max_nullfunc_tries:int
+parmtype:       max_probe_tries:int
+parmtype:       beacon_loss_count:int
+parmtype:       probe_wait_ms:int
+parmtype:       minstrel_vht_only:bool

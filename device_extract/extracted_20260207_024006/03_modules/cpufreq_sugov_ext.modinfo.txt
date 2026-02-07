@@ -1,0 +1,9 @@
+filename:       /vendor_dlkm/lib/modules/cpufreq_sugov_ext.ko
+license:        GPL
+license:        GPL v2
+license:        GPL
+author:         Chung-Kai Yang <Chung-kai.Yang@mediatek.com>
+description:    MTK static power Platform Driver v2.1.1
+depends:        thermal_interface
+name:           cpufreq_sugov_ext
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

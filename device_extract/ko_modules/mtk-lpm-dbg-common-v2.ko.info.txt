@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-lpm-dbg-common-v2.ko
+license:        GPL
+license:        GPL
+author:         MediaTek Inc.
+description:    low power debug module
+alias:          of:N*T*Cmediatek,mtk-lpm
+alias:          of:N*T*Cmediatek,mtk-lpmC*
+depends:        mtk-lpm,pinctrl-mtk-common-v2_debug,mtk-cmdq-drv-ext
+name:           mtk_lpm_dbg_common_v2
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

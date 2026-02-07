@@ -1,0 +1,36 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/vivo_ts.ko
+license:        GPL
+author:         VTS
+description:    VTS MODULE
+alias:          spi:vivo,ts-spi
+alias:          i2c:sec_ts
+alias:          of:N*T*Csamsung,y761
+alias:          of:N*T*Csamsung,y761C*
+alias:          platform:goodix_ts
+alias:          of:N*T*Cgoodix,gt9886_V2
+alias:          of:N*T*Cgoodix,gt9886_V2C*
+alias:          i2c:goodix_i2c
+alias:          i2c:synaptics_tcm_i2c
+alias:          of:N*T*Csynaptics,_synaptics-3618
+alias:          of:N*T*Csynaptics,_synaptics-3618C*
+alias:          platform:synaptics_tcm
+alias:          platform:synaptics_tcm_second
+alias:          of:N*T*Cgoodix,brl-generic
+alias:          of:N*T*Cgoodix,brl-genericC*
+alias:          of:N*T*Cgoodix,gt9897
+alias:          of:N*T*Cgoodix,gt9897C*
+alias:          i2c:gtx8_i2c
+alias:          platform:goodix_ts_main
+alias:          platform:goodix_ts_second
+alias:          of:N*T*Cfocaltech,ft3519t
+alias:          of:N*T*Cfocaltech,ft3519tC*
+alias:          platform:goodix_thp
+alias:          platform:goodix_thp_second
+srcversion:     D83C642300A5B81E7C9CADC
+depends:        mtk_disp_notify,sensors_class,vivo_bsp_engine,mediatek-drm
+name:           vivo_ts
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           debug_log:Show debug log control
+parm:           debug_log_nl9916:Show debug log control
+parmtype:       debug_log:bool
+parmtype:       debug_log_nl9916:bool

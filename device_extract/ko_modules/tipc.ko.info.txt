@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/tipc.ko
+license:        Dual BSD/GPL
+description:    TIPC: Transparent Inter Process Communication
+srcversion:     E2A37BED7E38C3CE079B1BB
+depends:        
+intree:         Y
+name:           tipc
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

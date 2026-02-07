@@ -1,0 +1,14 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_ccuv.ko
+license:        GPL v2
+license:        GPL v2
+license:        GPL v2
+description:    MTK CCU Rproc Driver
+description:    MTK CCU Rproc Driver
+description:    MTK CCU Rproc Driver
+alias:          of:N*T*Cmediatek,ccu_rproc
+alias:          of:N*T*Cmediatek,ccu_rprocC*
+alias:          of:N*T*Cmediatek,ccucammain
+alias:          of:N*T*Cmediatek,ccucammainC*
+depends:        mtk-smi-dbg,mtk-icc-core,system_heap,mrdump,aee_aed
+name:           mtk_ccuv
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

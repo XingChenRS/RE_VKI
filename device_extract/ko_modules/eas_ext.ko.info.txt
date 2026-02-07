@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/eas_ext.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    MediaTek eas_ext
+depends:        scheduler
+name:           eas_ext
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

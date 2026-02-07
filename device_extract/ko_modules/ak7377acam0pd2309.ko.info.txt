@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/ak7377acam0pd2309.ko
+license:        GPL v2
+author:         Po-Hao Huang <Po-Hao.Huang@mediatek.com>
+description:    AK7377CAM0PD2309 VCM driver
+alias:          i2c:ak7377acam0pd2309
+alias:          of:N*T*Cmediatek,ak7377acam0pd2309
+alias:          of:N*T*Cmediatek,ak7377acam0pd2309C*
+depends:        event_track
+name:           ak7377acam0pd2309
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/camera_af_media.ko
+license:        GPL
+description:    MTK V4L2 Composite Driver
+alias:          of:N*T*Cmediatek,mtk_composite_v4l2_2
+alias:          of:N*T*Cmediatek,mtk_composite_v4l2_2C*
+depends:        
+name:           camera_af_media
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

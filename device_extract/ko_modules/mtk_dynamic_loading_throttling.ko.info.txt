@@ -1,0 +1,13 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_dynamic_loading_throttling.ko
+license:        GPL
+author:         Wen Su <Wen.Su@mediatek.com>
+description:    MTK dynamic loading throttling driver
+alias:          of:N*T*Cmediatek,mt6359p-dynamic_loading_throttling
+alias:          of:N*T*Cmediatek,mt6359p-dynamic_loading_throttlingC*
+alias:          of:N*T*Cmediatek,mt6363-dynamic_loading_throttling
+alias:          of:N*T*Cmediatek,mt6363-dynamic_loading_throttlingC*
+alias:          of:N*T*Cmediatek,mt6377-dynamic_loading_throttling
+alias:          of:N*T*Cmediatek,mt6377-dynamic_loading_throttlingC*
+depends:        mtk_low_battery_throttling
+name:           mtk_dynamic_loading_throttling
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

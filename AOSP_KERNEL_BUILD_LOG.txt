@@ -1,0 +1,20 @@
+=== 2026-02-07T04:21:53+08:00 AOSP kernel sync & build ===
+KERNEL_SRC=/mnt/c/Users/XingChenRS/Documents/android_16.0_kernel_MT6989.tar/android_16.0_kernel_MT6989
+KERNEL_WS=/home/xingc/kernel_aosp_ws
+LOG_FILE=/mnt/c/Users/XingChenRS/Documents/android_16.0_kernel_MT6989.tar/android_16.0_kernel_MT6989/AOSP_KERNEL_BUILD_LOG.txt
+--- repo init android14-6.1 ---
+
+... A new version of repo (2.54) is available.
+... New version is available at: /home/xingc/kernel_aosp_ws/.repo/repo/repo
+... The launcher is run from: /usr/bin/repo
+!!! The launcher is not writable.  Please talk to your sysadmin or distro
+!!! to get an update installed.
+
+fatal: cannot obtain manifest https://android.googlesource.com/kernel/manifest
+================================================================================
+Repo command failed: UpdateManifestError
+	Unable to sync manifest default.xml
+
+manifests:
+fatal: couldn't find remote ref refs/heads/android14-6.1
+manifests: sleeping 4.0 seconds before retrying

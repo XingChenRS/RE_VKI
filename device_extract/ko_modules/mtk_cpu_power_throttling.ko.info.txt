@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_cpu_power_throttling.ko
+license:        GPL
+author:         Samuel Hsieh
+description:    MTK cpu power throttling driver
+alias:          of:N*T*Cmediatek,cpu-power-throttling
+alias:          of:N*T*Cmediatek,cpu-power-throttlingC*
+depends:        mtk_low_battery_throttling,mtk_battery_oc_throttling,mtk_bp_thl
+name:           mtk_cpu_power_throttling
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,11 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/snd-soc-rt5512.ko
+license:        GPL
+author:         Jeff Chang <jeff_chang@richtek.com>
+description:    RT5512 SPKAMP Driver
+alias:          of:N*T*Crichtek,rt5512
+alias:          of:N*T*Crichtek,rt5512C*
+alias:          i2c:rt5512
+srcversion:     1053BF1A52FD5642934701F
+depends:        mtk-sp-spk-amp,richtek_spm_cls
+name:           snd_soc_rt5512
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

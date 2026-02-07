@@ -1,0 +1,12 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/v4l2_aw36515.ko
+license:        GPL
+license:        GPL
+author:         Roger-HY Wang <roger-hy.wang@mediatek.com>
+description:    Texas Instruments flash common driver
+description:    Texas Instruments AW36515 LED flash driver
+alias:          i2c:aw36515
+alias:          of:N*T*Cmediatek,aw36515
+alias:          of:N*T*Cmediatek,aw36515C*
+depends:        flashlight
+name:           v4l2_aw36515
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

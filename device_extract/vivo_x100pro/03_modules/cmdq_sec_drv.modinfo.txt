@@ -1,0 +1,7 @@
+filename:       /vendor_dlkm/lib/modules/cmdq-sec-drv.ko
+license:        GPL v2
+license:        GPL v2
+license:        GPL v2
+depends:        gz_tz_system,mtk-cmdq-drv-ext,mmprofile
+name:           cmdq_sec_drv
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

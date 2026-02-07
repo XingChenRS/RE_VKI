@@ -1,0 +1,6 @@
+filename:       /vendor_dlkm/lib/modules/c2k_usb_f_via_ets.ko
+license:        GPL
+alias:          usbfunc:via_ets
+depends:        c2k_usb
+name:           c2k_usb_f_via_ets
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,28 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/scheduler.ko
+license:        GPL
+license:        GPL
+license:        GPL
+license:        GPL
+license:        GPL
+author:         MediaTek Inc.
+description:    MediaTek scheduler
+depends:        powerhal_cpu_ctrl,cpufreq_sugov_ext,thermal_interface,cpuqos_v3
+name:           %s: runtime=%u samples=%d event=%s hisevt=%s demand=%u util_demand=%u (hist[0]=%u hist[1]=%u hist[2]=%u hist[3]=%u hist[4]=%u) (util_sum_hist[0]=%u util_sum_hist[1]=%u util_sum_hist[2]=%u util_sum_hist[3]=%u util_sum_hist[4]=%u) (util_avg_history[0]=%u util_avg_history[1]=%u util_avg_history[2]=%u util_avg_history[3]=%u util_avg_history[4]=%u) pelt(util=%lu util_enqueued=%u util_ewma=%u)", REC->pid, REC->comm, REC->runtime, REC->samples, task_event_names[REC->evt], history_event_names[REC->hisevt], REC->demand, REC->util_demand, REC->hist0, REC->hist1, REC->hist2, REC->hist3, REC->hist4, REC->util_sum_hist0, REC->util_sum_hist1, REC->util_sum_hist2, REC->util_sum_hist3, REC->util_sum_hist4, REC->util_avg_history0, REC->util_avg_history1, REC->util_avg_history2, REC->util_avg_history3, REC->util_avg_history4, REC->util_avg, REC->enqueued, REC->ewma
+name:           %s: event=%s delta = %llu util_sum = %llu CIE = %lu FIE = %lu", REC->pid, REC->comm, add_task_demand_names[REC->evt], REC->delta, REC->util_sum, REC->cie, REC->fie
+name:           %s event=%s prev_delta = %llu curr_delta = %llu", REC->cpu, REC->pid, REC->comm, cpu_event_names[REC->evt], REC->prev_delta, REC->curr_delta
+name:           %s  full_window=%d prev_window=%u curr_window=%u", REC->pid, REC->comm, REC->full_window, REC->prev_window, REC->curr_window
+name:           %s comm=%s pid=%d prio=%d nr_running=%u rt_nr_running=%u affine=%x cfs_util=%lu rt_util=%lu gp0=[%d] gp1=[%d] gp2=[%d] gp3=[%d]", REC->cpu, REC->enqueue ? "enqueue" : "dequeue", REC->comm, REC->pid, REC->prio, REC->nr_running, REC->rt_nr_running, REC->cpus_allowed, REC->cfs_util, REC->rt_util, REC->gp0_cnt, REC->gp1_cnt, REC->gp2_cnt, REC->gp3_cnt
+name:           scheduler
+name:           %s event=%s prev_delta = %llu curr_delta = %llu
+
+name:           %s comm=%s pid=%d prio=%d nr_running=%u rt_nr_running=%u affine=%x cfs_util=%lu rt_util=%lu gp0=[%d] gp1=[%d] gp2=[%d] gp3=[%d]
+
+name:           %s: runtime=%u samples=%d event=%s hisevt=%s demand=%u util_demand=%u (hist[0]=%u hist[1]=%u hist[2]=%u hist[3]=%u hist[4]=%u) (util_sum_hist[0]=%u util_sum_hist[1]=%u util_sum_hist[2]=%u util_sum_hist[3]=%u util_sum_hist[4]=%u) (util_avg_history[0]=%u util_avg_history[1]=%u util_avg_history[2]=%u util_avg_history[3]=%u util_avg_history[4]=%u) pelt(util=%lu util_enqueued=%u util_ewma=%u)
+
+name:           %s: event=%s delta = %llu util_sum = %llu CIE = %lu FIE = %lu
+
+name:           %s  full_window=%d prev_window=%u curr_window=%u
+
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       rsc_first_candidate_pid:int
+parmtype:       rsc_second_candidate_pid:int

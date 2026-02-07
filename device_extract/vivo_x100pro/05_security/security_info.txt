@@ -1,0 +1,9 @@
+=== Verified Boot 状态 ===
+ro.boot.verifiedbootstate = green
+ro.boot.vbmeta.device_state = locked
+
+=== SELinux 状态 ===
+Enforcing
+
+=== 内核安全参数 ===
+kptr_restrict = 2

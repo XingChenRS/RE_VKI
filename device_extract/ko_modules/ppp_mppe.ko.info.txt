@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/ppp_mppe.ko
+license:        Dual BSD/GPL
+author:         Frank Cusack <fcusack@fcusack.com>
+description:    Point-to-Point Protocol Microsoft Point-to-Point Encryption support
+alias:          ppp-compress-18
+srcversion:     65C81D3810F749C11EA8A6C
+depends:        ppp_generic,libarc4
+intree:         Y
+name:           ppp_mppe
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

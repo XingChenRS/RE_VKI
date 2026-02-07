@@ -1,0 +1,30 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_u_ether.ko
+license:        GPL v2
+author:         David Brownell
+description:    ethernet over USB driver
+depends:        rps_perf
+name:           mtk_u_ether
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           qmult:queue length multiplier at high/super speed
+parm:           dev_addr:Device Ethernet Address
+parm:           host_addr:Host Ethernet Address
+parm:           tx_wakeup_threshold:tx wakeup threshold value
+parm:           u_ether_tx_req_threshold:u_ether_tx_req_threshold value
+parm:           rndis_mtu:Set RNDIS MTU value
+parm:           rndis_gso:Enable RNDIS GSO
+parm:           uether_debug:Enable U_Ether Debug
+parm:           ip_debug:Enable IPID Debug
+parm:           ip_debug_ratelimit:Enable IP Debug ratelimit
+parm:           uether_tx_profile:Profile TX XMIT
+parmtype:       qmult:uint
+parmtype:       dev_addr:charp
+parmtype:       host_addr:charp
+parmtype:       tx_wakeup_threshold:uint
+parmtype:       u_ether_tx_req_threshold:uint
+parmtype:       u_ether_rx_pending_thld:uint
+parmtype:       rndis_mtu:uint
+parmtype:       rndis_gso:uint
+parmtype:       uether_debug:uint
+parmtype:       ip_debug:uint
+parmtype:       ip_debug_ratelimit:uint
+parmtype:       uether_tx_profile:uint

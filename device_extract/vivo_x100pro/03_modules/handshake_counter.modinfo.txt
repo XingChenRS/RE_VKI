@@ -1,0 +1,8 @@
+filename:       /vendor_dlkm/lib/modules/handshake_counter.ko
+license:        GPL
+author:         test@test.com
+description:    Control for handshake
+srcversion:     4B6737B80D9C83FC62FC73D
+depends:        
+name:           handshake_counter
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

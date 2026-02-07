@@ -1,0 +1,11 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/l2tp_ppp.ko
+license:        GPL
+author:         James Chapman <jchapman@katalix.com>
+description:    PPP over L2TP over UDP
+alias:          net-pf-24-proto-1
+alias:          net-l2tp-type-7
+srcversion:     5D1BBDC7DB1D54FF8CEBE1E
+depends:        pppox,l2tp_core,ppp_generic
+intree:         Y
+name:           l2tp_ppp
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

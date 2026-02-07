@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/slcan.ko
+license:        GPL
+author:         Oliver Hartkopp <socketcan@hartkopp.net>
+author:         Dario Binacchi <dario.binacchi@amarulasolutions.com>
+description:    serial line CAN interface
+alias:          tty-ldisc-17
+depends:        can-dev
+intree:         Y
+name:           slcan
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

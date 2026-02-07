@@ -1,0 +1,16 @@
+filename:       /vendor_dlkm/lib/modules/bluetooth.ko
+license:        GPL
+author:         Marcel Holtmann <marcel@holtmann.org>
+description:    Bluetooth Core ver 2.22
+alias:          net-pf-31
+srcversion:     C5D5940E8FA0E300523A32B
+depends:        rfkill
+intree:         Y
+name:           bluetooth
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           disable_ertm:Disable enhanced retransmission mode
+parm:           enable_ecred:Enable enhanced credit flow control mode
+parm:           disable_esco:Disable eSCO connection creation
+parmtype:       disable_ertm:bool
+parmtype:       enable_ecred:bool
+parmtype:       disable_esco:bool

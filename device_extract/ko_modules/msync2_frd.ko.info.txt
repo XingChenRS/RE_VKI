@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/msync2_frd.ko
+license:        Proprietary
+author:         MediaTek Inc.
+description:    MediaTek MSYNC2
+depends:        mediatek-drm
+name:           msync2_frd
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/usbnet.ko
+license:        GPL
+author:         David Brownell
+description:    USB network driver framework
+depends:        mii
+intree:         Y
+name:           usbnet
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           msg_level:Override default message level
+parmtype:       msg_level:int

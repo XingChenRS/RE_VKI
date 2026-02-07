@@ -1,0 +1,66 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-cam-isp7sp.ko
+license:        GPL
+license:        GPL
+description:    Camera ISP driver
+description:    DMA-contig memory handling routines for mtk-cam videobuf2
+alias:          of:N*T*Cmediatek,mt6897-camisp
+alias:          of:N*T*Cmediatek,mt6897-camispC*
+alias:          of:N*T*Cmediatek,mt6989-camisp
+alias:          of:N*T*Cmediatek,mt6989-camispC*
+alias:          of:N*T*Cmediatek,seninf-core
+alias:          of:N*T*Cmediatek,seninf-coreC*
+alias:          of:N*T*Cmediatek,seninf
+alias:          of:N*T*Cmediatek,seninfC*
+alias:          of:N*T*Cmediatek,cam-raw
+alias:          of:N*T*Cmediatek,cam-rawC*
+alias:          of:N*T*Cmediatek,cam-yuv
+alias:          of:N*T*Cmediatek,cam-yuvC*
+alias:          of:N*T*Cmediatek,cam-rms
+alias:          of:N*T*Cmediatek,cam-rmsC*
+alias:          of:N*T*Cmediatek,camsv
+alias:          of:N*T*Cmediatek,camsvC*
+alias:          of:N*T*Cmediatek,mraw
+alias:          of:N*T*Cmediatek,mrawC*
+depends:        mtk_slbc,system_heap,mtk-cmdq-drv-ext,ccd_rpmsg,aee_aed,clk-common,event_track,mtk-mmdvfs-v3,gz_tz_system,mtk-smi,mtk-smi-dbg,mtk_printk_ctrl,iommu_debug,mtk-icc-core,mmqos-common,mtk_sec_heap,mtk_ccu_mssv
+name:           mtk_cam_isp7sp
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           debug_sensor_meta_dump:activates sensor meta dump
+parm:           debug_buf_fmt_sel:working fmt select: 0->bayer, 1->ufbc
+parm:           sv_pure_raw:enable pure raw dump with casmsv
+parm:           debug_dram_ring_mode:enable ringbuffer on dram
+parm:           seninf_vsync_debug:seninf_vsync_debug
+parm:           seninf_dbg_log:seninf_dbg_log
+parm:           enable_reset_log:debug: enable reset log
+parm:           debug_raw:activates debug info
+parm:           debug_raw_num:debug: num of used raw devices
+parm:           debug_pixel_mode:debug: pixel mode
+parm:           debug_clk_idx:debug: clk idx
+parm:           debug_clk_freq_mhz:debug: clk freq(ex. input '546' = 546MHz)
+parm:           debug_user_raws_must:debug: user raws must
+parm:           debug_user_raws:debug: user raws
+parm:           debug_disable_twin_otf_scen:debug: disable twin otf scen
+parm:           debug_disable_twin_dc_scen:debug: disable twin dc scen
+parm:           disable_recover_flow:disable_recover_flow
+parm:           debug_opts:debug options
+parm:           ftrace_tags:enable ftrace tags (bitmask)
+parmtype:       debug_sensor_meta_dump:uint
+parmtype:       debug_buf_fmt_sel:int
+parmtype:       sv_pure_raw:uint
+parmtype:       debug_dram_ring_mode:uint
+parmtype:       seninf_vsync_debug:uint
+parmtype:       seninf_dbg_log:uint
+parmtype:       enable_reset_log:int
+parmtype:       debug_raw:uint
+parmtype:       debug_raw_num:int
+parmtype:       debug_pixel_mode:int
+parmtype:       debug_clk_idx:int
+parmtype:       debug_clk_freq_mhz:int
+parmtype:       debug_user_raws_must:array of int
+parmtype:       debug_user_raws:array of int
+parmtype:       debug_disable_twin_otf_scen:int
+parmtype:       debug_disable_twin_dc_scen:int
+parmtype:       debug_cam_sv:int
+parmtype:       debug_cam_mraw:int
+parmtype:       disable_recover_flow:uint
+parmtype:       debug_opts:uint
+parmtype:       ftrace_tags:int

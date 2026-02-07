@@ -1,0 +1,11 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/sec.ko
+license:        GPL v2
+author:         MediaTek Inc.
+description:    MediaTek Kernel Security Module
+depends:        
+name:           sec
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           lks:A device lks parameter under sysfs (0=NL, 1=L, 2=NA)
+parm:           recovery_done:recovery_done status(0 = complete, 1 = on-going, 2 = error)
+parmtype:       lks:uint
+parmtype:       recovery_done:uint

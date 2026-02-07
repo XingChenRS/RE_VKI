@@ -1,0 +1,11 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_core_ctl.ko
+license:        GPL
+author:         Mediatek Inc.
+description:    Mediatek core_ctl
+depends:        cpufreq_sugov_ext,scheduler,thermal_interface
+name:           mtk_core_ctl
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           periodic_debug_enable:echo periodic debug trace if needed
+parm:           policy_enable:echo cpu pause policy if needed
+parmtype:       debug_enable:bool
+parmtype:       periodic_debug_delay:int

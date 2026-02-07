@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_gpufreq_wrapper.ko
+license:        GPL
+description:    MediaTek GPU-DVFS wrapper driver
+alias:          of:N*T*Cmediatek,gpufreq_wrapper
+alias:          of:N*T*Cmediatek,gpufreq_wrapperC*
+depends:        gpueb,mtk_tinysys_ipi,mtk_gpu_hal,mtk_pbm,device-apc-common
+name:           mtk_gpufreq_wrapper
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,17 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_jpeg.ko
+license:        GPL v2
+description:    MediaTek JPEG codec driver
+alias:          of:N*T*Cmediatek,mt8173-jpgdec
+alias:          of:N*T*Cmediatek,mt8173-jpgdecC*
+alias:          of:N*T*Cmediatek,mt2701-jpgdec
+alias:          of:N*T*Cmediatek,mt2701-jpgdecC*
+alias:          of:N*T*Cmediatek,mtk-jpgenc
+alias:          of:N*T*Cmediatek,mtk-jpgencC*
+alias:          of:N*T*Cmediatek,mtk-jpgenc_c1
+alias:          of:N*T*Cmediatek,mtk-jpgenc_c1C*
+alias:          of:N*T*Cmediatek,mtk-jpgenc_c0_c1
+alias:          of:N*T*Cmediatek,mtk-jpgenc_c0_c1C*
+depends:        mtk-icc-core,mtk-mmdvfs-v3
+name:           mtk_jpeg
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       debug:int

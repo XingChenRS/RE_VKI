@@ -1,0 +1,14 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/rtl8150.ko
+license:        GPL
+author:         Petko Manolov <petkan@users.sourceforge.net>
+description:    rtl8150 based usb-ethernet driver
+alias:          usb:v0BDAp8150d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v0411p0012d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v3980p0003d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v07B8p401Ad*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v1557p8150d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v0586p401Ad*dc*dsc*dp*ic*isc*ip*in*
+depends:        
+intree:         Y
+name:           rtl8150
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

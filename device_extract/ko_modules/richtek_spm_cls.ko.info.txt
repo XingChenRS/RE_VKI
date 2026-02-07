@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/richtek_spm_cls.ko
+license:        GPL
+author:         Jeff Chang <jeff_chang@richtek.com>
+description:    Richtek BIGDATA Class driver
+srcversion:     C03714BAD8E3D0F5D9681FF
+depends:        mtk-sp-spk-amp
+name:           richtek_spm_cls
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,13 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/tmem_ffa.ko
+license:        GPL v2
+author:         MediaTek Inc.
+description:    MediaTek Trusted Memory Driver
+firmware:       on
+firmware:       off
+depends:        gz_tz_system,mcDrvModule-ffa,ffa_v10
+name:           tmem_ffa
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           ut_multithread_wait_completion_timeout_ms:set wait completion timeout in ms for multithread UT tests
+parm:           ut_saturation_stress_pmem_min_chunk_size:set pmem minimal chunk size for saturation stress tests
+parmtype:       wait_comp_ms:uint
+parmtype:       pmem_min_chunk_size:uint

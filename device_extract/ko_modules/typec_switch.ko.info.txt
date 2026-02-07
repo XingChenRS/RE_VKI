@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/typec_switch.ko
+license:        GPL
+author:         qinbaoqiang <qinbaoqiang@vivo.com>
+description:    VIVO TYPEC SWITCH driver
+depends:        max20328-i2c,mt6681-accdet,tcpc_class,vfcs-vpsy
+name:           typec_switch
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

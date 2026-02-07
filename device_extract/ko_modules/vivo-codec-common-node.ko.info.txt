@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/vivo-codec-common-node.ko
+license:        GPL
+license:        GPL
+author:         zhengguobing <zhengguobing@vivo.com>
+author:         chenjinquan <chenjinquan@vivo.com>
+description:     vivo codec common driver
+description:    smartpa debug driver
+depends:        mtk-sp-spk-amp
+name:           vivo_codec_common_node
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

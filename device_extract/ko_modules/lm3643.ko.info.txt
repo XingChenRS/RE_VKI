@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/lm3643.ko
+license:        GPL
+author:         Roger-HY Wang <roger-hy.wang@mediatek.com>
+description:    Texas Instruments LM3643 LED flash driver
+alias:          i2c:lm3643
+alias:          of:N*T*Cmediatek,lm3643
+alias:          of:N*T*Cmediatek,lm3643C*
+depends:        flashlight
+name:           lm3643
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

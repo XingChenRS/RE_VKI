@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/nvmem-mt635x-efuse.ko
+license:        GPL v2
+author:         Jeter Chen <Jeter.Chen@mediatek.com>
+description:    MediaTek PMIC eFuse Driver for MT6359 PMIC
+depends:        
+name:           nvmem_mt635x_efuse
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/sapu.ko
+license:        GPL v2
+alias:          of:N*T*Cmediatek,trusty-sapu
+alias:          of:N*T*Cmediatek,trusty-sapuC*
+depends:        gz_trusty_mod,gz_tz_system,mtk_sec_heap
+name:           %s, src=%d
+
+name:           sapu
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/snd-soc-aw882xx.ko
+license:        GPL v2
+description:    ASoC AW882XX Smart PA Driver
+alias:          i2c:aw882xx_smartpa
+depends:        mtk-sp-spk-amp,vivo-codec-common-node
+name:           snd_soc_aw882xx
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_cm_mgr_mt6989.ko
+license:        GPL
+author:         Morven-CF Yeh<morven-cf.yeh@mediatek.com>
+description:    Mediatek cm_mgr driver
+depends:        mtk_cm_mgr,mtk-dvfsrc,mtk_dramc,mtk_cm_ipi
+name:           mtk_cm_mgr_mt6989
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

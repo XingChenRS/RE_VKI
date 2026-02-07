@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/gzvm.ko
+license:        GPL
+author:         MediaTek
+description:    GenieZone interface for VMM
+alias:          of:N*T*Cmediatek,geniezone-hyp
+alias:          of:N*T*Cmediatek,geniezone-hypC*
+depends:        
+intree:         Y
+name:           gzvm
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

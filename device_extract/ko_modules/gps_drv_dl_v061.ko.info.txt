@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/gps_drv_dl_v061.ko
+license:        GPL
+license:        GPL
+author:         Hua Fu
+author:         Chaoran Zhang <Chaoran.Zhang@mediatek.com>
+description:    GPS FW log driver
+depends:        conninfra
+name:           gps_drv_dl_v061
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

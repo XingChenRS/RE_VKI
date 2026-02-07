@@ -1,0 +1,10 @@
+filename:       /vendor_dlkm/lib/modules/dw9781c.ko
+license:        GPL
+author:         Po-Hao Huang <Po-Hao.Huang@mediatek.com>
+description:    DW9781C OIS driver
+alias:          i2c:dw9781c
+alias:          of:N*T*Cmediatek,dw9781c
+alias:          of:N*T*Cmediatek,dw9781cC*
+depends:        hf_manager
+name:           dw9781c
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

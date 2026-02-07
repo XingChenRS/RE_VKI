@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/frs.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    MediaTek Frame Rate Smoother
+depends:        mtk_fpsgo
+name:           frs
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       frs_nl_id:int
+parmtype:       frs_pid:int

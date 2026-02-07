@@ -1,0 +1,9 @@
+filename:       /vendor_dlkm/lib/modules/aod-dev.ko
+license:        GPL v2
+author:         Ahsin Chen <ahsin.chen@mediatek.com>
+description:    Mediatek AOD-SCP
+alias:          rpmsg:glink_aod
+depends:        scp,mediatek-drm,mtk_tinysys_ipi,event_track,vivo_ts
+name:           aod_dev
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       aod_dev_err_state:uint

@@ -1,0 +1,6 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/vivo_haptic_core.ko
+license:        GPL
+author:         vivo lra team
+depends:        event_track
+name:           vivo_haptic_core
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-vcodec-common.ko
+license:        GPL v2
+license:        GPL v2
+depends:        system_heap,scheduler
+name:           mtk_vcodec_common
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       fence_debug:int

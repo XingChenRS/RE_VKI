@@ -1,0 +1,6 @@
+=== model ===
+MT6989
+=== compatible ===
+mediatek,MT6989
+=== chosen/bootargs ===
+ console=tty0 root=/dev/ram nosoftlockup kasan.page_alloc.sample=1 transparent_hugepage=never cgroup.memory=nosocket,nokmem disable_dma32=on 8250.nr_uarts=4 log_buf_len=4m vmalloc=400M swiotlb=noforce firmware_class.path=/vendor/firmware arm64.nopauth arm64.nosme arm64.nosve loop.max_part=7 ufshcd_core.poll_queues=0 arm64.nomte mtk_printk_ctrl.disable_uart=1 PMIC_UVLO=NoUVLO usb2jtag_mode=0 root=/dev/ram bootopt=64S3,32N2,64N2 erofs.reserved_pages=256 product.version=PD2324_A_15.1.9.55.W10 fingerprint.abbr=14/UP1A.231005.007 region_ver=W10 product.solution=MTK rtc_reset=0 product_state=6 ramoops.mem_address=0x48090000 ramoops.mem_size=0xe0000 ramoops.pmsg_size=0x10000 ramoops.console_size=0x40000 printk.devkmsg=on vivoboot.bootreason=reboot vivolog_flag=0 tier=0 bbk_dp=0 lcm_software_id=0x0c80c2 bootconfig

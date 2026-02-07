@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/jpeg-driver.ko
+license:        GPL
+author:         Jason Hsu <yeong-cherng.hsu@mediatek.com>
+description:    JPEG Dec Codec Driver
+depends:        mtk-mmdvfs-v3,system_heap,mtk-smi-dbg
+name:           jpeg_driver
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       jpg_dbg_level:int
+parmtype:       jpg_core_binding:int

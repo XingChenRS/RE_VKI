@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/gz_virtio_mod.ko
+license:        GPL v2
+description:    Trusty virtio driver
+alias:          of:N*T*Candroid,trusty-virtio-v1
+alias:          of:N*T*Candroid,trusty-virtio-v1C*
+alias:          of:N*T*Candroid,nebula-virtio-v1
+alias:          of:N*T*Candroid,nebula-virtio-v1C*
+depends:        gz_trusty_mod
+name:           gz_virtio_mod
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

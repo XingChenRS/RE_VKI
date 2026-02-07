@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-smmuv3-pmu.ko
+license:        GPL
+description:    PMU driver for MTK SMMUv3 Performance Monitors Extension
+alias:          of:N*T*Carm,smmu-v3-pmcg
+alias:          of:N*T*Carm,smmu-v3-pmcgC*
+depends:        smmu_secure
+name:           mtk_smmuv3_pmu
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

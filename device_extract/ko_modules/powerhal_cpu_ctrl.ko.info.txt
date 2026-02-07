@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/powerhal_cpu_ctrl.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    MediaTek POWERHAL_CPU_CTRL
+depends:        cpudvfs,mtk_ioctl_powerhal
+name:           powerhal_cpu_ctrl
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

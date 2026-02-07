@@ -1,0 +1,53 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/apu_top.ko
+license:        GPL
+alias:          of:N*T*Cmtk68xx,apurpc
+alias:          of:N*T*Cmtk68xx,apurpcC*
+alias:          of:N*T*Cmediatek,apusys_power
+alias:          of:N*T*Cmediatek,apusys_powerC*
+alias:          of:N*T*Cmtk6873,apucore
+alias:          of:N*T*Cmtk6873,apucoreC*
+alias:          of:N*T*Cmtk6853,apucore
+alias:          of:N*T*Cmtk6853,apucoreC*
+alias:          of:N*T*Cmtk688x,apucore
+alias:          of:N*T*Cmtk688x,apucoreC*
+alias:          of:N*T*Cmtk6873,apucon
+alias:          of:N*T*Cmtk6873,apuconC*
+alias:          of:N*T*Cmtk6853,apucon
+alias:          of:N*T*Cmtk6853,apuconC*
+alias:          of:N*T*Cmtk688x,apucon
+alias:          of:N*T*Cmtk688x,apuconC*
+alias:          of:N*T*Cmtk68x3,apuvpu
+alias:          of:N*T*Cmtk68x3,apuvpuC*
+alias:          of:N*T*Cmtk68x3,apuvpu0
+alias:          of:N*T*Cmtk68x3,apuvpu0C*
+alias:          of:N*T*Cmtk68x3,apuvpu1
+alias:          of:N*T*Cmtk68x3,apuvpu1C*
+alias:          of:N*T*Cmtk688x,apuvpu0
+alias:          of:N*T*Cmtk688x,apuvpu0C*
+alias:          of:N*T*Cmtk688x,apuvpu1
+alias:          of:N*T*Cmtk688x,apuvpu1C*
+alias:          of:N*T*Cmtk688x,apuvpu2
+alias:          of:N*T*Cmtk688x,apuvpu2C*
+alias:          of:N*T*Cmtk6873,apumdla
+alias:          of:N*T*Cmtk6873,apumdlaC*
+alias:          of:N*T*Cmtk6873,apumdla0
+alias:          of:N*T*Cmtk6873,apumdla0C*
+alias:          of:N*T*Cmtk688x,apumdla
+alias:          of:N*T*Cmtk688x,apumdlaC*
+alias:          of:N*T*Cmtk688x,apumdla0
+alias:          of:N*T*Cmtk688x,apumdla0C*
+alias:          of:N*T*Cmtk688x,apumdla1
+alias:          of:N*T*Cmtk688x,apumdla1C*
+alias:          of:N*T*Cmediatek,apusys_cb
+alias:          of:N*T*Cmediatek,apusys_cbC*
+alias:          of:N*T*Cmtk688x,apuiommu
+alias:          of:N*T*Cmtk688x,apuiommuC*
+depends:        aee_aed
+name:           %s, src=%d
+
+name:           apu_top
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           fpga_type:Different rcx/acx/ncx combination for fpga platform, check platform code for detail
+parm:           aputop_func_sel:trigger apu top func by parameter
+parmtype:       fpga_type:int
+parmtype:       aputop_func_sel:int

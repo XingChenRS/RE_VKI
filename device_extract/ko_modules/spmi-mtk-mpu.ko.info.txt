@@ -1,0 +1,18 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/spmi-mtk-mpu.ko
+license:        GPL
+description:    MediaTek SPMI PMIF MPU Driver
+alias:          of:N*T*Cmediatek,mt6886-spmi_pmif_mpu
+alias:          of:N*T*Cmediatek,mt6886-spmi_pmif_mpuC*
+alias:          of:N*T*Cmediatek,mt6895-spmi_pmif_mpu
+alias:          of:N*T*Cmediatek,mt6895-spmi_pmif_mpuC*
+alias:          of:N*T*Cmediatek,mt6897-spmi-pmif-mpu
+alias:          of:N*T*Cmediatek,mt6897-spmi-pmif-mpuC*
+alias:          of:N*T*Cmediatek,mt6983-spmi_pmif_mpu
+alias:          of:N*T*Cmediatek,mt6983-spmi_pmif_mpuC*
+alias:          of:N*T*Cmediatek,mt6985-spmi_pmif_mpu
+alias:          of:N*T*Cmediatek,mt6985-spmi_pmif_mpuC*
+alias:          of:N*T*Cmediatek,mt6989-spmi-pmif-mpu
+alias:          of:N*T*Cmediatek,mt6989-spmi-pmif-mpuC*
+depends:        
+name:           spmi_mtk_mpu
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

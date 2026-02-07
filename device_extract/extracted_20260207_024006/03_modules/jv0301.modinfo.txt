@@ -1,0 +1,9 @@
+filename:       /vendor_dlkm/lib/modules/jv0301.ko
+license:        GPL v2
+author:         JIIOV
+description:    JIIOV fingerprint sensor device driver
+alias:          of:N*T*Cmediatek,jiiov-fp
+alias:          of:N*T*Cmediatek,jiiov-fpC*
+depends:        vfp_spi
+name:           jv0301
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

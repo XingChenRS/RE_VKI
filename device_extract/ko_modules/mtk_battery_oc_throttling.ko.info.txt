@@ -1,0 +1,13 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_battery_oc_throttling.ko
+license:        GPL
+author:         Jeter Chen
+description:    MTK battery over current throttling driver
+alias:          of:N*T*Cmediatek,mt6359p-battery_oc_throttling
+alias:          of:N*T*Cmediatek,mt6359p-battery_oc_throttlingC*
+alias:          of:N*T*Cmediatek,mt6375-battery_oc_throttling
+alias:          of:N*T*Cmediatek,mt6375-battery_oc_throttlingC*
+alias:          of:N*T*Cmediatek,mt6377-battery_oc_throttling
+alias:          of:N*T*Cmediatek,mt6377-battery_oc_throttlingC*
+depends:        
+name:           mtk_battery_oc_throttling
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

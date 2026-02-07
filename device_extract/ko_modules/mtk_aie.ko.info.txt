@@ -1,0 +1,23 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_aie.ko
+license:        GPL
+license:        GPL
+license:        GPL
+license:        GPL v2
+author:         Fish Wu <fish.wu@mediatek.com>
+description:    AIE DMA-contig memory handling routines for videobuf2
+description:    AIE specific memory handling routines for aie_videobuf2
+description:    vmalloc memory handling routines for aie_videobuf2
+description:    Mediatek AIE driver
+alias:          of:N*T*Cmediatek,aie-isp7s
+alias:          of:N*T*Cmediatek,aie-isp7sC*
+alias:          of:N*T*Cmediatek,aie-isp7sp
+alias:          of:N*T*Cmediatek,aie-isp7spC*
+alias:          of:N*T*Cmediatek,aie-isp7sp-1
+alias:          of:N*T*Cmediatek,aie-isp7sp-1C*
+depends:        mtk-cmdq-drv-ext,cmdq-sec-drv,system_heap
+name:           mtk_aie
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       aie_log_level_value:int
+parmtype:       aie_cg_debug_open_en:int
+parmtype:       aie_cg_debug_perframe_en:int
+parmtype:       aie_sys_ftrace_en:int

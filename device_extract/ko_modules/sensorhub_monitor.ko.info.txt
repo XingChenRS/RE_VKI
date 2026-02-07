@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/sensorhub_monitor.ko
+license:        GPL v2
+author:         liu.yu@vivo.com
+description:    sensorhub driver
+depends:        sensorhub
+name:           sensorhub_monitor
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

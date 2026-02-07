@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_pbm.ko
+license:        GPL
+author:         Samuel Hsieh
+description:    MTK power budget management
+alias:          of:N*T*Cmediatek,pbm
+alias:          of:N*T*Cmediatek,pbmC*
+depends:        mtk_dynamic_loading_throttling,mtk_mdpm
+name:           mtk_pbm
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

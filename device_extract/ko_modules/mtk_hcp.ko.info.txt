@@ -1,0 +1,14 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_hcp.ko
+license:        GPL v2
+description:    Mediatek hetero control process driver
+alias:          of:N*T*Cmediatek,hcp
+alias:          of:N*T*Cmediatek,hcpC*
+alias:          of:N*T*Cmediatek,hcp7s
+alias:          of:N*T*Cmediatek,hcp7sC*
+alias:          of:N*T*Cmediatek,hcp7sp
+alias:          of:N*T*Cmediatek,hcp7spC*
+depends:        mtk_slbc,system_heap
+name:           mtk_hcp
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       hcp_dbg_en:int
+parmtype:       hcp_kernel_fence_dbg_en:int

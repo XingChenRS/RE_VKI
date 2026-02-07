@@ -1,0 +1,27 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/wlan_drv_gen4m_6989_6639.ko
+license:        Dual BSD/GPL
+author:         NIC_AUTHOR
+description:    NIC_DESC
+alias:          pci:v000014C3d00003107sv*sd*bc*sc*i*
+alias:          pci:v000014C3d00006639sv*sd*bc*sc*i*
+alias:          pci:v000014C3d00007927sv*sd*bc*sc*i*
+depends:        mtk-dvfsrc,aee_aed,connadp,vivo_board_info,vivo_board_info_detect,wmt_chrdev_wifi_connac3,vivo_bsp_engine,cfg80211,mtk_disp_notify,pmic_lbat_service,pcie-mediatek-gen3,conninfra,wlan_page_pool,ccci_md_all,mddp,device-apc-common,connfem
+name:           [%s], index=[%u]
+
+name:           [%s], index=[%u], setting=[%s]
+
+name:           [%s], index=[%u], setting=[%s], UINT_MAX=[%u], iftype=[%d]
+
+name:           %d realm=%d
+
+name:           %s
+
+name:           [%s], index=[%u], appliedWay=[%u:%s], operation=[%u:%s], ChlSettingCount=[%u]
+
+name:           wlan_drv_gen4m_6989_6639
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           chainValue:add for chain mode set
+parm:           bspFullScan:add for bsp full scan
+parmtype:       nvram:charp
+parmtype:       chainValue:charp
+parmtype:       bspFullScan:uint

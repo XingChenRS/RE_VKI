@@ -1,0 +1,11 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/pda_drv_mt6989.ko
+license:        GPL
+author:         MM6SW3
+description:    Camera PDA driver
+alias:          of:N*T*Cmediatek,camera-pda
+alias:          of:N*T*Cmediatek,camera-pdaC*
+alias:          of:N*T*Cmediatek,camera-pda2
+alias:          of:N*T*Cmediatek,camera-pda2C*
+depends:        mtk-mmdvfs-v3,mtk-icc-core
+name:           pda_drv_mt6989
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

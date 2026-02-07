@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_disp_sec.ko
+license:        GPL v2
+author:         Aaron Chung <Aaron.Chung@mediatek.com>
+description:    MTK DRM secure Display
+depends:        mtk-cmdq-drv-ext,cmdq-sec-drv,mediatek-drm,mtk_sec_heap
+name:           mtk_disp_sec
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

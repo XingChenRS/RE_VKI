@@ -1,0 +1,13 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/md_cooling_all.ko
+license:        GPL v2
+author:         Shun-Yao Yang <brian-sy.yang@mediatek.com>
+description:    Mediatek modem cooling driver
+alias:          of:N*T*Cmediatek,mt6295-md-cooler
+alias:          of:N*T*Cmediatek,mt6295-md-coolerC*
+alias:          of:N*T*Cmediatek,mt6297-md-cooler
+alias:          of:N*T*Cmediatek,mt6297-md-coolerC*
+alias:          of:N*T*Cmediatek,mt6298-md-cooler
+alias:          of:N*T*Cmediatek,mt6298-md-coolerC*
+depends:        ccci_md_all,thermal_trace
+name:           md_cooling_all
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

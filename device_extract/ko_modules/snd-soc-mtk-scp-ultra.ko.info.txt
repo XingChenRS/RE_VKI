@@ -1,0 +1,12 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/snd-soc-mtk-scp-ultra.ko
+license:        GPL v2
+license:        GPL v2
+author:         Ning Li <Ning.Li@mediatek.com>
+author:         Youwei Dong <Youwei.Dong@mediatek.com>
+description:    Mediatek ALSA SoC scp ultrasound platform driver
+description:    Mediatek scp ultra platform driver
+alias:          of:N*T*Cmediatek,snd-scp-ultra
+alias:          of:N*T*Cmediatek,snd-scp-ultraC*
+depends:        mtk-scp-ultra,scp,mtk-afe-external,mtk_tinysys_ipi
+name:           snd_soc_mtk_scp_ultra
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

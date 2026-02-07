@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/fp_dispatch_event.ko
+license:        GPL
+author:         fingerprint team
+description:    fingerprint dispatch touch event to lcm and hal.
+alias:          fingerprint dispatch touch event
+depends:        mediatek-drm
+name:           fp_dispatch_event
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

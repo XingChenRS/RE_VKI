@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/can-raw.ko
+license:        Dual BSD/GPL
+author:         Urs Thuermann <urs.thuermann@volkswagen.de>
+description:    PF_CAN raw protocol
+alias:          can-proto-1
+depends:        can
+intree:         Y
+name:           can_raw
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

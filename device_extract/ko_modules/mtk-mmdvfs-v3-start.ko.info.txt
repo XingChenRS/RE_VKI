@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-mmdvfs-v3-start.ko
+license:        GPL
+author:         Anthony Huang<anthony.huang@mediatek.com>
+description:    MMDVFS V3 start Driver
+depends:        mtk-mmdvfs-debug,mtk-mmdvfs-v3
+name:           mtk_mmdvfs_v3_start
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

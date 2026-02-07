@@ -1,0 +1,11 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/hidp.ko
+license:        GPL
+author:         Marcel Holtmann <marcel@holtmann.org>
+author:         David Herrmann <dh.herrmann@gmail.com>
+description:    Bluetooth HIDP ver 1.2
+alias:          bt-proto-6
+srcversion:     D6E1B785364CC2597761FD7
+depends:        bluetooth
+intree:         Y
+name:           hidp
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

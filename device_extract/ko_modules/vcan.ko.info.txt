@@ -1,0 +1,11 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/vcan.ko
+license:        Dual BSD/GPL
+author:         Urs Thuermann <urs.thuermann@volkswagen.de>
+description:    virtual CAN interface
+alias:          rtnl-link-vcan
+depends:        can-dev
+intree:         Y
+name:           vcan
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           echo:Echo sent frames (for testing). Default: 0 (Off)
+parmtype:       echo:bool

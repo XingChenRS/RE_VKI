@@ -1,0 +1,33 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/soc_temp_lvts.ko
+license:        GPL v2
+author:         Yu-Chia Chang <ethan.chang@mediatek.com>
+description:    Mediatek soc temperature driver
+alias:          of:N*T*Cmediatek,mt6873-lvts
+alias:          of:N*T*Cmediatek,mt6873-lvtsC*
+alias:          of:N*T*Cmediatek,mt6853-lvts
+alias:          of:N*T*Cmediatek,mt6853-lvtsC*
+alias:          of:N*T*Cmediatek,mt6893-lvts
+alias:          of:N*T*Cmediatek,mt6893-lvtsC*
+alias:          of:N*T*Cmediatek,mt6983-lvts
+alias:          of:N*T*Cmediatek,mt6983-lvtsC*
+alias:          of:N*T*Cmediatek,mt6985-lvts
+alias:          of:N*T*Cmediatek,mt6985-lvtsC*
+alias:          of:N*T*Cmediatek,mt6879-lvts
+alias:          of:N*T*Cmediatek,mt6879-lvtsC*
+alias:          of:N*T*Cmediatek,mt6895-lvts
+alias:          of:N*T*Cmediatek,mt6895-lvtsC*
+alias:          of:N*T*Cmediatek,mt6855-lvts
+alias:          of:N*T*Cmediatek,mt6855-lvtsC*
+alias:          of:N*T*Cmediatek,mt6833-lvts
+alias:          of:N*T*Cmediatek,mt6833-lvtsC*
+alias:          of:N*T*Cmediatek,mt6789-lvts
+alias:          of:N*T*Cmediatek,mt6789-lvtsC*
+alias:          of:N*T*Cmediatek,mt6886-lvts
+alias:          of:N*T*Cmediatek,mt6886-lvtsC*
+alias:          of:N*T*Cmediatek,mt6897-lvts
+alias:          of:N*T*Cmediatek,mt6897-lvtsC*
+alias:          of:N*T*Cmediatek,mt6989-lvts
+alias:          of:N*T*Cmediatek,mt6989-lvtsC*
+depends:        thermal_interface
+name:           soc_temp_lvts
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

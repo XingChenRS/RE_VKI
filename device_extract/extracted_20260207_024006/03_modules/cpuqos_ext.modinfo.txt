@@ -1,0 +1,7 @@
+filename:       /vendor_dlkm/lib/modules/cpuqos_ext.ko
+license:        Proprietary
+author:         MediaTek Inc.
+description:    MediaTek scheduler ext
+depends:        cpuqos_v3
+name:           cpuqos_ext
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

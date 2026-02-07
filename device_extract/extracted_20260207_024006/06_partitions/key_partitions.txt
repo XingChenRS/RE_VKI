@@ -1,0 +1,32 @@
+=== Boot 相关分区 ===
+/dev/block/by-name/boot_a
+/dev/block/by-name/boot_b
+/dev/block/by-name/boot_para
+/dev/block/by-name/bootloader1
+/dev/block/by-name/bootloader2
+/dev/block/by-name/init_boot_a
+/dev/block/by-name/init_boot_b
+/dev/block/by-name/vendor_boot_a
+/dev/block/by-name/vendor_boot_b
+
+=== DTBO/VBMETA 分区 ===
+/dev/block/by-name/dtbo_a
+/dev/block/by-name/dtbo_b
+/dev/block/by-name/vbmeta_a
+/dev/block/by-name/vbmeta_b
+/dev/block/by-name/vbmeta_oem_a
+/dev/block/by-name/vbmeta_oem_b
+/dev/block/by-name/vbmeta_system_a
+/dev/block/by-name/vbmeta_system_b
+/dev/block/by-name/vbmeta_vendor_a
+/dev/block/by-name/vbmeta_vendor_b
+/dev/block/by-name/vbmeta_vgc_a
+/dev/block/by-name/vbmeta_vgc_b
+
+=== 主要分区 ===
+/dev/block/by-name/vbmeta_system_a
+/dev/block/by-name/vbmeta_system_b
+/dev/block/by-name/vbmeta_vendor_a
+/dev/block/by-name/vbmeta_vendor_b
+/dev/block/by-name/vendor_boot_a
+/dev/block/by-name/vendor_boot_b

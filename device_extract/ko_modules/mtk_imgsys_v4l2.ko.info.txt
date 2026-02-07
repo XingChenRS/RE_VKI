@@ -1,0 +1,11 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_imgsys_v4l2.ko
+license:        GPL v2
+author:         Frederic Chen <frederic.chen@mediatek.com>
+description:    Mediatek DIP driver
+alias:          of:N*T*Cmediatek,imgsys
+alias:          of:N*T*Cmediatek,imgsysC*
+depends:        mtk_hcp,iommu_debug,mtk_imgsys_cmdq,mtk-ipesys-me,mtk-mmdvfs-v3,mtk-smi
+name:           mtk_imgsys_v4l2
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       imgsys_dbg_en:int
+parmtype:       imgsys_ftrace_en:int

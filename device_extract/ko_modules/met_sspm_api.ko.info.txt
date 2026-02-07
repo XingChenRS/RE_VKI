@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/met_sspm_api.ko
+license:        GPL
+author:         DT_DM5
+description:    MET_CORE
+depends:        met,sspm_v3
+name:           met_sspm_api
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

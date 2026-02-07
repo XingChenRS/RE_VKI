@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-pm-domain-disable-unused.ko
+license:        GPL
+alias:          of:N*T*Cmediatek,scpsys-disable-unused
+alias:          of:N*T*Cmediatek,scpsys-disable-unusedC*
+depends:        
+name:           mtk_pm_domain_disable_unused
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

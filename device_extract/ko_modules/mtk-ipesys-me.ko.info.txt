@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-ipesys-me.ko
+license:        GPL v2
+author:         Marvin Lin <marvin.lin@mediatek.com>
+description:    Mediatek ME driver
+alias:          of:N*T*Cmediatek,ipesys-me
+alias:          of:N*T*Cmediatek,ipesys-meC*
+depends:        
+name:           mtk_ipesys_me
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

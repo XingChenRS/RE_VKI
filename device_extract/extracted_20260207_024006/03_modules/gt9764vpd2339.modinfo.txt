@@ -1,0 +1,10 @@
+filename:       /vendor_dlkm/lib/modules/gt9764vpd2339.ko
+license:        GPL v2
+author:         Po-Hao Huang <Po-Hao.Huang@mediatek.com>
+description:    GT9764VPD2339 VCM driver
+alias:          i2c:gt9764vpd2339
+alias:          of:N*T*Cmediatek,gt9764vpd2339
+alias:          of:N*T*Cmediatek,gt9764vpd2339C*
+depends:        
+name:           gt9764vpd2339
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

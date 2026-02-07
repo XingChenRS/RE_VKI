@@ -1,0 +1,15 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/vtskin_temp.ko
+license:        GPL v2
+author:         Samuel Hsieh <samuel.hsieh@mediatek.com>
+description:    Mediatek on virtual tskin driver
+alias:          of:N*T*Cmediatek,mt6983-virtual-tskin
+alias:          of:N*T*Cmediatek,mt6983-virtual-tskinC*
+alias:          of:N*T*Cmediatek,mt6985-virtual-tskin
+alias:          of:N*T*Cmediatek,mt6985-virtual-tskinC*
+alias:          of:N*T*Cmediatek,mt6897-virtual-tskin
+alias:          of:N*T*Cmediatek,mt6897-virtual-tskinC*
+alias:          of:N*T*Cmediatek,mt6989-virtual-tskin
+alias:          of:N*T*Cmediatek,mt6989-virtual-tskinC*
+depends:        thermal_interface
+name:           vtskin_temp
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-lpm-dbg-mt6989.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    mt6989 low power debug module
+depends:        mtk-lpm-dbg-common-v2,mtk-swpm,ccci_md_all
+name:           mtk_lpm_dbg_mt6989
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

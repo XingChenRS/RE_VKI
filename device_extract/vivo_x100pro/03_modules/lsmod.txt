@@ -1,0 +1,576 @@
+Module                  Size  Used by
+gps_scp               131072  2 
+gps_pwr                24576  2 
+msync2_frd             20480  0 
+active_cpufreq         40960  0 
+aod_dev                53248  0 
+vsec_vcedev            32768  0 
+sar_power              20480  0 
+sarpower_class         20480  1 sar_power
+sensorhub_monitor      20480  0 
+mem_hooks              20480  0 [permanent]
+fp_dispatch_event      20480  1 
+bbklog_enable          24576  0 
+logd_kernel            28672  5 
+vivo_ts              4161536  6 aod_dev,fp_dispatch_event
+sensors_class          24576  1 vivo_ts
+aw86938               135168  0 
+aw86927               131072  0 
+vivo_haptic_core       57344  5 aw86938,aw86927,[permanent]
+mtk_ips_helper         20480  0 
+mtk_mbraink           282624  1 
+mtk_c2ps               69632  0 
+c2ps_perf_ioctl        28672  1 mtk_c2ps
+fpsgo                1441792  0 
+task_turbo             69632  0 
+pgboost                32768  0 
+frs                    20480  1 
+mtk_fpsgo             602112  3 mtk_mbraink,fpsgo,frs
+mtk_mmdvfs_v3_start    20480  0 
+mtk_pm_domain_disable_unused    20480  0 
+clk_disable_unused     20480  0 
+btmtk_uart_unify      372736  1 
+mtk_perf_ioctl_magt    28672  1 mtk_fpsgo
+mtk_core_ctl           81920  0 
+mtk_vmm_notifier       20480  0 
+vdec_fmt               69632  0 
+mtk_disp_sec           20480  0 
+uload_ind              28672  0 
+load_track             20480  1 uload_ind
+widevine_driver        24576  0 
+hbt                    45056  1 
+sec                    40960  0 
+mtk_perf_common        73728  0 
+mtk_dvfsrc_start       20480  0 
+atf_logger             40960  0 
+lpm_gov_MHSP           28672  0 
+mtk_lpm_dbg_mt6989     53248  0 
+mtk_lpm_plat_v1        20480  0 
+mtk_lpm_dbg_common_v2   122880  3 mtk_mbraink,mtk_lpm_dbg_mt6989,mtk_lpm_plat_v1
+mtk_lpm                65536  2 mtk_lpm_plat_v1,mtk_lpm_dbg_common_v2
+mtk_smmuv3_lmu         28672  0 
+mtk_smmuv3_pmu         28672  0 
+sapu                   32768  0 
+mtk_heap_debug         57344  0 
+mem_ddr_size           20480  0 [permanent]
+mtk_heap_refill        24576  0 [permanent]
+jv0301                 24576  0 
+gf9578                 40960  4 
+vfp_spi                20480  2 jv0301,gf9578
+fp_id                  20480  2 gf9578,vfp_spi
+apu_aov                45056  0 
+tmf8801                86016  0 
+gz_log_mod             24576  0 
+gz_main_mod            86016  0 
+gz_virtio_mod          24576  0 
+gz_irq_mod             24576  0 
+pda_drv_mt6989         69632  0 
+mtk_cm_mgr_mt6989      20480  0 
+mtk_cm_mgr             53248  2 mtk_fpsgo,mtk_cm_mgr_mt6989
+mtk_cm_ipi             20480  2 mtk_cm_mgr_mt6989,mtk_cm_mgr
+sub_vcm                28672  0 
+dw9781ois              32768  0 
+dw9800vpd2417          20480  0 
+aw8601cam2pd2339       20480  0 
+gt9764vpd2339          20480  0 
+aw86016cam3pd2430      20480  0 
+ak7316cam2pd2430       24576  0 
+dw9800kcam1pd2430      20480  0 
+gt9764vcam0pd2430      20480  0 
+aw8601cam3pd2324       20480  1 
+aw8601cam3pd2309       20480  0 
+ak7377acam0pd2309      28672  0 
+dw9827pd2309           20480  0 
+ak7316cam0pd2324       24576  1 
+ak7316cam2pd2324       24576  1 
+ak7316cam2pd2309       20480  0 
+dw9781d                81920  0 
+dw9781c                32768  0 
+main4_vcm              28672  0 
+main3_vcm              28672  0 
+main2_vcm              28672  0 
+main_vcm               28672  0 
+camera_af_media        20480  0 
+touch_boost            69632  0 
+mtk_ioctl_touch_boost    24576  1 touch_boost
+mtk_perf_ioctl         32768  2 mtk_fpsgo,touch_boost
+v4l2_lm36010           32768  0 
+v4l2_flash_aw36515_front    32768  0 
+v4l2_flash_aw36515_cold    45056  0 
+v4l2_flash_aw36515_warm    36864  1 v4l2_flash_aw36515_cold
+v4l2_aw36515           32768  2 
+v4l2_ocp81373          32768  0 
+lm3643                 24576  0 
+flashlight             57344  7 v4l2_lm36010,v4l2_flash_aw36515_front,v4l2_flash_aw36515_cold,v4l2_flash_aw36515_warm,v4l2_aw36515,v4l2_ocp81373,lm3643
+mtk_composite          20480  0 
+vsen_sensorhub         24576  0 
+sensorhub              77824  2 sensorhub_monitor,vsen_sensorhub
+hf_manager             61440  11 dw9781ois,dw9781d,dw9781c,vsen_sensorhub,sensorhub
+gps_drv_dl_v061      1368064  2 
+wlan_drv_gen4m_6989_6639 10326016  0 
+wmt_chrdev_wifi_connac3    49152  1 wlan_drv_gen4m_6989_6639
+conninfra             823296  3 btmtk_uart_unify,gps_drv_dl_v061,wlan_drv_gen4m_6989_6639
+connscp               204800  5 gps_scp
+connfem                86016  2 btmtk_uart_unify,wlan_drv_gen4m_6989_6639
+mtk_swpm_mem_dbg_v6989    20480  0 
+mtk_swpm_mml_dbg_v6989    20480  0 
+mtk_swpm_disp_dbg_v6989    20480  0 
+mtk_swpm_audio_dbg_v6989    20480  0 
+mtk_swpm_cpu_dbg_v6989    20480  0 
+mtk_swpm_dbg_v6989     36864  0 
+mtk_swpm_dbg_common_v1    20480  1 mtk_swpm_dbg_v6989
+mtk_swpm               45056  9 mtk_mbraink,mtk_lpm_dbg_mt6989,mtk_swpm_mem_dbg_v6989,mtk_swpm_mml_dbg_v6989,mtk_swpm_disp_dbg_v6989,mtk_swpm_audio_dbg_v6989,mtk_swpm_cpu_dbg_v6989,mtk_swpm_dbg_v6989,mtk_swpm_dbg_common_v1
+imgsensor             704512  10 
+camera_eeprom_v4l2     90112  1 imgsensor
+gt9896s                90112  0 
+gt9895                106496  0 
+tui_common             20480  0 
+mtk_cam_isp7sp        872448  34 
+mtk_ccd_remoteproc     36864  2 
+ccd_rpmsg              36864  2 mtk_cam_isp7sp,mtk_ccd_remoteproc
+fhctl                  86016  0 
+mcupm                  40960  1 fhctl
+eas_ext                20480  0 
+cpuqos_ext             20480  0 
+jpeg_driver            61440  0 
+mtk_scp_vow            20480  0 
+mtk_vow                98304  3 mtk_scp_vow
+mtk_vcodec_enc_v2     212992  0 
+mtk_vcodec_dec_v2     245760  1 
+mtk_vcodec_common      86016  2 mtk_vcodec_enc_v2,mtk_vcodec_dec_v2
+scheduler             520192  8 mtk_c2ps,mtk_fpsgo,mtk_core_ctl,touch_boost,eas_ext,mtk_vcodec_enc_v2,mtk_vcodec_dec_v2,mtk_vcodec_common
+cpuqos_v3              57344  2 cpuqos_ext,scheduler
+powerhal_cpu_ctrl      45056  3 mtk_fpsgo,touch_boost,scheduler
+mtk_ioctl_powerhal     28672  1 powerhal_cpu_ctrl
+cpudvfs                24576  1 powerhal_cpu_ctrl
+cpufreq_sugov_ext     188416  11 active_cpufreq,mtk_c2ps,task_turbo,mtk_fpsgo,mtk_core_ctl,mtk_perf_common,scheduler,cpudvfs
+mtk_jpeg               49152  0 
+wifi_cooling           20480  0 
+backlight_cooling      20480  0 
+charger_cooling        20480  0 
+md_cooling_all         32768  0 
+vtskin_temp            24576  0 
+board_temp             20480  0 
+thermal_trace          65536  1 md_cooling_all
+csc_driver             53248  0 
+pem_driver             57344  0 
+thermal_generic_adc    20480  0 
+pmic_temp              28672  0 
+soc_temp_lvts          90112  0 
+thermal_interface      65536  8 mtk_core_ctl,mtk_perf_common,mtk_swpm_cpu_dbg_v6989,scheduler,cpufreq_sugov_ext,vtskin_temp,thermal_trace,soc_temp_lvts
+mddp                   98304  1 wlan_drv_gen4m_6989_6639
+mt6989_mt6681          86016  3 
+snd_soc_mt6989_afe    806912  3 mtk_swpm_audio_dbg_v6989,mt6989_mt6681
+snd_soc_mtk_scp_ultra    45056  2 snd_soc_mt6989_afe
+vivo_audio_ktv         81920  1 snd_soc_mt6989_afe
+mtk_soc_offload_common    32768  1 
+snd_soc_ak4377         40960  1 
+snd_soc_tfa9874       237568  2 
+snd_soc_aw87391       118784  0 
+snd_soc_aw882xx       200704  0 
+typec_switch           20480  0 
+vivo_soc_codec         20480  0 
+vivo_codec_common_node    45056  5 snd_soc_ak4377,snd_soc_tfa9874,snd_soc_aw87391,snd_soc_aw882xx,vivo_soc_codec
+snd_soc_rt5512         36864  0 
+richtek_spm_cls        24576  1 snd_soc_rt5512
+mtk_sp_spk_amp         24576  6 mt6989_mt6681,snd_soc_tfa9874,snd_soc_aw882xx,vivo_codec_common_node,snd_soc_rt5512,richtek_spm_cls
+snd_soc_mt6681        700416  2 mt6989_mt6681
+mt6681_accdet          61440  3 mt6989_mt6681,typec_switch,snd_soc_mt6681
+usb_offload            73728  0 
+snd_soc_mtk_common     86016  5 snd_soc_mt6989_afe,usb_offload
+mtk_scp_ultra          20480  2 snd_soc_mtk_scp_ultra,snd_soc_mtk_common
+snd_soc_audiodsp_common   135168  5 snd_soc_mt6989_afe,mtk_soc_offload_common,mtk_sp_spk_amp,snd_soc_mtk_common
+audio_ipi             327680  6 mtk_soc_offload_common,mtk_sp_spk_amp,usb_offload,snd_soc_mtk_common,snd_soc_audiodsp_common
+adsp_v2                24576  0 
+mali_dmabuf_test_mt6989_r44    36864  0 
+mali_kbase_mt6989_r44  2469888  142 
+mtk_sec_heap           45056  7 mtk_disp_sec,widevine_driver,sapu,mtk_heap_debug,gz_main_mod,mtk_cam_isp7sp,mali_kbase_mt6989_r44
+apusys               1236992  1 apu_aov
+apu_top               249856  2 apu_aov,apusys
+tmem_ffa              155648  3 gz_main_mod,mali_kbase_mt6989_r44,mtk_sec_heap
+mali_mgm_mt6989_r44    45056  1 
+mali_prot_alloc_mt6989_r44    20480  1 
+ged                   434176  3 mtk_fpsgo,mtk_swpm_dbg_common_v1,mali_kbase_mt6989_r44
+mtk_gpu_qos            24576  1 ged
+mtk_qos                36864  5 mtk_perf_common,mtk_swpm_dbg_v6989,mtk_swpm,apusys,mtk_gpu_qos
+mtk_gpu_iommu_mt6989    20480  0 
+mtk_gpufreq_mt6989    110592  0 
+mtk_cg_peak_power_throttling    65536  0 
+mtk_peak_power_budget    69632  3 flashlight,snd_soc_mt6989_afe,apusys
+mtk_gpu_power_throttling    20480  0 
+mtk_gpufreq_wrapper    98304  7 thermal_interface,mali_kbase_mt6989_r44,mali_prot_alloc_mt6989_r44,ged,mtk_gpu_qos,mtk_gpufreq_mt6989,mtk_gpu_power_throttling
+gpueb                  61440  4 fhctl,mali_kbase_mt6989_r44,ged,mtk_gpufreq_wrapper
+mtk_cpu_power_throttling    20480  0 
+mtk_md_power_throttling    20480  0 
+mtk_bp_thl             24576  2 mtk_gpu_power_throttling,mtk_cpu_power_throttling
+mtk_battery_oc_throttling    24576  4 mtk_peak_power_budget,mtk_gpu_power_throttling,mtk_cpu_power_throttling,mtk_md_power_throttling
+syscon_reboot_mode     20480  0 
+reboot_mode            20480  1 syscon_reboot_mode
+sspm_v3                28672  9 mtk_swpm_mem_dbg_v6989,mtk_swpm_mml_dbg_v6989,mtk_swpm_disp_dbg_v6989,mtk_swpm_audio_dbg_v6989,mtk_swpm_cpu_dbg_v6989,mtk_swpm_dbg_v6989,mtk_swpm,ged,mtk_qos
+mtk_irtx_pwm           20480  0 
+mtk_pwm                49152  1 mtk_irtx_pwm
+mtk_usb_f_rndis        40960  0 
+mtk_u_ether            49152  1 mtk_usb_f_rndis
+c2k_usb_f_via_modem    20480  1 
+c2k_usb_f_via_ets      20480  1 
+c2k_usb_f_via_atc      20480  1 
+c2k_usb                49152  6 c2k_usb_f_via_modem,c2k_usb_f_via_ets,c2k_usb_f_via_atc
+ccci_fsm_scp           24576  0 
+scp                   176128  9 aod_dev,apu_aov,sensorhub,connscp,mtk_scp_vow,mtk_vow,snd_soc_mtk_scp_ultra,mt6681_accdet,ccci_fsm_scp
+ccci_dpmaif           180224  0 
+ccci_ccif              61440  0 
+mtk_ssc_dbg_v2         20480  0 
+mtk_ssc                20480  1 mtk_ssc_dbg_v2
+mtk_pmic_oc_debug      24576  0 
+ccci_md_all           499712  43 mtk_mbraink,mtk_lpm_dbg_mt6989,wlan_drv_gen4m_6989_6639,conninfra,md_cooling_all,mddp,snd_soc_mtk_common,mtk_md_power_throttling,c2k_usb,ccci_fsm_scp,ccci_dpmaif,ccci_ccif,mtk_pmic_oc_debug
+ccci_auxadc            20480  1 ccci_md_all
+ccci_util_lib         139264  22 snd_soc_mtk_common,ccci_fsm_scp,ccci_dpmaif,ccci_ccif,ccci_md_all,ccci_auxadc,[permanent]
+ccmni                  36864  2 ccci_dpmaif,ccci_md_all
+rps_perf               20480  2 mtk_u_ether,ccmni
+mtk_pbm                36864  3 flashlight,mtk_gpufreq_wrapper,ccci_md_all
+mtk_mdpm              106496  2 ccci_md_all,mtk_pbm
+mtk_dynamic_loading_throttling    24576  1 mtk_pbm
+nvmem_mt635x_efuse     20480  0 
+camera_dpe_isp7sp     475136  1 
+mtk_imgsys_isp7sp     143360  0 
+mtk_imgsys_v4l2       200704  1 mtk_imgsys_isp7sp
+mtk_imgsys_cmdq      1114112  1 mtk_imgsys_v4l2
+mtk_ipesys_me          20480  1 mtk_imgsys_v4l2
+mtk_hcp               155648  4 mtk_imgsys_isp7sp,mtk_imgsys_v4l2
+mtk_aie_debug_7sp_1    20480  0 
+mtk_aie               176128  1 mtk_aie_debug_7sp_1
+cmdq_sec_drv           57344  6 mtk_disp_sec,mtk_imgsys_cmdq,mtk_aie,[permanent]
+gz_tz_system           57344  5 sapu,gz_main_mod,mtk_cam_isp7sp,tmem_ffa,cmdq_sec_drv
+gz_ipc_mod             49152  2 gz_main_mod,gz_tz_system
+gz_trusty_mod          36864  7 sapu,gz_log_mod,gz_main_mod,gz_virtio_mod,gz_irq_mod,gz_tz_system,gz_ipc_mod
+mtk_et                 24576  0 
+clk_dbg_mt6989         36864  0 
+trace_mmstat           32768  0 
+mtk_gpu_hal            57344  9 mtk_perf_common,mtk_swpm_dbg_common_v1,mali_kbase_mt6989_r44,ged,mtk_gpu_qos,mtk_gpufreq_mt6989,mtk_cg_peak_power_throttling,mtk_gpufreq_wrapper,trace_mmstat
+mtk_ccuv               49152  2 imgsensor,mtk_cam_isp7sp
+spmi_mtk_mpu           20480  0 
+mac80211             1052672  0 
+cfg80211             1085440  2 wlan_drv_gen4m_6989_6639,mac80211
+wl28681                28672  0 
+qcom_pm8008_regulator    28672  0 
+nova327_mipi_yuv       24576  0 
+imgsensor_glue         20480  2 imgsensor,nova327_mipi_yuv
+handshake_counter      86016  1 ccmni
+actuator_core_vivo     36864  3 aw8601cam3pd2309,dw9827pd2309,ak7316cam2pd2309
+nfc                   114688  0 
+mac802154             118784  0 
+ieee802154_socket      40960  0 
+ieee802154_6lowpan     28672  0 
+ieee802154            126976  3 mac802154,ieee802154_socket,ieee802154_6lowpan
+nhc_udp                20480  0 
+nhc_routing            20480  0 
+nhc_mobility           20480  0 
+nhc_ipv6               20480  0 
+nhc_hop                20480  0 
+nhc_fragment           20480  0 
+nhc_dest               20480  0 
+6lowpan                32768  8 ieee802154_6lowpan,nhc_udp,nhc_routing,nhc_mobility,nhc_ipv6,nhc_hop,nhc_fragment,nhc_dest
+diag                   20480  0 
+tipc                  376832  1 diag
+l2tp_ppp               40960  0 
+l2tp_core              69632  1 l2tp_ppp
+hidp                   53248  0 
+rfcomm                 86016  0 
+can_gw                 32768  0 
+can_bcm                32768  0 
+can_raw                40960  0 
+can                    32768  3 can_gw,can_bcm,can_raw
+8021q                  45056  0 
+btsdio                 20480  0 
+hci_uart               81920  0 
+btqca                  24576  1 hci_uart
+btbcm                  28672  1 hci_uart
+bluetooth             761856  8 btmtk_uart_unify,hidp,rfcomm,btsdio,hci_uart,btqca,btbcm
+rfkill                 40960  3 cfg80211,nfc,bluetooth
+ftdi_sio               65536  0 
+usbserial              49152  1 ftdi_sio
+cdc_acm                40960  0 
+r8153_ecm              20480  0 
+aqc111                 32768  0 
+cdc_ncm                36864  0 
+cdc_eem                20480  0 
+cdc_ether              20480  2 r8153_ecm,cdc_ncm
+ax88179_178a           45056  0 
+asix                   53248  0 
+usbnet                 53248  7 r8153_ecm,aqc111,cdc_ncm,cdc_eem,cdc_ether,ax88179_178a,asix
+r8152                 155648  1 r8153_ecm
+rtl8150                24576  0 
+wwan                   45056  0 
+pptp                   40960  0 
+pppox                  24576  2 l2tp_ppp,pptp
+ppp_mppe               20480  0 
+ppp_deflate            20480  0 
+bsd_comp               20480  0 
+ppp_generic            73728  6 l2tp_ppp,pptp,pppox,ppp_mppe,ppp_deflate,bsd_comp
+slhc                   20480  1 ppp_generic
+slcan                  32768  0 
+vcan                   20480  0 
+can_dev                53248  2 slcan,vcan
+mii                    24576  4 ax88179_178a,asix,usbnet,r8152
+libarc4                20480  2 mac80211,ppp_mppe
+zsmalloc               40960  1 mali_kbase_mt6989_r44
+kheaders             4046848  0 
+gzvm                   65536  0 
+vivo_fs_trace         548864  1 
+lz4m                   20480  0 
+dm_verity_fec_vivo     20480  0 
+vivo_rsc               20480  0 
+shrinker_proxy         24576  0 
+vivo_tshell            61440  0 
+vr                     36864  0 [permanent]
+systracker             20480  0 
+cache_parity           24576  0 
+last_bus               49152  0 
+mtk_socinfo            20480  0 
+bus_parity             24576  0 
+dbg_error_flag         20480  2 last_bus,bus_parity
+mediatek_cpufreq_hw    28672  0 
+usb_meta               36864  0 
+smpu_hook_v1           20480  0 [permanent]
+smpu                   24576  2 ccci_md_all,smpu_hook_v1,[permanent]
+emi_mpu                20480  2 ccci_md_all,smpu,[permanent]
+mtk_swpm_perf_arm_pmu    28672  1 mtk_swpm_dbg_common_v1
+arm_dsu_pmu            28672  1 
+slbc_mt6989            61440  0 
+slc_parity             20480  0 [permanent]
+emi_slb                20480  0 [permanent]
+slbc_ipi               36864  1 slbc_mt6989
+slbc_trace             24576  1 slbc_mt6989
+adsp                  114688  6 usb_offload,snd_soc_mtk_common,snd_soc_audiodsp_common,audio_ipi,adsp_v2
+reset_ti_syscon        20480  3 
+mtk_mminfra_imax       24576  0 
+tcpci_late_sync        20480  0 [permanent]
+extcon_mtk_usb         32768  0 
+leds_mtk_pwm           20480  0 
+leds_mtk_disp          20480  0 
+pcie_mediatek_gen3     45056  1 wlan_drv_gen4m_6989_6639
+connadp                57344  7 gps_pwr,btmtk_uart_unify,wlan_drv_gen4m_6989_6639,conninfra,connscp,wifi_cooling,pcie_mediatek_gen3
+mtk_low_battery_throttling    24576  6 mtk_peak_power_budget,mtk_gpu_power_throttling,mtk_cpu_power_throttling,mtk_md_power_throttling,mtk_dynamic_loading_throttling,connadp
+pmic_lvsys_notify      20480  1 mtk_low_battery_throttling
+phy_mtk_pcie           20480  1 
+pwm_mtk_disp           20480  0 
+mt6375_battery        393216  0 
+pmic_lbat_service      32768  4 wlan_drv_gen4m_6989_6639,mtk_md_power_throttling,mtk_low_battery_throttling,mt6375_battery
+rt_pd_manager          24576  0 
+mtk_pep                32768  0 
+mtk_pep20              45056  0 
+mtk_pd_charging        40960  0 
+mtk_pep45              57344  0 
+mtk_pep40              53248  0 
+mtk_charger_framework   114688  5 mtk_pep,mtk_pep20,mtk_pd_charging,mtk_pep45,mtk_pep40
+mtk_pd_adapter         24576  0 
+mtk_chg_type_det       20480  0 
+vfcs_wls_monitor      126976  0 
+vfcs_vivo_wls_idtp9415   172032  1 vfcs_wls_monitor
+vfcs_vivo_wls_cps4041   188416  1 vfcs_wls_monitor
+vfcs_misc_core         24576  0 
+vfcs_max77929          24576  0 
+vfcs_sc8510            24576  0 
+vfcs_max77932          20480  0 
+vfcs_fg_common_core   110592  0 
+vfcs_sm5602            98304  0 
+vfcs_multi_fg_core     24576  1 vfcs_sm5602
+vfcs_bq28z610         106496  0 
+vfcs_pi_dev           143360  0 
+vfcs_cp_dev           172032  0 
+vfcs_fchg_core         45056  1 vfcs_cp_dev
+vfcs_core             487424  1 vfcs_pi_dev
+max20328_i2c           40960  6 mt6989_mt6681,typec_switch,vivo_soc_codec,mt6681_accdet,rt_pd_manager,vfcs_core
+vfcs_cms_core         278528  0 
+pie_driver           2732032  1 vfcs_cms_core
+vfcs_sc89601d          45056  0 
+vfcs_rt9467            36864  0 
+vfcs_mp2762            36864  0 
+vfcs_bq25890h          45056  0 
+vfcs_bq2579x           45056  0 
+vfcs_bq25601d          36864  0 
+vfcs_battery_id        20480  0 
+vfcs_battery           86016  0 
+vfcs_meter             69632  3 vfcs_multi_fg_core,vfcs_bq28z610,vfcs_battery
+vfcs_reserved_block_core    24576  4 vfcs_fg_common_core,vfcs_sm5602,vfcs_cms_core,vfcs_battery
+mt6375_charger         73728  1 
+vfcs_chg              147456  11 vfcs_max77929,vfcs_sc8510,vfcs_max77932,vfcs_core,vfcs_sc89601d,vfcs_rt9467,vfcs_mp2762,vfcs_bq25890h,vfcs_bq2579x,vfcs_bq25601d,mt6375_charger
+tcpc_mt6375            45056  1 vfcs_chg
+tcpc_class            352256  9 typec_switch,tcpci_late_sync,extcon_mtk_usb,rt_pd_manager,mtk_pd_adapter,mtk_chg_type_det,vfcs_core,vfcs_chg,tcpc_mt6375
+pd_dbg_info            20480  2 tcpc_mt6375,tcpc_class
+vfcs_fuelsummary       98304  16 vfcs_vivo_wls_cps4041,vfcs_multi_fg_core,vfcs_bq28z610,vfcs_core,vfcs_cms_core,vfcs_sc89601d,vfcs_rt9467,vfcs_mp2762,vfcs_bq25890h,vfcs_bq2579x,vfcs_bq25601d,vfcs_battery_id,vfcs_battery,vfcs_meter,mt6375_charger,vfcs_chg
+mtk_charger_algorithm_class    24576  6 mtk_pep,mtk_pep20,mtk_pd_charging,mtk_pep45,mtk_pep40,mtk_charger_framework
+charger_class          61440  8 mtk_pep,mtk_pep20,mtk_pd_charging,mtk_pep45,mtk_pep40,mtk_charger_framework,mtk_chg_type_det,mt6375_charger
+adapter_class          24576  5 mtk_pd_charging,mtk_pep45,mtk_pep40,mtk_charger_framework,mtk_pd_adapter
+mt6375_auxadc          24576  0 
+mt6375_adc             20480  0 
+industrialio_triggered_buffer    20480  1 mt6375_adc
+kfifo_buf              20480  1 industrialio_triggered_buffer
+rtc_mt6685             40960  1 
+rt6160_regulator       20480  0 
+rt5133_regulator       28672  0 
+rt4803                 20480  0 
+extdev_io_class        20480  1 rt5133_regulator
+mt6375                 20480  0 
+i2c_mt65xx             45056  2 sensorhub,snd_soc_mt6681
+regulator_vibrator     20480  0 
+mtk_pmic_keys          20480  0 
+mtk_kpd                20480  1 mtk_pmic_keys
+pidmap                 24576  0 
+phy_mtk_ufs            20480  1 
+mtk_mmc                53248  0 
+rpmb_mtk               69632  1 mtk_mmc,[permanent]
+ufs_mediatek_mod_ise   245760  1 rpmb_mtk
+rpmb                   24576  1 ufs_mediatek_mod_ise
+ufs_mediatek_dbg       49152  1 ufs_mediatek_mod_ise
+mtk_mmc_dbg           184320  1 mtk_mmc
+blocktag               77824  4 mtk_perf_common,mtk_mmc,ufs_mediatek_mod_ise,mtk_mmc_dbg
+cqhci                  36864  1 mtk_mmc
+usb_dp_selector        20480  0 
+ps5170                 24576  0 
+mux_switch             28672  5 usb_dp_selector,ps5170
+usb_boost              40960  1 usb_offload
+mtu3                  139264  3 usb_offload,usb_boost
+xhci_mtk_hcd_v2       299008  2 usb_offload,usb_boost
+phy_mtk_xsphy          61440  2 
+vivo_board_info        20480  1 wlan_drv_gen4m_6989_6639
+vivo_board_info_detect    20480  8 wlan_drv_gen4m_6989_6639,mt6989_mt6681,vfcs_pi_dev,vfcs_fchg_core,vfcs_core,vfcs_battery_id,vfcs_battery,vivo_board_info
+pinctrl_mtk_common_v2_debug    28672  3 mtk_lpm_dbg_common_v2,i2c_mt65xx,mtk_mmc
+pinctrl_mt6373         20480  0 
+mtk_spmi_pmic_adc      24576  0 
+isee_ffa              204800  0 
+mcDrvModule_ffa       331776  18 tmem_ffa,rpmb_mtk
+teeperf                24576  0 
+ffa_v10                28672  4 gz_main_mod,tmem_ffa,isee_ffa,mcDrvModule_ffa
+nvmem_mt6681_efuse     20480  2 
+mt6681_auxadc          20480  0 
+mt6681_core            20480  2 mt6989_mt6681,snd_soc_mt6681
+mt6685_audclk          20480  1 snd_soc_mt6681
+8250_mtk               98304  1 btmtk_uart_unify
+uarthub_drv           204800  1 8250_mtk
+mtk_uart_apdma         45056  1 8250_mtk
+mtk_dpc                53248  0 
+aee_rs                 24576  0 
+mtk_vdisp              20480  0 
+panel_alpha_jdi_nt36672e_cphy_vdo   262144  0 
+panel_nt37801_cmd_fhd_plus   233472  0 
+panel_nt37801_cmd_fhd   233472  0 
+panel_alpha_jdi_nt36672e_vdo_120hz   274432  0 
+panel_alpha_jdi_nt36672e_vdo_60hz   135168  0 
+panel_truly_nt35595_cmd   151552  0 
+panel_truly_td4330_cmd    94208  0 
+panel_virtual         417792  0 
+panel_common         2596864  0 
+mediatek_drm         3121152  29 msync2_frd,aod_dev,fp_dispatch_event,vivo_ts,mtk_fpsgo,mtk_disp_sec,mtk_swpm_disp_dbg_v6989,thermal_interface,ged,ccci_md_all,leds_mtk_pwm,leds_mtk_disp,vfcs_cms_core,ufs_mediatek_mod_ise,usb_dp_selector,mtk_dpc,aee_rs,mtk_vdisp,panel_common
+drm_display_helper    163840  1 mediatek_drm
+drm_dma_helper         28672  1 mediatek_drm
+mtk_afe_external       24576  9 mtk_scp_vow,snd_soc_mtk_scp_ultra,mtk_soc_offload_common,snd_soc_mtk_common,mtk_scp_ultra,snd_soc_audiodsp_common,adsp_v2,scp,mediatek_drm
+mtk_mminfra_debug      32768  1 mediatek_drm
+vivo_display          667648  4 panel_virtual,panel_common,mediatek_drm
+mt6685_nvtclk          20480  1 vivo_display
+clkbuf                 69632  2 pcie_mediatek_gen3,mt6685_nvtclk
+mt6685_core            20480  0 
+event_track            28672  5 aod_dev,vivo_haptic_core,ak7377acam0pd2309,mtk_cam_isp7sp,vivo_display
+mtk_panel_ext          24576  13 gt9896s,gt9895,leds_mtk_disp,panel_alpha_jdi_nt36672e_cphy_vdo,panel_nt37801_cmd_fhd_plus,panel_nt37801_cmd_fhd,panel_alpha_jdi_nt36672e_vdo_120hz,panel_alpha_jdi_nt36672e_vdo_60hz,panel_truly_nt35595_cmd,panel_truly_td4330_cmd,panel_virtual,panel_common,mediatek_drm
+rt4831a_drv            20480  5 leds_mtk_disp,panel_nt37801_cmd_fhd_plus,panel_nt37801_cmd_fhd,panel_alpha_jdi_nt36672e_vdo_120hz,panel_alpha_jdi_nt36672e_vdo_60hz
+leds_mtk               28672  7 backlight_cooling,thermal_interface,leds_mtk_pwm,leds_mtk_disp,panel_common,mediatek_drm,rt4831a_drv
+mdp_drv_mt6989        524288  5 mtk_dpc
+cmdq_helper_inf        53248  1 mdp_drv_mt6989
+mtk_mml_mt6989         32768  0 
+mtk_mml              1982464  4 mtk_swpm_mml_dbg_v6989,mtk_dpc,mediatek_drm,mtk_mml_mt6989
+mtk_slbc               32768  16 apu_aov,mtk_cam_isp7sp,mtk_vcodec_enc_v2,mtk_vcodec_dec_v2,cpuqos_v3,mali_kbase_mt6989_r44,apusys,mali_mgm_mt6989_r44,ccci_md_all,mtk_hcp,slbc_mt6989,slbc_ipi,adsp,mtk_mminfra_imax,mediatek_drm,mtk_mml,[permanent]
+cmdq_platform_mt6989    20480  0 [permanent]
+mtk_cmdq_drv_ext      286720  60 vdec_fmt,mtk_disp_sec,mtk_lpm_dbg_common_v2,mtk_cam_isp7sp,camera_dpe_isp7sp,mtk_imgsys_isp7sp,mtk_imgsys_cmdq,mtk_aie,cmdq_sec_drv,mtk_mminfra_imax,mtk_dpc,mediatek_drm,mtk_mminfra_debug,mdp_drv_mt6989,cmdq_helper_inf,mtk_mml_mt6989,mtk_mml,cmdq_platform_mt6989,[permanent]
+mtk_mmdebug_vcp        20480  0 
+mmqos_mt6989           45056  0 
+mmqos_common          122880  3 mtk_cam_isp7sp,mediatek_drm,mmqos_mt6989
+mtk_mmdvfs_debug       36864  3 mtk_mmdvfs_v3_start,mtk_mmdebug_vcp,mmqos_common
+mtk_mmdvfs             28672  3 mediatek_drm,mmqos_common,mtk_mmdvfs_debug
+mmprofile             114688  6 cmdq_sec_drv,mtk_dpc,mediatek_drm,mdp_drv_mt6989,mtk_cmdq_drv_ext,mtk_mmdvfs
+mtk_mmdvfs_v3          73728  17 mtk_mmdvfs_v3_start,mtk_vmm_notifier,vdec_fmt,pda_drv_mt6989,mtk_cam_isp7sp,jpeg_driver,mtk_vcodec_enc_v2,mtk_vcodec_dec_v2,mtk_jpeg,camera_dpe_isp7sp,mtk_imgsys_v4l2,mtk_imgsys_cmdq,mtk_dpc,mdp_drv_mt6989,mtk_mml,mmqos_common,mtk_mmdvfs_debug
+mtk_mmdvfs_ftrace      36864  1 mtk_mmdvfs_debug
+mtk_icc_core           40960  12 vdec_fmt,pda_drv_mt6989,mtk_cam_isp7sp,mtk_vcodec_enc_v2,mtk_vcodec_dec_v2,mtk_jpeg,mtk_imgsys_cmdq,mtk_ccuv,mediatek_drm,mdp_drv_mt6989,mtk_mml,mmqos_common
+mtk_dvfsrc_helper      81920  3 mtk_mbraink,mtk_perf_common,usb_boost
+mtk_dramc              24576  6 mtk_cm_mgr_mt6989,thermal_interface,mtk_qos,mediatek_drm,mmqos_common,mtk_dvfsrc_helper,[permanent]
+pd_chk_mt6989          40960  0 
+clk_chk_mt6989         81920  1 pd_chk_mt6989
+clk_bringup            20480  0 
+mt6989_dcm             40960  0 
+mtk_dcm                20480  1 mt6989_dcm
+mtk_scpsys_bringup     20480  0 
+mtk_scpsys_mt6989      49152  0 
+mtk_vmm_spm_mt6989     20480  0 
+mt6681_regulator       20480  3 
+mt6373_regulator       36864  36 
+mt6363_regulator       40960  35 
+mt6316_regulator       20480  3 
+spmi_mtk_pmif          73728  2 ccci_md_all,clkbuf
+mtk_spmi_pmic          40960  0 
+mtk_pmic_wrap          40960  0 
+clk_mt6989_vcodec      24576  0 
+clk_mt6989_vlp         20480  0 
+clk_mt6989_mdpsys      28672  0 
+clk_mt6989_bus         20480  0 
+clk_mt6989_peri        28672  0 
+clk_mt6989_mmsys       32768  0 
+clk_mt6989_img         28672  0 
+clk_mt6989_cam         28672  0 
+clk_mt6989_adsp        24576  0 
+clk_mt6989             65536  0 
+mtk_hw_semaphore       20480  0 
+mtk_emi                24576  0 
+mtk_dvfsrc_devfreq     20480  1 mtk_fpsgo
+mtk_dvfsrc_regulator    32768  7 
+mtk_dvfsrc             49152  9 mtk_fpsgo,mtk_cm_mgr_mt6989,wlan_drv_gen4m_6989_6639,ccci_dpmaif,usb_boost,mtk_dvfsrc_helper,mtk_emi,mtk_dvfsrc_devfreq,mtk_dvfsrc_regulator
+vcp                   135168  2 mtk_vcodec_enc_v2,mtk_vcodec_dec_v2
+mtk_tinysys_ipi        28672  20 aod_dev,apu_aov,sensorhub,connscp,fhctl,mcupm,mtk_vow,mtk_vcodec_enc_v2,mtk_vcodec_dec_v2,snd_soc_mtk_scp_ultra,mt6681_accdet,ged,mtk_gpufreq_wrapper,gpueb,ccci_fsm_scp,scp,mtk_mmdebug_vcp,mmqos_common,mtk_mmdvfs_v3,vcp
+mtk_rpmsg_mbox         20480  1 mtk_tinysys_ipi
+mtk_mbox               45056  7 mcupm,gpueb,scp,adsp,vcp,mtk_tinysys_ipi,mtk_rpmsg_mbox
+vcp_status             24576  11 mtk_vcodec_dec_v2,mtk_imgsys_cmdq,mediatek_drm,mtk_mminfra_debug,mtk_cmdq_drv_ext,mtk_mmdebug_vcp,mmqos_common,mtk_mmdvfs_v3,pd_chk_mt6989,clk_chk_mt6989,vcp
+ise_trusty_virtio      32768  0 
+ise_trusty_ipc         45056  2 
+ise_trusty_log         20480  0 
+ise_trusty             36864  3 ise_trusty_virtio,ise_trusty_ipc,ise_trusty_log
+clk_fmeter_mt6989      32768  0 
+mtk_scpsys             94208  2 mtk_scpsys_mt6989,mtk_dvfsrc
+system_heap           106496  299 mtk_heap_debug,mtk_heap_refill,mtk_cam_isp7sp,jpeg_driver,mtk_vcodec_dec_v2,mtk_vcodec_common,mali_kbase_mt6989_r44,mtk_sec_heap,mali_mgm_mt6989_r44,ged,mtk_hcp,mtk_aie,mtk_ccuv,slbc_mt6989,mediatek_drm,mdp_drv_mt6989,mtk_mml,vcp
+mm_fake_engine         20480  0 
+arm_smmu_v3           102400  30 
+mtk_smi_dbg            49152  19 vdec_fmt,mtk_cam_isp7sp,jpeg_driver,mtk_vcodec_enc_v2,mtk_vcodec_dec_v2,mtk_imgsys_cmdq,mtk_ccuv,mtk_vdisp,mediatek_drm,mtk_mminfra_debug,mdp_drv_mt6989,mtk_mml,mtk_cmdq_drv_ext,mtk_mmdebug_vcp,mtk_mmdvfs_debug,mtk_mmdvfs,mtk_mmdvfs_v3,vcp,arm_smmu_v3,[permanent]
+emi                    36864  11 pgboost,mtk_vcodec_enc_v2,mtk_vcodec_dec_v2,mali_kbase_mt6989_r44,mali_mgm_mt6989_r44,mtk_qos,ccci_md_all,emi_mpu,adsp,mmqos_common,mtk_smi_dbg,[permanent]
+mtk_smi               167936  8 mtk_cam_isp7sp,mtk_vcodec_enc_v2,mtk_imgsys_isp7sp,mtk_imgsys_v4l2,mediatek_drm,mtk_mml,mmqos_common,mtk_smi_dbg
+smmu_secure            20480  3 mtk_smmuv3_lmu,mtk_smmuv3_pmu,arm_smmu_v3
+iommu_debug           184320  11 vdec_fmt,mtk_cam_isp7sp,mtk_vcodec_enc_v2,mtk_vcodec_dec_v2,apusys,mtk_imgsys_v4l2,mtk_aie_debug_7sp_1,mediatek_drm,mdp_drv_mt6989,mtk_cmdq_drv_ext,arm_smmu_v3
+pinctrl_mt6989         98304  30 [permanent]
+pinctrl_mtk_v2         81920  78 pinctrl_mtk_common_v2_debug,pinctrl_mt6373,pinctrl_mt6989
+wlan_page_pool         36864  1 wlan_drv_gen4m_6989_6639
+sn100                  40960  1 
+sn100_spi              20480  1 sn100
+spi_mt65xx             36864  2 vfp_spi,sn100_spi
+mtk_ise_mailbox        28672  2 ufs_mediatek_mod_ise,ise_trusty,[permanent]
+clk_common            393216  25 mtk_cam_isp7sp,fhctl,usb_offload,scp,clk_dbg_mt6989,mediatek_drm,mtk_mminfra_debug,mtk_mmdvfs_debug,mtk_mmdvfs_v3,pd_chk_mt6989,clk_chk_mt6989,clk_mt6989_vcodec,clk_mt6989_vlp,clk_mt6989_mdpsys,clk_mt6989_bus,clk_mt6989_peri,clk_mt6989_mmsys,clk_mt6989_img,clk_mt6989_cam,clk_mt6989_adsp,clk_mt6989,vcp,clk_fmeter_mt6989,mtk_smi_dbg,mtk_ise_mailbox
+ise_lpm                24576  2 ufs_mediatek_mod_ise,ise_trusty
+tinysys_scmi           24576  10 mtk_cm_ipi,mtk_qos,sspm_v3,mtk_ssc,slbc_ipi,mediatek_drm,mtk_mminfra_debug,mtk_mml,ise_lpm
+mtk_mbox_mailbox       20480  2 [permanent]
+device_apc_mt6989      94208  0 
+device_apc_common      53248  10 wlan_drv_gen4m_6989_6639,conninfra,mtk_gpufreq_wrapper,ccci_md_all,adsp,mtk_mminfra_debug,mtk_cmdq_drv_ext,clk_chk_mt6989,vcp,device_apc_mt6989
+sec_rng                20480  0 
+zcache                 65536  1 [permanent]
+v_zsmalloc             45056  1 zcache
+timer_mediatek         24576  0 
+aee_hangdet            57344  0 
+mtk_wdt                20480  1 
+vfcs_vpsy              73728  30 typec_switch,vivo_tshell,extcon_mtk_usb,mt6375_battery,vfcs_wls_monitor,vfcs_vivo_wls_idtp9415,vfcs_vivo_wls_cps4041,vfcs_misc_core,vfcs_max77929,vfcs_fg_common_core,vfcs_sm5602,vfcs_multi_fg_core,vfcs_bq28z610,vfcs_cp_dev,vfcs_core,vfcs_cms_core,vfcs_sc89601d,vfcs_rt9467,vfcs_mp2762,vfcs_bq25890h,vfcs_bq2579x,vfcs_bq25601d,vfcs_battery_id,vfcs_battery,vfcs_meter,mt6375_charger,vfcs_chg,vfcs_fuelsummary,mediatek_drm,mtk_wdt
+nvmem_mtk_devinfo      20480  0 
+mtk_printk_ctrl        28672  1 mtk_cam_isp7sp
+log_store              28672  0 
+mtk_disp_notify        20480  9 vivo_ts,btmtk_uart_unify,mtk_cm_mgr,wlan_drv_gen4m_6989_6639,conninfra,gt9896s,gt9895,uarthub_drv,mediatek_drm
+mtk_sync               20480  2 mediatek_drm,mtk_mml
+irq_dbg                20480  9 mali_kbase_mt6989_r44,ccci_dpmaif,ccci_ccif,ccci_md_all,adsp,ufs_mediatek_mod_ise,ufs_mediatek_dbg,mtk_cmdq_drv_ext,vcp
+dbgtop_drm             20480  0 [permanent]
+mkp                    53248  0 
+monitor_hang           45056  2 mtk_heap_debug
+vivo_bsp_engine       221184  12 vivo_ts,wlan_drv_gen4m_6989_6639,mt6375_battery,vfcs_vivo_wls_cps4041,vfcs_fg_common_core,vfcs_sm5602,vfcs_core,mtk_kpd,mediatek_drm,leds_mtk,vfcs_vpsy,monitor_hang,[permanent]
+aee_aed                98304  49 dw9781d,wlan_drv_gen4m_6989_6639,conninfra,imgsensor,mtk_cam_isp7sp,fhctl,snd_soc_mt6989_afe,snd_soc_mtk_common,snd_soc_audiodsp_common,mali_kbase_mt6989_r44,apusys,apu_top,scp,mtk_ssc,mtk_pmic_oc_debug,ccci_md_all,ccci_util_lib,mtk_imgsys_cmdq,mtk_ccuv,cache_parity,last_bus,bus_parity,smpu,emi_mpu,slc_parity,emi_slb,adsp,mt6375_battery,rtc_mt6685,ufs_mediatek_dbg,aee_rs,mediatek_drm,mtk_mminfra_debug,mdp_drv_mt6989,mtk_mml,mtk_cmdq_drv_ext,mtk_mmdebug_vcp,mmprofile,mtk_dvfsrc_helper,spmi_mtk_pmif,vcp,mtk_smi,iommu_debug,clk_common,device_apc_common
+mrdump                 81920  26 mtk_heap_debug,mali_kbase_mt6989_r44,apusys,mtk_gpufreq_mt6989,ccci_dpmaif,ccci_md_all,ccci_util_lib,mtk_ccuv,cache_parity,bus_parity,dbg_error_flag,slc_parity,adsp,ufs_mediatek_dbg,mtk_mmc_dbg,blocktag,mediatek_drm,mmqos_common,mtk_mmdvfs_debug,spmi_mtk_pmif,vcp,aee_hangdet,log_store,mkp,monitor_hang,vivo_bsp_engine
+bootprof               28672  2 usb_meta,isee_ffa

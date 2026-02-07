@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mii.ko
+license:        GPL
+author:         Jeff Garzik <jgarzik@pobox.com>
+description:    MII hardware support library
+depends:        
+intree:         Y
+name:           mii
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

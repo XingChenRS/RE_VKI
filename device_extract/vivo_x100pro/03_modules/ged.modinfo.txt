@@ -1,0 +1,28 @@
+filename:       /vendor_dlkm/lib/modules/ged.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    MediaTek GED Driver
+alias:          of:N*T*Cmediatek,ged
+alias:          of:N*T*Cmediatek,gedC*
+depends:        mtk_gpufreq_wrapper,mtk_gpu_hal,system_heap,mediatek-drm,gpueb,mtk_tinysys_ipi,sspm_v3,mtk_gpu_qos
+name:           ged
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       ged_boost_enable:uint
+parmtype:       ged_force_mdp_enable:int
+parmtype:       ged_smart_boost:uint
+parmtype:       ged_monitor_3D_fence_debug:uint
+parmtype:       ged_monitor_3D_fence_disable:uint
+parmtype:       ged_monitor_3D_fence_systrace:uint
+parmtype:       ged_mix:int
+parmtype:       gpu_loading:uint
+parmtype:       gpu_block:uint
+parmtype:       gpu_idle:uint
+parmtype:       gpu_dvfs_enable:uint
+parmtype:       boost_gpu_enable:uint
+parmtype:       gpu_debug_enable:uint
+parmtype:       gpu_bottom_freq:uint
+parmtype:       gpu_cust_boost_freq:uint
+parmtype:       gpu_cust_upbound_freq:uint
+parmtype:       g_gpu_timer_based_emu:uint
+parmtype:       gpu_opp_logs_enable:uint
+parmtype:       is_GED_KPI_enabled:uint

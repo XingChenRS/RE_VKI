@@ -1,0 +1,7 @@
+filename:       /vendor_dlkm/lib/modules/adsp-v2.ko
+license:        GPL v2
+author:         Chien-Wei Hsu <Chien-Wei.Hsu@mediatek.com>
+description:    MTK AUDIO DSP PLATFORM Device Driver
+depends:        adsp,mtk-afe-external
+name:           adsp_v2
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

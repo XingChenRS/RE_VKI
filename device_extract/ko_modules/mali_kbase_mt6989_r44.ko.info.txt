@@ -1,0 +1,23 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mali_kbase_mt6989_r44.ko
+license:        GPL
+alias:          of:N*T*Carm,mali-valhall
+alias:          of:N*T*Carm,mali-valhallC*
+srcversion:     378D4C77F6E3F22A34CDF9D
+depends:        zsmalloc,aee_aed,mtk_gpufreq_wrapper,ged,mtk_gpu_hal,mtk_slbc,mrdump,emi,system_heap,mtk_sec_heap,tmem_ffa,irq-dbg,gpueb
+name:           '%s' entries=0x%p size=%u is_circular=%d rmem_virt=0x%p rmem_size=%zu fallback=%d
+name:           mali_kbase_mt6989_r44
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           override_l2_size:Override L2 size config for testing
+parm:           override_l2_hash:Override L2 hash config for testing
+parm:           l2_hash_values:Override L2 hash values config for testing
+parm:           config_system_coherency:System Coherency
+parm:           corestack_driver_control:Let the driver power on/off the GPU core stack independently without involving the Power Domain Controller. This should only be enabled on platforms for which integration of the PDC to the Mali GPU is known to be problematic.
+parm:           fw_name:firmware image
+parm:           csf_firmware_boot_timeout_ms:Maximum time to wait for firmware to boot.
+parmtype:       override_l2_size:byte
+parmtype:       override_l2_hash:byte
+parmtype:       l2_hash_values:array of uint
+parmtype:       config_system_coherency:uint
+parmtype:       corestack_driver_control:bool
+parmtype:       fw_name:string
+parmtype:       csf_firmware_boot_timeout_ms:uint

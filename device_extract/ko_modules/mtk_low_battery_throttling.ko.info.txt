@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_low_battery_throttling.ko
+license:        GPL
+author:         Jeter Chen <Jeter.Chen@mediatek.com>
+description:    MTK low battery throttling driver
+alias:          of:N*T*Cmediatek,low_battery_throttling
+alias:          of:N*T*Cmediatek,low_battery_throttlingC*
+depends:        pmic_lbat_service,pmic_lvsys_notify
+name:           mtk_low_battery_throttling
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

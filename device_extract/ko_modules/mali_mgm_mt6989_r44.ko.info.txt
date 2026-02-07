@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mali_mgm_mt6989_r44.ko
+license:        GPL
+author:         ARM Ltd.
+alias:          of:N*T*Carm,physical-memory-group-manager
+alias:          of:N*T*Carm,physical-memory-group-managerC*
+srcversion:     2B0182F6896083BE5D07F4B
+depends:        emi,system_heap,mtk_slbc
+name:           mali_mgm_mt6989_r44
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

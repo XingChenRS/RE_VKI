@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/backlight_cooling.ko
+license:        GPL v2
+author:         Ming-Hao Chou <minghao.chou@mediatek.com>
+description:    Mediatek backlight cooling driver
+alias:          of:N*T*Cmediatek,backlight-cooler
+alias:          of:N*T*Cmediatek,backlight-coolerC*
+depends:        leds-mtk
+name:           backlight_cooling
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

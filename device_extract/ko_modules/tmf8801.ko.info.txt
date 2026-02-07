@@ -1,0 +1,12 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/tmf8801.ko
+license:        GPL
+description:    AMS-TAOS tmf8801 ToF sensor driver
+alias:          i2c:tof8801
+alias:          of:N*T*Cams,tof8801
+alias:          of:N*T*Cams,tof8801C*
+alias:          of:N*T*Cmediatek,tof8801-ams
+alias:          of:N*T*Cmediatek,tof8801-amsC*
+srcversion:     C54EA909AC25FC460BB2FFC
+depends:        
+name:           tmf8801
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

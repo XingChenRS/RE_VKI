@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-swpm.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    mtk swpm module
+depends:        sspm_v3,mtk_qos
+name:           mtk_swpm
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

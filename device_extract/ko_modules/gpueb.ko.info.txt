@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/gpueb.ko
+license:        GPL
+description:    MediaTek GPUEB-PLAT driver
+alias:          of:N*T*Cmediatek,gpueb
+alias:          of:N*T*Cmediatek,gpuebC*
+depends:        mtk_tinysys_ipi,mtk-mbox
+name:           gpueb
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,7 @@
+filename:       /vendor_dlkm/lib/modules/fhctl.ko
+license:        GPL v2
+author:         Kuan-Hsin Lee <kuan-hsin.lee@mediatek.com>
+description:    MediaTek FHCTL Driver
+depends:        clk-common,aee_aed,mcupm,mtk_tinysys_ipi,gpueb
+name:           fhctl
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

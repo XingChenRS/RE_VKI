@@ -31,8 +31,7 @@ source "lib/Kconfig.debug"
 
 source "Documentation/Kconfig"
 
-# vivo_rsc: 开源树中无 kernel/vivo_rsc/Kconfig，已移除引用；设备上由 vendor_dlkm 的 vivo_rsc.ko 提供
-# source "kernel/vivo_rsc/Kconfig"
+# source "kernel/vivo_rsc/Kconfig"  # vivo_rsc not in tree (restore build)
 
 # ANDROID: Set KCONFIG_EXT_PREFIX to decend into an external project.
 source "$(KCONFIG_EXT_PREFIX)Kconfig.ext"

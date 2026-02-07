@@ -1,0 +1,7 @@
+filename:       /vendor_dlkm/lib/modules/conninfra.ko
+license:        GPL
+author:         Willy.Yu @ CTD/SE5/CS5
+depends:        connadp,aee_aed,mtk_disp_notify,device-apc-common,ccci_md_all
+name:           conninfra
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       g_conn_adaptor_major:uint

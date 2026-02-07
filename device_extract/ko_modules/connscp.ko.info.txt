@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/connscp.ko
+license:        GPL
+author:         Willy Yu <Willy.Yu@mediatek.com>
+description:    Conn SCP Bridge dev
+depends:        connadp,scp,mtk_tinysys_ipi
+name:           connscp
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

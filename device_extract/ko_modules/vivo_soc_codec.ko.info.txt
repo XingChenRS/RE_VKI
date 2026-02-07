@@ -1,0 +1,6 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/vivo_soc_codec.ko
+license:        GPL
+description:    Vivo codec module
+depends:        vivo-codec-common-node,max20328-i2c
+name:           vivo_soc_codec
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mali_prot_alloc_mt6989_r44.ko
+license:        GPL
+author:         ARM Ltd.
+alias:          of:N*T*Carm,protected-memory-allocator
+alias:          of:N*T*Carm,protected-memory-allocatorC*
+srcversion:     C72AFDC31F88CEA57063F0F
+depends:        mtk_gpufreq_wrapper
+name:           mali_prot_alloc_mt6989_r44
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

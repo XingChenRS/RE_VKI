@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/kheaders.ko
+license:        GPL v2
+author:         Joel Fernandes
+description:    Echo the kernel header artifacts used to build the kernel
+depends:        
+intree:         Y
+name:           kheaders
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

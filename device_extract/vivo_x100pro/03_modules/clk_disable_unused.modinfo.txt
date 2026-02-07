@@ -1,0 +1,7 @@
+filename:       /vendor_dlkm/lib/modules/clk-disable-unused.ko
+license:        GPL
+alias:          of:N*T*Cmediatek,clk-disable-unused
+alias:          of:N*T*Cmediatek,clk-disable-unusedC*
+depends:        
+name:           clk_disable_unused
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

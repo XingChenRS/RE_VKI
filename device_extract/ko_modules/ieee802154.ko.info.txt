@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/ieee802154.ko
+license:        GPL v2
+author:         Dmitry Eremin-Solenikov
+description:    IEEE 802.15.4 configuration interface
+depends:        
+intree:         Y
+name:           ieee802154
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

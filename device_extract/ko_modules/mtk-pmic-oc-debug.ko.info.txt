@@ -1,0 +1,15 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-pmic-oc-debug.ko
+license:        GPL v2
+author:         Jeter Chen <Jeter.Chen@mediatek.com>
+description:    MediaTek PMIC Over Current Debug
+alias:          of:N*T*Cmediatek,mt6835-oc-debug
+alias:          of:N*T*Cmediatek,mt6835-oc-debugC*
+alias:          of:N*T*Cmediatek,mt6879-oc-debug
+alias:          of:N*T*Cmediatek,mt6879-oc-debugC*
+alias:          of:N*T*Cmediatek,mt6895-oc-debug
+alias:          of:N*T*Cmediatek,mt6895-oc-debugC*
+alias:          of:N*T*Cmediatek,mt6983-oc-debug
+alias:          of:N*T*Cmediatek,mt6983-oc-debugC*
+depends:        ccci_md_all,aee_aed
+name:           mtk_pmic_oc_debug
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

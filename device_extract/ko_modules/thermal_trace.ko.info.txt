@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/thermal_trace.ko
+license:        GPL v2
+author:         Shun-Yao Yang <brian-sy.yang@mediatek.com>
+description:    Mediatek thermal trace driver
+depends:        thermal_interface
+name:           thermal_trace
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

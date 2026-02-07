@@ -1,0 +1,16 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_imgsys_isp7sp.ko
+license:        GPL v2
+author:         Johnson-CH chiu <johnson-ch.chiu@mediatek.com>
+description:    Mediatek imgsys driver
+alias:          of:N*T*Cmediatek,imgsys-isp7sp-mt6897
+alias:          of:N*T*Cmediatek,imgsys-isp7sp-mt6897C*
+alias:          of:N*T*Cmediatek,imgsys-isp7sp-mt6989
+alias:          of:N*T*Cmediatek,imgsys-isp7sp-mt6989C*
+depends:        mtk_imgsys_v4l2,mtk-smi,mtk-cmdq-drv-ext,mtk_hcp
+name:           mtk_imgsys_isp7sp
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       imgsys_dip_dbg_en:int
+parmtype:       imgsys_traw_dbg_en:int
+parmtype:       imgsys_pqdip_dbg_en:int
+parmtype:       imgsys_wpe_dbg_en:int
+parmtype:       imgsys_me_dbg_en:int

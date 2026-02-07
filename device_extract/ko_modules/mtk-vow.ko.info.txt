@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-vow.ko
+license:        GPL v2
+author:         Michael Hsiao <michael.hsiao@mediatek.com>
+description:    MediaTek VoW Driver
+depends:        scp,mtk_tinysys_ipi
+name:           mtk_vow
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

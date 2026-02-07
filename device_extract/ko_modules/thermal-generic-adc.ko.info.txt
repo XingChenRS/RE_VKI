@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/thermal-generic-adc.ko
+license:        GPL v2
+author:         Laxman Dewangan <ldewangan@nvidia.com>
+description:    Generic ADC thermal driver using IIO framework with DT
+alias:          of:N*T*Cgeneric-adc-thermal
+alias:          of:N*T*Cgeneric-adc-thermalC*
+depends:        
+intree:         Y
+name:           thermal_generic_adc
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -139,7 +139,7 @@ obj-$(CONFIG_SCF_TORTURE_TEST) += scftorture.o
 
 $(obj)/configs.o: $(obj)/config_data.gz
 
-# vivo_rsc: 开源树中无 kernel/vivo_rsc/ 目录，设备上由 vendor_dlkm 的 .ko 提供；此处移除引用以免编译失败
+# vivo_rsc not in tree (restore build)
 # obj-$(CONFIG_VIVO_RSC) += vivo_rsc/
 
 targets += config_data config_data.gz
@@ -151,11 +151,16 @@ filechk_cat = cat $<
 $(obj)/config_data: $(KCONFIG_CONFIG) FORCE
 	$(call filechk,cat)
 
-$(obj)/kheaders.o: $(obj)/kheaders_data.tar.xz
-
 quiet_cmd_genikh = CHK     $(obj)/kheaders_data.tar.xz
       cmd_genikh = $(CONFIG_SHELL) $(srctree)/kernel/gen_kheaders.sh $@
 $(obj)/kheaders_data.tar.xz: FORCE
 	$(call cmd,genikh)
+
+# O= 构建时 .incbin "kernel/kheaders_data.tar.xz" 可能从 srctree 解析，拷一份到源码树
+quiet_cmd_copy_ikh_to_srctree = COPY    kheaders_data.tar.xz -> srctree/kernel/
+      cmd_copy_ikh_to_srctree = cp -f $(obj)/kheaders_data.tar.xz $(srctree)/kernel/kheaders_data.tar.xz
+$(srctree)/kernel/kheaders_data.tar.xz: $(obj)/kheaders_data.tar.xz FORCE
+	$(call cmd,copy_ikh_to_srctree)
+$(obj)/kheaders.o: $(obj)/kheaders_data.tar.xz $(srctree)/kernel/kheaders_data.tar.xz
 
 clean-files := kheaders_data.tar.xz kheaders.md5

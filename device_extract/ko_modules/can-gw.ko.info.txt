@@ -1,0 +1,11 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/can-gw.ko
+license:        Dual BSD/GPL
+author:         Oliver Hartkopp <oliver.hartkopp@volkswagen.de>
+description:    PF_CAN netlink gateway
+alias:          can-gw
+depends:        can
+intree:         Y
+name:           can_gw
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           max_hops:maximum can-gw routing hops for CAN frames (valid values: 1-6 hops, default: 1)
+parmtype:       max_hops:uint

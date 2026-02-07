@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/ppp_generic.ko
+license:        GPL
+alias:          char-major-108-0
+alias:          rtnl-link-ppp
+alias:          devname:ppp
+depends:        slhc
+intree:         Y
+name:           ppp_generic
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

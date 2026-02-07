@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/sar_power.ko
+license:        GPL v2
+author:         Kangkai Deng <dengkangkai@vivo.com>
+description:    SAR POWER sarpower driver
+depends:        sarpower_class
+name:           sar_power
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

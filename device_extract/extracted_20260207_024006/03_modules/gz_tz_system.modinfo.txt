@@ -1,0 +1,7 @@
+filename:       /vendor_dlkm/lib/modules/gz_tz_system.ko
+license:        GPL v2
+alias:          of:N*T*Cmediatek,trusty-tz
+alias:          of:N*T*Cmediatek,trusty-tzC*
+depends:        gz_ipc_mod,gz_trusty_mod
+name:           gz_tz_system
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

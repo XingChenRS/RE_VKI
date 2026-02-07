@@ -1,0 +1,8 @@
+filename:       /vendor_dlkm/lib/modules/c2ps_perf_ioctl.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    MediaTek C2PS c2ps_perf_ioctl
+depends:        
+name:           c2ps_perf_ioctl
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       debug_log_on:int

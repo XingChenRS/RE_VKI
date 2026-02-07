@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_md_power_throttling.ko
+license:        GPL
+author:         Samuel Hsieh
+description:    MTK modem power throttling driver
+alias:          of:N*T*Cmediatek,md-power-throttling
+alias:          of:N*T*Cmediatek,md-power-throttlingC*
+depends:        mtk_low_battery_throttling,mtk_battery_oc_throttling,pmic_lbat_service,ccci_md_all
+name:           mtk_md_power_throttling
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

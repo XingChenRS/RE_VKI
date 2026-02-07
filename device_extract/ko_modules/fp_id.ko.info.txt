@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/fp_id.ko
+license:        GPL
+author:         Xiaot BBK Corporation
+srcversion:     B69DFEA54D9FD400A058202
+depends:        
+name:           fp_id
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

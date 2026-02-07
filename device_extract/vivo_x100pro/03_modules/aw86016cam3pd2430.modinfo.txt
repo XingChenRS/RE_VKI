@@ -1,0 +1,10 @@
+filename:       /vendor_dlkm/lib/modules/aw86016cam3pd2430.ko
+license:        GPL v2
+author:         Po-Hao Huang <Po-Hao.Huang@mediatek.com>
+description:    AW86016CAM3PD2430 VCM driver
+alias:          i2c:aw86016cam3pd2430
+alias:          of:N*T*Cmediatek,aw86016cam3pd2430
+alias:          of:N*T*Cmediatek,aw86016cam3pd2430C*
+depends:        
+name:           aw86016cam3pd2430
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

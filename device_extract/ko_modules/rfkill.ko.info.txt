@@ -1,0 +1,13 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/rfkill.ko
+license:        GPL
+author:         Ivo van Doorn <IvDoorn@gmail.com>
+author:         Johannes Berg <johannes@sipsolutions.net>
+description:    RF switch support
+alias:          char-major-10-242
+alias:          devname:rfkill
+depends:        
+intree:         Y
+name:           rfkill
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           default_state:Default initial state for all radio types, 0 = radio off
+parmtype:       default_state:uint

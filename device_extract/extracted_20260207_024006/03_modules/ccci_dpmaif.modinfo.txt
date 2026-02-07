@@ -1,0 +1,7 @@
+filename:       /vendor_dlkm/lib/modules/ccci_dpmaif.ko
+license:        GPL
+author:         ccci
+description:    ccci dpmaif driver
+depends:        ccci_util_lib,mtk-dvfsrc,ccmni,ccci_md_all,irq-dbg,mrdump
+name:           ccci_dpmaif
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

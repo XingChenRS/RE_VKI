@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_bp_thl.ko
+license:        GPL
+author:         Samuel Hsieh
+description:    MTK battery percent throttling driver
+alias:          of:N*T*Cmediatek,mtk-bp-thl
+alias:          of:N*T*Cmediatek,mtk-bp-thlC*
+depends:        
+name:           mtk_bp_thl
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

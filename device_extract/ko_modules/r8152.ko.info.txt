@@ -1,0 +1,43 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/r8152.ko
+license:        GPL
+author:         Realtek linux nic maintainers <nic_swsd@realtek.com>
+description:    Realtek RTL8152/RTL8153 Based USB Ethernet Adapters
+firmware:       rtl_nic/rtl8153a-2.fw
+firmware:       rtl_nic/rtl8153a-3.fw
+firmware:       rtl_nic/rtl8153a-4.fw
+firmware:       rtl_nic/rtl8153b-2.fw
+firmware:       rtl_nic/rtl8153c-1.fw
+firmware:       rtl_nic/rtl8156a-2.fw
+firmware:       rtl_nic/rtl8156b-2.fw
+alias:          usb:v0BDAp8050d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v0BDAp8053d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v0BDAp8152d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v0BDAp8153d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v0BDAp8155d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v0BDAp8156d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v045Ep07ABd*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v045Ep07C6d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v045Ep0927d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v045Ep0C5Ed*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v04E8pA101d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v17EFp304Fd*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v17EFp3054d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v17EFp3062d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v17EFp3069d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v17EFp3082d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v17EFp3098d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v17EFp7205d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v17EFp720Cd*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v17EFp7214d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v17EFp721Ed*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v17EFpA387d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v13B1p0041d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v0955p09FFd*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v2357p0601d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v2001pB301d*dc*dsc*dp*ic*isc*ip*in*
+alias:          usb:v0B05p1976d*dc*dsc*dp*ic*isc*ip*in*
+srcversion:     6277236C082D7002ADD4485
+depends:        mii
+intree:         Y
+name:           r8152
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

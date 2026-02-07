@@ -1,0 +1,13 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_perf_ioctl_magt.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    MediaTek MAGT ioctl
+depends:        
+name:           mtk_perf_ioctl_magt
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       thermal_aware_threshold:int
+parmtype:       fpsdrop_aware_threshold:int
+parmtype:       advice_bat_avg_current:int
+parmtype:       advice_bat_max_current:int
+parmtype:       targetfps_throttling_temp:int
+parmtype:       thermal_aware_light_threshold:int

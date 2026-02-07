@@ -1,0 +1,12 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/trace_mmstat.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    MediaTek mmstat tracer
+depends:        mtk_gpu_hal
+name:           trace_mmstat
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       min_adj:int
+parmtype:       max_adj:int
+parmtype:       limit_pid:int
+parmtype:       native_pid:int
+parmtype:       timer_intval:ulong

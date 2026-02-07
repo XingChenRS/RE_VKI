@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_gpufreq_mt6989.ko
+license:        GPL
+description:    MediaTek GPU-DVFS platform driver
+alias:          of:N*T*Cmediatek,gpufreq
+alias:          of:N*T*Cmediatek,gpufreqC*
+depends:        mtk_gpufreq_wrapper,mrdump,mtk_gpu_hal
+name:           mtk_gpufreq_mt6989
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

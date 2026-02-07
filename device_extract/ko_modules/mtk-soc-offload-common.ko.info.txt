@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-soc-offload-common.ko
+license:        GPL v2
+description:    MediaTek Offload Driver
+alias:          of:N*T*Cmediatek,mt-soc-offload-common
+alias:          of:N*T*Cmediatek,mt-soc-offload-commonC*
+depends:        snd-soc-audiodsp-common,mtk-afe-external,audio_ipi
+name:           mtk_soc_offload_common
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

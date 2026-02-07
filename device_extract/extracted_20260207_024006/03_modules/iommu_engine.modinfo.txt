@@ -1,0 +1,6 @@
+filename:       /vendor_dlkm/lib/modules/iommu_engine.ko
+license:        GPL
+description:    MediaTek IOMMU test engine
+depends:        
+name:           iommu_engine
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

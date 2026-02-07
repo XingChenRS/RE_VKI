@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/usb_offload.ko
+license:        GPL
+description:    MediaTek USB Offload Driver
+alias:          of:N*T*Cmediatek,usb-offload
+alias:          of:N*T*Cmediatek,usb-offloadC*
+depends:        audio_ipi,usb_boost,mtu3,adsp,clk-common,xhci-mtk-hcd-v2,snd-soc-mtk-common
+name:           usb_offload
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           usb_offload_log:Enable/Disable USB Offload log
+parmtype:       usb_offload_log:uint

@@ -1,0 +1,11 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/zram.ko
+license:        Dual BSD/GPL
+author:         Nitin Gupta <ngupta@vflare.org>
+description:    Compressed RAM Block Device
+depends:        zsmalloc
+intree:         Y
+name:           zram
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           num_devices:Number of pre-created zram devices
+parmtype:       ezram_feature:uint
+parmtype:       num_devices:uint

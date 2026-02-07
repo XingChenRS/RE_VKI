@@ -1,0 +1,17 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/aqc111.ko
+license:        GPL
+description:    Aquantia AQtion USB to 5/2.5GbE Controllers
+alias:          usb:v2ECApC101d*dc*dsc*dp*icFFisc*ip*in*
+alias:          usb:v2ECApC101d*dc*dsc*dp*ic02isc06ip00in*
+alias:          usb:v0B95p2790d*dc*dsc*dp*icFFisc*ip*in*
+alias:          usb:v0B95p2790d*dc*dsc*dp*ic02isc06ip00in*
+alias:          usb:v0B95p2791d*dc*dsc*dp*icFFisc*ip*in*
+alias:          usb:v0B95p2791d*dc*dsc*dp*ic02isc06ip00in*
+alias:          usb:v20F4pE05Ad*dc*dsc*dp*icFFisc*ip*in*
+alias:          usb:v20F4pE05Ad*dc*dsc*dp*ic02isc06ip00in*
+alias:          usb:v1C04p0015d*dc*dsc*dp*icFFisc*ip*in*
+alias:          usb:v1C04p0015d*dc*dsc*dp*ic02isc06ip00in*
+depends:        usbnet
+intree:         Y
+name:           aqc111
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,11 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/can.ko
+license:        Dual BSD/GPL
+author:         Urs Thuermann <urs.thuermann@volkswagen.de>, Oliver Hartkopp <oliver.hartkopp@volkswagen.de>
+description:    Controller Area Network PF_CAN core
+alias:          net-pf-29
+depends:        
+intree:         Y
+name:           can
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           stats_timer:enable timer for statistics (default:on)
+parmtype:       stats_timer:int

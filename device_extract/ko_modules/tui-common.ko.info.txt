@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/tui-common.ko
+license:        GPL
+author:         mediatek
+description:    tui common
+depends:        
+name:           tui_common
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

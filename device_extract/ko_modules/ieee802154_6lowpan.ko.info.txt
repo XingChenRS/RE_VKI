@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/ieee802154_6lowpan.ko
+license:        GPL
+alias:          rtnl-link-lowpan
+depends:        6lowpan,ieee802154
+intree:         Y
+name:           ieee802154_6lowpan
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

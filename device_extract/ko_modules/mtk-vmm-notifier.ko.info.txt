@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-vmm-notifier.ko
+license:        GPL v2
+author:         Yuan Jung Kuo <yuan-jung.kuo@mediatek.com>
+description:    MTK VMM notifier driver
+depends:        mtk-mmdvfs-v3
+name:           mtk_vmm_notifier
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

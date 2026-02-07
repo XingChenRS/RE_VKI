@@ -1,0 +1,11 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/camera_eeprom_v4l2.ko
+license:        GPL v2
+author:         Mediatek
+description:    camera eeprom driver
+alias:          of:N*T*Cmediatek,camera_eeprom
+alias:          of:N*T*Cmediatek,camera_eepromC*
+depends:        
+name:           camera_eeprom_v4l2
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           cam_eeprom_debug:camera_eeprom_debug
+parmtype:       cam_eeprom_debug:uint

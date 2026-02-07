@@ -1,0 +1,26 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/snd-soc-tfa9874.ko
+license:        GPL
+description:    ASoC TFA98XX driver
+alias:          i2c:tfa98xx
+depends:        mtk-sp-spk-amp,vivo-codec-common-node
+name:           snd_soc_tfa9874
+name:           %s!
+
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           fw_name:TFA98xx DSP firmware (container file) name.
+parm:           trace_level:TFA98xx debug trace level (0=off, bits:1=verbose,2=regdmesg,3=regftrace,4=timing).
+parm:           no_start:do not start the work queue; for debugging via user
+
+parm:           no_reset:do not use the reset line; for debugging via user
+
+parm:           pcm_sample_format:PCM sample format: 0=S16_LE, 1=S24_LE, 2=S32_LE, 3=dynamic
+
+parm:           pcm_no_constraint:do not use constraints for PCM parameters
+
+parmtype:       fw_name:charp
+parmtype:       trace_level:int
+parmtype:       dflt_prof_name:charp
+parmtype:       no_start:int
+parmtype:       no_reset:int
+parmtype:       pcm_sample_format:int
+parmtype:       pcm_no_constraint:int

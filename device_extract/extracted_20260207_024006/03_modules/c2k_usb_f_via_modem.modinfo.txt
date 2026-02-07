@@ -1,0 +1,6 @@
+filename:       /vendor_dlkm/lib/modules/c2k_usb_f_via_modem.ko
+license:        GPL
+alias:          usbfunc:via_modem
+depends:        c2k_usb
+name:           c2k_usb_f_via_modem
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

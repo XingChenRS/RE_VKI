@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/cpuqos_v3.ko
+license:        GPL
+author:         Jing-Ting Wu
+depends:        mtk_slbc
+name:           %s", REC->pid, REC->comm
+name:           %s", REC->pid, REC->comm
+name:           cpuqos_v3
+name:           %s
+
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

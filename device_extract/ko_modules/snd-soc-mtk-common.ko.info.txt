@@ -1,0 +1,31 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/snd-soc-mtk-common.ko
+license:        GPL v2
+license:        GPL v2
+license:        GPL v2
+license:        GPL
+license:        GPL v2
+license:        GPL v2
+license:        GPL v2
+license:        GPL v2
+author:         Garlic Tseng <garlic.tseng@mediatek.com>
+author:         Garlic Tseng <garlic.tseng@mediatek.com>
+author:         Chih-Hao Chang <chih-hao.chang@mediatek.com>
+author:         Yu-Syuan Cai <yusyuan.cai@mediatek.com>
+author:         Kai Chieh Chuang <kaichieh.chuang@mediatek.com>
+author:         Kai Chieh Chuang <kaichieh.chuang@mediatek.com>
+author:         Kai Chieh Chuang <kaichieh.chuang@mediatek.com>
+description:    Mediatek simple platform driver
+description:    Mediatek simple fe dai operator
+description:    Mediatek Smart Phone PCM Operation
+description:    Mediatek USB offload ops
+description:    Mediatek uSip memory control
+description:    Mediatek sram manager
+description:    Mediatek Smart Phone PCM Operation
+description:    Mediatek AFE Debug
+depends:        mtk-afe-external,snd-soc-audiodsp-common,aee_aed,mtk-scp-ultra,adsp,audio_ipi,ccci_md_all,ccci_util_lib
+name:           snd_soc_mtk_common
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           audio_usb_offload_log:Enable/Disable allocate audio USB Offload log
+parm:           use_dram_only:Enable/Disable allocate audio USB Offload SRAM
+parmtype:       audio_usb_offload_log:uint
+parmtype:       use_dram_only:uint

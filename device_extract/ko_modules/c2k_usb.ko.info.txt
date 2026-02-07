@@ -1,0 +1,18 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/c2k_usb.ko
+license:        GPL
+license:        GPL
+author:         Juelun Guo <jlguo@via-telecom.com>
+author:         Juelun Guo <jlguo@via-telecom.com>
+description:    Rawbulk Gadget - transport data from CP to Gadget
+description:    Rawbulk Driver - perform bypass for QingCheng
+srcversion:     C82E7C38185DEC65EE75D15
+depends:        ccci_md_all
+name:           c2k_usb
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           dump_mask:Set data dump mask for each transfers
+parmtype:       c2k_usb_dbg_level:uint
+parmtype:       dump_mask:uint
+parmtype:       full_dump:uint
+parmtype:       max_cache_cnt:uint
+parmtype:       base_cache_cnt:uint
+parmtype:       drop_check_interval:uint

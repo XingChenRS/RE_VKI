@@ -1,0 +1,31 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_c2ps.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    MediaTek C2PS
+depends:        cpufreq_sugov_ext,c2ps_perf_ioctl,scheduler
+name:           mtk_c2ps
+name:           %s_%d util=%d freq=%ld
+
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       picked_wl_table:int
+parmtype:       background_monitor_duration:int
+parmtype:       proc_time_window_size:int
+parmtype:       debug_log_on:int
+parmtype:       background_idlerate_alert:int
+parmtype:       background_idlerate_dangerous:int
+parmtype:       recovery_uclamp_max_immediately:bool
+parmtype:       need_boost_uclamp_max:bool
+parmtype:       c2ps_regulator_process_mode:int
+parmtype:       c2ps_remote_monitor_proc_time:int
+parmtype:       c2ps_remote_monitor_uclamp:int
+parmtype:       c2ps_remote_monitor_task:string
+parmtype:       c2ps_regulator_debug_max_uclamp:int
+parmtype:       c2ps_regulator_debug_min_uclamp:int
+parmtype:       c2ps_regulator_base_update_uclamp:int
+parmtype:       c2ps_uclamp_up_margin:int
+parmtype:       c2ps_uclamp_down_margin:int
+parmtype:       c2ps_regulator_bg_update_uclamp:int
+parmtype:       c2ps_regulator_bg_update_uclamp_fast:int
+parmtype:       c2ps_uclamp_bg_up_margin_cluster0:int
+parmtype:       c2ps_uclamp_bg_up_margin_cluster1:int
+parmtype:       c2ps_uclamp_bg_up_margin_cluster2:int

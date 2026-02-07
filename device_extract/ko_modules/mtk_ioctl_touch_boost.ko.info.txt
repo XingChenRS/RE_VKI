@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_ioctl_touch_boost.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    MediaTek TOUCH_BOOST perf_ioctl
+depends:        
+name:           mtk_ioctl_touch_boost
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

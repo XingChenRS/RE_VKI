@@ -1,0 +1,10 @@
+filename:       /vendor_dlkm/lib/modules/dw9781ois.ko
+license:        GPL v2
+author:         Sam Hung <Sam.Hung@mediatek.com>
+description:    DW9781OIS VCM driver
+alias:          i2c:dw9781ois
+alias:          of:N*T*Cmediatek,dw9781ois
+alias:          of:N*T*Cmediatek,dw9781oisC*
+depends:        hf_manager
+name:           dw9781ois
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

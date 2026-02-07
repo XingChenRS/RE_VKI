@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-pwm.ko
+license:        GPL
+author:         Chun-Hung.wu
+description:     This module is used for chip of mediatek
+depends:        
+name:           mtk_pwm
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/vfp_spi.ko
+license:        GPL
+author:         vivo fingerprint team
+description:    vivo mtk spi driver
+alias:          spi:vivo mtkfp_spi
+alias:          of:N*T*Cmediatek,fingerprint
+alias:          of:N*T*Cmediatek,fingerprintC*
+depends:        spi-mt65xx,fp_id
+name:           vfp_spi
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

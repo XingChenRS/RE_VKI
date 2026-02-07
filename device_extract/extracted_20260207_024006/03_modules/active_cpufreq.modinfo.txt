@@ -1,0 +1,7 @@
+filename:       /vendor_dlkm/lib/modules/active_cpufreq.ko
+license:        GPL
+author:         xieminsheng
+description:    scheduler big data
+depends:        cpufreq_sugov_ext
+name:           active_cpufreq
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

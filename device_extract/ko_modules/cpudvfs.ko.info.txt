@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/cpudvfs.ko
+license:        GPL v2
+author:         Tungchen Shih <tungchen.shih@mediatek.com>
+description:    MTK CPU DVFS Platform Driver Helper v0.1.1
+depends:        cpufreq_sugov_ext
+name:           cpudvfs
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

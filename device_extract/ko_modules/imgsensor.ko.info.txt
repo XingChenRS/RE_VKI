@@ -1,0 +1,17 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/imgsensor.ko
+license:        GPL v2
+alias:          i2c:imgsensor
+alias:          of:N*T*Cmediatek,imgsensor
+alias:          of:N*T*Cmediatek,imgsensorC*
+depends:        aee_aed,camera_eeprom_v4l2,mtk_ccu_mssv,imgsensor-glue
+name:           imgsensor
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           sensor_debug:imgsensor_debug
+parm:           ae_ctrl_disable_debug:for vivo ae debug
+parm:           adaptor_trace_en:adaptor_trace_en
+parmtype:       poweroff_timeout_ms:uint
+parmtype:       sensor_debug:uint
+parmtype:       set_ctrl_unlock:uint
+parmtype:       parallel_setting_enable:bool
+parmtype:       ae_ctrl_disable_debug:int
+parmtype:       adaptor_trace_en:uint

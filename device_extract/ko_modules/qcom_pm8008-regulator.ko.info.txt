@@ -1,0 +1,6 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/qcom_pm8008-regulator.ko
+license:        GPL v2
+description:    QPNP PM8008 PMIC Regulator Driver
+depends:        
+name:           qcom_pm8008_regulator
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

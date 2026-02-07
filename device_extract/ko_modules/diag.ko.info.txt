@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/diag.ko
+license:        Dual BSD/GPL
+alias:          net-pf-16-proto-4-type-30
+depends:        tipc
+intree:         Y
+name:           diag
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

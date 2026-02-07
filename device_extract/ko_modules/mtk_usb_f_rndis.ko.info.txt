@@ -1,0 +1,19 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_usb_f_rndis.ko
+license:        GPL
+author:         David Brownell
+alias:          usbfunc:mtk_rndis
+depends:        mtk_u_ether
+name:           mtk_usb_f_rndis
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           rndis_dl_max_pkt_per_xfer:Maximum packets per transfer for DL aggregation
+parm:           rndis_ul_max_pkt_per_xfer:Maximum packets per transfer for UL aggregation
+parm:           f_rndis_debug:f_rndis debug flag
+parm:           rndis_ul_max_pkt_per_xfer_rcvd:Max num of REMOTE_NDIS_PACKET_MSGs received in a single transfer
+parm:           rndis_ul_max_xfer_size_rcvd:Max size of bus transfer received
+parm:           rndis_debug:enable debugging
+parmtype:       rndis_dl_max_pkt_per_xfer:uint
+parmtype:       rndis_ul_max_pkt_per_xfer:uint
+parmtype:       f_rndis_debug:uint
+parmtype:       rndis_ul_max_pkt_per_xfer_rcvd:int
+parmtype:       rndis_ul_max_xfer_size_rcvd:int
+parmtype:       rndis_debug:uint

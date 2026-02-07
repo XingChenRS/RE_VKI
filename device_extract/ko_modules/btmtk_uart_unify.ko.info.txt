@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/btmtk_uart_unify.ko
+license:        Dual BSD/GPL
+license:        GPL
+description:    Mediatek Bluetooth Driver
+srcversion:     4E805460DFE068D7B6EEC2D
+depends:        8250_mtk,conninfra,connfem,mtk_disp_notify,connadp,bluetooth
+name:           btmtk_uart_unify
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       BT_major:uint
+parmtype:       btmtk_intf_num:int

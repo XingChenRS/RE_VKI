@@ -1,0 +1,7 @@
+filename:       /vendor_dlkm/lib/modules/event_track.ko
+license:        GPL
+author:         Ronny<xiezhulin@vivo.com>
+description:    Event Tracking
+depends:        
+name:           event_track
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

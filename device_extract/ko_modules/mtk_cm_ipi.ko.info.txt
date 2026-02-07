@@ -1,0 +1,6 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_cm_ipi.ko
+license:        GPL
+description:    CM ipi Driver v0.1
+depends:        tinysys-scmi
+name:           mtk_cm_ipi
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

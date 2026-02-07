@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-lpm-plat-v1.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    MTK low power platform module
+depends:        mtk-lpm-dbg-common-v2,mtk-lpm
+name:           mtk_lpm_plat_v1
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

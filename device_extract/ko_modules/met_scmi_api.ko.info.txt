@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/met_scmi_api.ko
+license:        GPL
+author:         DT_DM5
+description:    MET_CORE
+depends:        met,tinysys-scmi
+name:           met_scmi_api
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

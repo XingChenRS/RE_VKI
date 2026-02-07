@@ -1,0 +1,12 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/snd-soc-mt6681.ko
+license:        GPL
+author:         KaiChieh Chuang <kaichieh.chuang@mediatek.com>
+author:         Eason Yen <eason.yen@mediatek.com>
+author:         Shane Chien <shane.chien@mediatek.com>
+author:         Ting-Fang Hou <Ting-Fang.Hou@mediatek.com>
+description:    mt6681 ALSA SoC codec driver
+alias:          of:N*T*Cmediatek,mt6681-sound
+alias:          of:N*T*Cmediatek,mt6681-soundC*
+depends:        mt6685-audclk,mt6681-core,i2c-mt65xx,mt6681-accdet
+name:           snd_soc_mt6681
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

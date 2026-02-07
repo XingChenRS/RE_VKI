@@ -1,0 +1,11 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/thermal_interface.ko
+license:        GPL v2
+author:         Henry Huang <henry.huang@mediatek.com>
+description:    Mediatek thermal interface driver
+alias:          of:N*T*Cmediatek,therm_intf
+alias:          of:N*T*Cmediatek,therm_intfC*
+depends:        mediatek-drm,leds-mtk,mtk_gpufreq_wrapper,mtk_dramc
+name:           %s, ref_num=%d op=%d
+
+name:           thermal_interface
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

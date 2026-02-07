@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-ips-helper.ko
+license:        GPL
+author:         Arvin Wang<arvin.wang@mediatek.com>
+description:    MTK IPS driver
+depends:        
+name:           mtk_ips_helper
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

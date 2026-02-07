@@ -1,0 +1,121 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/apusys.ko
+license:        GPL
+license:        GPL v2
+author:         SPT1
+description:    MTK APUSys Driver
+description:    MediaTek apu rpmsg driver
+alias:          of:N*T*Cmtk,edma
+alias:          of:N*T*Cmtk,edmaC*
+alias:          of:N*T*Cmtk,edma-sub
+alias:          of:N*T*Cmtk,edma-subC*
+alias:          of:N*T*Cmtk,edma-sub-v20
+alias:          of:N*T*Cmtk,edma-sub-v20C*
+alias:          of:N*T*Cmtk,edma-sub-v30
+alias:          of:N*T*Cmtk,edma-sub-v30C*
+alias:          of:N*T*Cmediatek,_mt6893-reviser
+alias:          of:N*T*Cmediatek,_mt6893-reviserC*
+alias:          of:N*T*Cmediatek,_mt6885-reviser
+alias:          of:N*T*Cmediatek,_mt6885-reviserC*
+alias:          of:N*T*Cmediatek,_mt6873-reviser
+alias:          of:N*T*Cmediatek,_mt6873-reviserC*
+alias:          of:N*T*Cmediatek,_mt6853-reviser
+alias:          of:N*T*Cmediatek,_mt6853-reviserC*
+alias:          of:N*T*Cmediatek,_rv-reviser-mt6886
+alias:          of:N*T*Cmediatek,_rv-reviser-mt6886C*
+alias:          of:N*T*Cmediatek,_rv-reviser
+alias:          of:N*T*Cmediatek,_rv-reviserC*
+alias:          of:N*T*Cmediatek,rv-apummu
+alias:          of:N*T*Cmediatek,rv-apummuC*
+alias:          of:N*T*Cmediatek,rv-apummu-mt6989
+alias:          of:N*T*Cmediatek,rv-apummu-mt6989C*
+alias:          of:N*T*Cmediatek,mt6853-mnoc
+alias:          of:N*T*Cmediatek,mt6853-mnocC*
+alias:          of:N*T*Cmediatek,mt6873-mnoc
+alias:          of:N*T*Cmediatek,mt6873-mnocC*
+alias:          of:N*T*Cmediatek,mt6885-mnoc
+alias:          of:N*T*Cmediatek,mt6885-mnocC*
+alias:          of:N*T*Cmediatek,mt6893-mnoc
+alias:          of:N*T*Cmediatek,mt6893-mnocC*
+alias:          of:N*T*Cmediatek,mt6853-debug
+alias:          of:N*T*Cmediatek,mt6853-debugC*
+alias:          of:N*T*Cmediatek,mt6873-debug
+alias:          of:N*T*Cmediatek,mt6873-debugC*
+alias:          of:N*T*Cmediatek,mt6885-debug
+alias:          of:N*T*Cmediatek,mt6885-debugC*
+alias:          of:N*T*Cmediatek,_mt6779-mdla
+alias:          of:N*T*Cmediatek,_mt6779-mdlaC*
+alias:          of:N*T*Cmediatek,_mt6873-mdla
+alias:          of:N*T*Cmediatek,_mt6873-mdlaC*
+alias:          of:N*T*Cmediatek,_mt6885-mdla
+alias:          of:N*T*Cmediatek,_mt6885-mdlaC*
+alias:          of:N*T*Cmediatek,_mt6893-mdla
+alias:          of:N*T*Cmediatek,_mt6893-mdlaC*
+alias:          of:N*T*Cmediatek,_mt6877-mdla
+alias:          of:N*T*Cmediatek,_mt6877-mdlaC*
+alias:          of:N*T*Cmediatek,_mt8195-mdla
+alias:          of:N*T*Cmediatek,_mt8195-mdlaC*
+alias:          of:N*T*Cmediatek,_mdla-rv
+alias:          of:N*T*Cmediatek,_mdla-rvC*
+alias:          of:N*T*Cmediatek,mt6885-vpu_core
+alias:          of:N*T*Cmediatek,mt6885-vpu_coreC*
+alias:          of:N*T*Cmediatek,mt6873-vpu_core
+alias:          of:N*T*Cmediatek,mt6873-vpu_coreC*
+alias:          of:N*T*Cmediatek,mt6853-vpu_core
+alias:          of:N*T*Cmediatek,mt6853-vpu_coreC*
+alias:          of:N*T*Cmediatek,mt6893-vpu_core
+alias:          of:N*T*Cmediatek,mt6893-vpu_coreC*
+alias:          of:N*T*Cmediatek,mt6785-vpu_core
+alias:          of:N*T*Cmediatek,mt6785-vpu_coreC*
+alias:          of:N*T*Cmediatek,mt6779-vpu_core
+alias:          of:N*T*Cmediatek,mt6779-vpu_coreC*
+alias:          of:N*T*Cmediatek,mt8188-vpu_core
+alias:          of:N*T*Cmediatek,mt8188-vpu_coreC*
+alias:          of:N*T*Cmediatek,mt6885-apusys_devapc
+alias:          of:N*T*Cmediatek,mt6885-apusys_devapcC*
+alias:          of:N*T*Cmediatek,mt6873-apusys_devapc
+alias:          of:N*T*Cmediatek,mt6873-apusys_devapcC*
+alias:          of:N*T*Cmediatek,mt6853-apusys_devapc
+alias:          of:N*T*Cmediatek,mt6853-apusys_devapcC*
+alias:          of:N*T*Cmediatek,mt6893-apusys_devapc
+alias:          of:N*T*Cmediatek,mt6893-apusys_devapcC*
+alias:          of:N*T*Cmediatek,apusys_sw_logger
+alias:          of:N*T*Cmediatek,apusys_sw_loggerC*
+alias:          of:N*T*Cmediatek,_mt6983-mvpu
+alias:          of:N*T*Cmediatek,_mt6983-mvpuC*
+alias:          of:N*T*Cmediatek,_mt8139-mvpu
+alias:          of:N*T*Cmediatek,_mt8139-mvpuC*
+alias:          of:N*T*Cmediatek,_mt6879-mvpu
+alias:          of:N*T*Cmediatek,_mt6879-mvpuC*
+alias:          of:N*T*Cmediatek,_mt6895-mvpu
+alias:          of:N*T*Cmediatek,_mt6895-mvpuC*
+alias:          of:N*T*Cmediatek,_mt6985-mvpu
+alias:          of:N*T*Cmediatek,_mt6985-mvpuC*
+alias:          of:N*T*Cmediatek,_mt6886-mvpu
+alias:          of:N*T*Cmediatek,_mt6886-mvpuC*
+alias:          of:N*T*Cmediatek,_mt6897-mvpu
+alias:          of:N*T*Cmediatek,_mt6897-mvpuC*
+alias:          of:N*T*Cmediatek,_mt6989-mvpu
+alias:          of:N*T*Cmediatek,_mt6989-mvpuC*
+alias:          of:N*T*Cmediatek,apusys-aov-smmu-device
+alias:          of:N*T*Cmediatek,apusys-aov-smmu-deviceC*
+alias:          of:N*T*Cmediatek,secure-apu-smmu-device
+alias:          of:N*T*Cmediatek,secure-apu-smmu-deviceC*
+depends:        apu_top,aee_aed,mtk_slbc,mtk_qos,mtk_peak_power_budget,mrdump,iommu_debug
+name:           apusys
+name:           %s
+
+name:           %s, src=%d
+
+name:           %s, src=%d
+
+name:           %s
+
+name:           %s, src=%d
+
+name:           %s, src=%d
+
+name:           %s
+
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           apu_pbm_func_sel:trigger apu pbm func by parameter
+parmtype:       apu_pbm_func_sel:int

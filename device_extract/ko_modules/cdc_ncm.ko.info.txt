@@ -1,0 +1,21 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/cdc_ncm.ko
+license:        Dual BSD/GPL
+author:         Hans Petter Selasky
+description:    USB CDC NCM host driver
+alias:          usb:v0BDBp*d*dc*dsc*dp*ic02isc0Dip00in*
+alias:          usb:v1BC7p0036d*dc*dsc*dp*ic02isc0Dip00in*
+alias:          usb:v413Cp81BBd*dc*dsc*dp*ic02isc0Dip00in*
+alias:          usb:v413Cp81BCd*dc*dsc*dp*ic02isc0Dip00in*
+alias:          usb:v413Cp*d*dc*dsc*dp*ic02isc0Dip00in*
+alias:          usb:v0930p*d*dc*dsc*dp*ic02isc0Dip00in*
+alias:          usb:v12D1p*d*dc*dsc*dp*ic02isc0Dip00in*
+alias:          usb:v1519p0443d*dc*dsc*dp*ic02isc0Dip00in*
+alias:          usb:v1546p1010d*dc*dsc*dp*ic02isc0Dip00in*
+alias:          usb:v17E9p*d*dc*dsc*dp*ic02isc0Dip00in*
+alias:          usb:v*p*d*dc*dsc*dp*ic02isc0Dip00in*
+depends:        usbnet,cdc_ether
+intree:         Y
+name:           cdc_ncm
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parm:           prefer_mbim:Prefer MBIM setting on dual NCM/MBIM functions
+parmtype:       prefer_mbim:bool

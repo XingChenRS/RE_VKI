@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/max20328-i2c.ko
+license:        GPL v2
+description:    MAX20328 I2C driver
+alias:          i2c:max20328b
+depends:        
+name:           max20328_i2c
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

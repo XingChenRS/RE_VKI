@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/gt9764vcam0pd2430.ko
+license:        GPL v2
+author:         Po-Hao Huang <Po-Hao.Huang@mediatek.com>
+description:    GT9764VCAM0PD2430 VCM driver
+alias:          i2c:gt9764vcam0pd2430
+alias:          of:N*T*Cmediatek,gt9764vcam0pd2430
+alias:          of:N*T*Cmediatek,gt9764vcam0pd2430C*
+depends:        
+name:           gt9764vcam0pd2430
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

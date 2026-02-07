@@ -1,0 +1,6 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/c2k_usb_f_via_atc.ko
+license:        GPL
+alias:          usbfunc:via_atc
+depends:        c2k_usb
+name:           c2k_usb_f_via_atc
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

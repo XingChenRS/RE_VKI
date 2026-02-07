@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/btbcm.ko
+license:        GPL
+author:         Marcel Holtmann <marcel@holtmann.org>
+description:    Bluetooth support for Broadcom devices ver 0.1
+srcversion:     AB4AD4986925484D817AA4E
+depends:        bluetooth
+intree:         Y
+name:           btbcm
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

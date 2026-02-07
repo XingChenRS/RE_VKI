@@ -1,0 +1,20 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/ax88179_178a.ko
+license:        GPL
+description:    ASIX AX88179/178A based USB 3.0/2.0 Gigabit Ethernet Devices
+alias:          usb:v0B95p1790d*dc*dsc*dp*icFFiscFFip00in*
+alias:          usb:v0B95p178Ad*dc*dsc*dp*icFFiscFFip00in*
+alias:          usb:v04B4p3610d*dc*dsc*dp*icFFiscFFip00in*
+alias:          usb:v2001p4A00d*dc*dsc*dp*icFFiscFFip00in*
+alias:          usb:v0DF6p0072d*dc*dsc*dp*icFFiscFFip00in*
+alias:          usb:v04E8pA100d*dc*dsc*dp*icFFiscFFip00in*
+alias:          usb:v17EFp304Bd*dc*dsc*dp*icFFiscFFip00in*
+alias:          usb:v050Dp0128d*dc*dsc*dp*icFFiscFFip00in*
+alias:          usb:v0930p0A13d*dc*dsc*dp*icFFiscFFip00in*
+alias:          usb:v0711p0179d*dc*dsc*dp*icFFiscFFip00in*
+alias:          usb:v07C9p000Ed*dc*dsc*dp*icFFiscFFip00in*
+alias:          usb:v07C9p000Fd*dc*dsc*dp*icFFiscFFip00in*
+alias:          usb:v07C9p0010d*dc*dsc*dp*icFFiscFFip00in*
+depends:        usbnet,mii
+intree:         Y
+name:           ax88179_178a
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

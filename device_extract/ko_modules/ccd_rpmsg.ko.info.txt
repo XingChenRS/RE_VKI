@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/ccd_rpmsg.ko
+license:        GPL v2
+license:        GPL v2
+description:    MediaTek ccd rpmsg driver
+description:    MediaTek ccd IPI interface
+depends:        
+name:           ccd_rpmsg
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

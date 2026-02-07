@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-smmuv3-lmu.ko
+license:        GPL
+description:    Latency Meter Unit driver for MTK SMMUv3
+alias:          of:N*T*Cmtk,smmu-v3-lmu
+alias:          of:N*T*Cmtk,smmu-v3-lmuC*
+depends:        smmu_secure
+name:           mtk_smmuv3_lmu
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

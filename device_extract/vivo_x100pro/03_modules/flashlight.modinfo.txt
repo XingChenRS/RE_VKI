@@ -1,0 +1,9 @@
+filename:       /vendor_dlkm/lib/modules/flashlight.ko
+license:        GPL
+author:         Simon Wang <Simon-TCH.Wang@mediatek.com>
+description:    MTK Flashlight Core Driver
+alias:          of:N*T*Cmediatek,flashlight_core
+alias:          of:N*T*Cmediatek,flashlight_coreC*
+depends:        mtk_pbm,mtk_peak_power_budget
+name:           flashlight
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

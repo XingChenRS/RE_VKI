@@ -1,0 +1,7 @@
+filename:       /vendor_dlkm/lib/modules/audio_ipi.ko
+license:        GPL
+author:         Harvey Huang <harvey.huang@mediatek.com>
+description:    MTK AUDIO IPI Device Driver
+depends:        adsp
+name:           audio_ipi
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

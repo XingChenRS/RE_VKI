@@ -1,16 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note */
-#ifndef _XT_MARK_H
-#define _XT_MARK_H
-
-#include <linux/types.h>
-
-struct xt_mark_tginfo2 {
-	__u32 mark, mask;
-};
-
-struct xt_mark_mtinfo1 {
-	__u32 mark, mask;
-	__u8 invert;
-};
-
-#endif /*_XT_MARK_H*/
+/* Wrapper for case-sensitive FS: source includes xt_mark.h, file is xt_MARK.h */
+#ifndef _XT_MARK_H_WRAPPER
+#define _XT_MARK_H_WRAPPER
+#include <linux/netfilter/xt_MARK.h>
+#endif

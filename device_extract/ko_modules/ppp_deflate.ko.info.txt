@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/ppp_deflate.ko
+license:        Dual BSD/GPL
+alias:          ppp-compress-26
+alias:          ppp-compress-24
+depends:        ppp_generic
+intree:         Y
+name:           ppp_deflate
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

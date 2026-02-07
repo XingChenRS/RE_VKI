@@ -1,0 +1,13 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/pgboost.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    MediaTek PGBOOST
+depends:        emi
+name:           pgboost
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       period_intval_hz:uint
+parmtype:       cd_timer_intval_hz:uint
+parmtype:       cd_etrig_intval_hz:uint
+parmtype:       allow_periodicity:uint
+parmtype:       allow_event_trigger:uint
+parmtype:       status_alloc_in_ranks:array of ulong

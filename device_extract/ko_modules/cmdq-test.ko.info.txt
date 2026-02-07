@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/cmdq-test.ko
+license:        GPL v2
+alias:          of:N*T*Cmediatek,cmdq-test
+alias:          of:N*T*Cmediatek,cmdq-testC*
+depends:        mtk-cmdq-drv-ext,cmdq-sec-drv
+name:           cmdq_test
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

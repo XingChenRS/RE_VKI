@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mac802154.ko
+license:        GPL v2
+description:    IEEE 802.15.4 subsystem
+depends:        ieee802154
+intree:         Y
+name:           mac802154
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

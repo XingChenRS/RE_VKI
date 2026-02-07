@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_ccd_remoteproc.ko
+license:        GPL v2
+license:        GPL v2
+description:    MediaTek CCD driver
+description:    MediaTek ccd memory interface
+alias:          of:N*T*Cmediatek,ccd
+alias:          of:N*T*Cmediatek,ccdC*
+depends:        ccd_rpmsg
+name:           mtk_ccd_remoteproc
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,7 @@
+filename:       /vendor_dlkm/lib/modules/ccmni.ko
+license:        GPL
+author:         MTK CCCI
+description:    CCCI ccmni driver v0.1
+depends:        rps_perf,handshake_counter
+name:           ccmni
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

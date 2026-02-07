@@ -1,0 +1,11 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/connfem.ko
+license:        GPL
+author:         Dennis Lin <dennis.lin@mediatek.com>
+author:         Brad Chou <brad.chou@mediatek.com>
+description:    Connsys FEM (Front-End-Module) Driver
+depends:        
+name:           connfem
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       connfem_major:uint
+parmtype:       epa_elna_hwid:uint
+parmtype:       config_file:charp

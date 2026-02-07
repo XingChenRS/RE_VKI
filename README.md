@@ -1,30 +1,71 @@
-# RE_VKI — vivo GKI 内核（可还原/自定义构建）
+# Android 16.0 内核 (MT6989 / GKI) — 官方源码补全与本地构建参考
 
-基于 Android Common Kernel 6.1（GKI），面向 **vivo X100 Pro（MT6989）** 的可构建内核树。在标准 `gki_defconfig` 上关闭 `CONFIG_MODULE_SIG_PROTECT`（`vivo_restore_gki.fragment`），便于与设备已有 vendor 模块兼容。
+> **重要说明**  
+> 本仓库**仅对官方 kernel 源码做补全**（头文件、Makefile、脚本等），使能在本地 WSL 环境完成编译。  
+> **当前状态：能在本地 WSL 环境编译通过，但刷入后几乎无法正常启动。**  
+> **本仓库内容仅供参考**，不保证任何设备可启动或数据安全，请勿依赖其产物直接刷机。
 
-## 构建方式
+基于 **MT6989**（联发科）的 Android 16.0 GKI 内核源码，在 **WSL (x86_64)** 下使用实机提取的 config/DTB 与 AOSP Clang 可完成构建；修改仅用于在 WSL 中通过编译，不解决启动兼容性。
 
-**推荐：GitHub Actions 云端编译**
+---
 
-- 打开 [Actions](https://github.com/XingChenRS/RE_VKI/actions) → 选择 **Build GKI Kernel** → **Run workflow**。
-- 可选集成 [KernelSU](https://kernelsu.org/)；AOSP clang 下载失败时会回退到系统 clang。
-- 构建产物在对应 Run 的 **Artifacts** 中下载（Image / Image.gz / Image.lz4）。
+## 资料说明
 
-详细步骤见 [Documentation/android/GITHUB_ACTIONS_BUILD.md](Documentation/android/GITHUB_ACTIONS_BUILD.md)。
+本仓库将**文档**与**设备提取文件**分类存放，便于查阅与复现。
 
-## 本地构建（WSL）
+### 文档（`docs/`）
 
-见 [Documentation/android/WSL_BUILD.md](Documentation/android/WSL_BUILD.md)。需准备 AOSP clang（r487747c）或使用系统 clang（`USE_SYSTEM_CLANG=1`）。
+| 文件 | 说明 |
+|------|------|
+| [docs/BUILD_REPRODUCE.md](docs/BUILD_REPRODUCE.md) | **构建与复现**：在 WSL 中复现编译的完整步骤，含环境、依赖、AOSP Clang、实机提取数据说明（含为何剔除部分 CONFIG）、构建步骤、产物、故障排除、Image 体积说明；并含「其他构建方式」如 `build_vivo_local.sh`。**仅编译可复现，刷机几乎无法启动。** |
+| [docs/BUILD_FIXES_LOG.md](docs/BUILD_FIXES_LOG.md) | **修复日志**：在 WSL 下编译时遇到的所有问题、原因与修改说明（模块签名、netfilter 头文件/符号、BTF、lz4 等），以及 Image 比官方小约 10MB 的原因与可选恢复方式。 |
+| [docs/CHANGELOG.md](docs/CHANGELOG.md) | **变更与探索记录**：当前版本信息（内核/实机 config 版本、构建环境、产物、**启动状态**）、探索过程中的失败与修复列表、此前已存在的修改、文档与脚本版本对应关系。 |
 
-## 刷机与测试
+上述文档仅描述如何在 WSL 中复现**编译**，不保证刷入后能正常启动；**本仓库内容仅供参考。**
 
-用 Artifacts 中的镜像按 [Documentation/android/vivo_mt6989_boot_repack.txt](Documentation/android/vivo_mt6989_boot_repack.txt) 重打包 boot。**务必先用 `fastboot boot` 临时启动测试，勿直接 `fastboot flash boot`。**
+### 设备提取文件（`device_extract/vivo_x100pro/`）
 
-## 日志与说明
+| 内容 | 说明 |
+|------|------|
+| **device_extract/vivo_x100pro/** | **Vivo X100 Pro (MT6989 / V2324HA)** 实机提取文件单独存放目录。内含 `02_kernel_config/running_kernel.config`、`04_device_tree/fdt.dtb` 及提取时的附加信息（系统信息、模块列表、安全/分区等）。构建脚本 **优先** 使用本目录；若无则回退到 `device_extract/extracted_*/`。 |
+| device_extract/vivo_x100pro/README.txt | 本目录说明与构建所需文件列表。 |
 
-- [KERNEL_RESTORE_LOG.md](KERNEL_RESTORE_LOG.md) — 设备提取、配置与构建决策记录。
-- [device_extract](device_extract/) — 本地设备提取数据与脚本（未纳入 git，仅本地保留）。
+其他目录（如 `device_extract/dtc/`、`device_extract/ko_modules/`）为工具或其它用途，见各自目录内说明。  
+实机提取数据在构建中的用法详见 [docs/BUILD_REPRODUCE.md](docs/BUILD_REPRODUCE.md) 第 4 节；原 [device_extract/README_DEVICE_BUILD.md](device_extract/README_DEVICE_BUILD.md) 已改为指向上述文档。
 
-## License
+---
 
-与上游 Linux / Android 内核一致（GPL-2.0 等）。
+## 快速开始
+
+### 环境要求
+
+- **WSL2**（Ubuntu 20.04+ 推荐）或 Linux x86_64
+- **AOSP Clang**：将 `linux-x86` 版放在仓库**上级目录**，例如  
+  `../aospclang/linux-x86/clang-r547379/bin`（或设置 `CLANG_PATH`）
+- 交叉编译：`aarch64-linux-gnu-gcc`（`gcc-aarch64-linux-gnu`）
+- 实机提取数据：使用仓库自带的 `device_extract/vivo_x100pro/`（或 `device_extract/extracted_*/`）即可
+
+### 一键构建（WSL 下在仓库根目录执行）
+
+```bash
+chmod +x build_with_device_extract.sh
+./build_with_device_extract.sh
+```
+
+产物：`out/arch/arm64/boot/Image`、`Image.gz`（若已安装 `lz4` 则还有 `Image.lz4`）、`out/device_dtb/fdt.dtb` 以及各模块 `.ko`。  
+**当前刷入后几乎无法正常启动，本仓库仅供编译与参考，请勿依赖其产物刷机。**
+
+若在 **Windows 编辑、在 WSL 其他路径编译**，需先运行 `sync_modified_to_wsl.sh` 再执行上述构建脚本。详见 [docs/BUILD_REPRODUCE.md](docs/BUILD_REPRODUCE.md)。
+
+---
+
+## 关于构建出的 Image 比官方内核小约 10MB
+
+本仓库默认构建产出的 **Image 体积比官方/实机内核小约 10MB**，主要原因：脚本关闭了 `CONFIG_DEBUG_INFO_BTF`（不嵌入 BTF）。若希望体积更接近或需要 BTF，见 [docs/BUILD_FIXES_LOG.md](docs/BUILD_FIXES_LOG.md) 中「关于构建出的 Image 比官方小约 10MB」及第 8 条。
+
+---
+
+## 许可证与免责
+
+内核源码遵循其原有许可证（如 GPL-2.0）。  
+**本仓库仅对官方 kernel 源码做补全，当前状态为能在本地 WSL 环境编译，但几乎无法正常启动。本仓库内容仅供参考。** 使用本仓库产物刷机存在变砖或数据丢失风险，请勿依赖本仓库做任何刷机决策。

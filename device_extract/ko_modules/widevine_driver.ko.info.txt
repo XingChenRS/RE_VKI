@@ -1,0 +1,10 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/widevine_driver.ko
+license:        GPL
+author:         Shan Zhang <shan.zhang@mediatek.com>
+description:    Widevine Drm Driver
+alias:          of:N*T*Cmediatek,drm_wv
+alias:          of:N*T*Cmediatek,drm_wvC*
+depends:        mtk_sec_heap
+name:           widevine_driver
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
+parmtype:       wv_dbg_level:int

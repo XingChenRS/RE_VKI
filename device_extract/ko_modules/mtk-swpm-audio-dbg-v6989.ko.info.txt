@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-swpm-audio-dbg-v6989.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    v6989 SWPM audio debug module
+depends:        mtk-swpm,sspm_v3,snd-soc-mt6989-afe
+name:           mtk_swpm_audio_dbg_v6989
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

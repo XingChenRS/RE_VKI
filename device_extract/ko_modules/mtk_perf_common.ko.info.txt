@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_perf_common.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    MediaTek performance tracker
+depends:        mtk-dvfsrc-helper,mtk_qos,cpufreq_sugov_ext,thermal_interface,blocktag,mtk_gpu_hal
+name:           mtk_perf_common
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

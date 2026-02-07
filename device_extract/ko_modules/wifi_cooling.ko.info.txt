@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/wifi_cooling.ko
+license:        GPL v2
+author:         Jerry-SC.Wu <jerry-sc.wu@mediatek.com>
+description:    Mediatek wifi cooling driver
+alias:          of:N*T*Cmediatek,wifi-level-cooler
+alias:          of:N*T*Cmediatek,wifi-level-coolerC*
+depends:        connadp
+name:           wifi_cooling
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

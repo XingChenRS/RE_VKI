@@ -1,0 +1,5 @@
+filename:       /vendor_dlkm/lib/modules/imgsensor-glue.ko
+license:        GPL v2
+depends:        
+name:           imgsensor_glue
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

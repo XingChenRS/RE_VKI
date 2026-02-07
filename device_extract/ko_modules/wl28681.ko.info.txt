@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/wl28681.ko
+license:        GPL v2
+description:    WL28681 PMIC Regulator Driver
+alias:          of:N*T*Cqcom,wl28681
+alias:          of:N*T*Cqcom,wl28681C*
+alias:          i2c:wl28681-regulator
+depends:        
+name:           wl28681
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

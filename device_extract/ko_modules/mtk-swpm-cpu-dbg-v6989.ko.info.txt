@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk-swpm-cpu-dbg-v6989.ko
+license:        GPL
+author:         MediaTek Inc.
+description:    v6989 SWPM cpu debug module
+depends:        mtk-swpm,sspm_v3,thermal_interface
+name:           mtk_swpm_cpu_dbg_v6989
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

@@ -1,0 +1,27 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/mtk_mdpm.ko
+license:        GPL
+author:         Samuel Hsieh
+description:    MTK modem power meter driver
+alias:          of:N*T*Cmediatek,mt6873-mdpm
+alias:          of:N*T*Cmediatek,mt6873-mdpmC*
+alias:          of:N*T*Cmediatek,mt6893-mdpm
+alias:          of:N*T*Cmediatek,mt6893-mdpmC*
+alias:          of:N*T*Cmediatek,mt6983-mdpm
+alias:          of:N*T*Cmediatek,mt6983-mdpmC*
+alias:          of:N*T*Cmediatek,mt6879-mdpm
+alias:          of:N*T*Cmediatek,mt6879-mdpmC*
+alias:          of:N*T*Cmediatek,mt6895-mdpm
+alias:          of:N*T*Cmediatek,mt6895-mdpmC*
+alias:          of:N*T*Cmediatek,mt6886-mdpm
+alias:          of:N*T*Cmediatek,mt6886-mdpmC*
+alias:          of:N*T*Cmediatek,mt6985-mdpm
+alias:          of:N*T*Cmediatek,mt6985-mdpmC*
+alias:          of:N*T*Cmediatek,mt6897-mdpm
+alias:          of:N*T*Cmediatek,mt6897-mdpmC*
+alias:          of:N*T*Cmediatek,mt6989-mdpm
+alias:          of:N*T*Cmediatek,mt6989-mdpmC*
+depends:        
+name:           %s(%d) section=%d, rat=%d, power_type=%d
+
+name:           mtk_mdpm
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

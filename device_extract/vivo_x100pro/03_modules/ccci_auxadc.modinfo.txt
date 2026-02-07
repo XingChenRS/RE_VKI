@@ -1,0 +1,7 @@
+filename:       /vendor_dlkm/lib/modules/ccci_auxadc.ko
+license:        GPL
+author:         ccci
+description:    ccci auxadc driver
+depends:        ccci_util_lib
+name:           ccci_auxadc
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

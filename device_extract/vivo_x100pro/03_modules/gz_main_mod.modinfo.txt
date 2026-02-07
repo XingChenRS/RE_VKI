@@ -1,0 +1,8 @@
+filename:       /vendor_dlkm/lib/modules/gz_main_mod.ko
+license:        GPL v2
+license:        GPL
+alias:          of:N*T*Cmediatek,trusty-mtee-v1
+alias:          of:N*T*Cmediatek,trusty-mtee-v1C*
+depends:        gz_tz_system,gz_trusty_mod,gz_ipc_mod,ffa_v10,mtk_sec_heap,tmem_ffa
+name:           gz_main_mod
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

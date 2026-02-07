@@ -1,0 +1,7 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/nhc_fragment.ko
+license:        GPL
+description:    6LoWPAN next header RFC6282 Fragment compression
+depends:        6lowpan
+intree:         Y
+name:           nhc_fragment
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

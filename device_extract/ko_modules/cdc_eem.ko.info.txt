@@ -1,0 +1,9 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/cdc_eem.ko
+license:        GPL
+author:         Omar Laazimani <omar.oberthur@gmail.com>
+description:    USB CDC EEM
+alias:          usb:v*p*d*dc*dsc*dp*ic02isc0Cip07in*
+depends:        usbnet
+intree:         Y
+name:           cdc_eem
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

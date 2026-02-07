@@ -1,0 +1,85 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/ccci_md_all.ko
+license:        GPL
+author:         CCCI
+description:    CCCI modem driver v0.1
+depends:        ccci_util_lib,ccmni,ccci_auxadc,mediatek-drm,mtk_slbc,emi-mpu,smpu,aee_aed,device-apc-common,mtk_mdpm,irq-dbg,emi,spmi-mtk-pmif,mtk_pbm,mrdump
+name:           %s sub6_rf_ecid_i=%u sub6_rf_ecid_h=%u vpa_info_num=%u
+
+name:           %s sub6_rf_ecid_i=%u sub6_rf_ecid_h=%u vpa_info_num=%u
+
+name:           audio
+Content-Type: Mar 
+Record-Route: Jul 401 Unauthorized
+Require: 
+t=0 0.0.0.0
+Server: REGISTER 
+c=IN IP6 180 Ringing100 Tryingv=0
+o=UPDATE NOTIFY 
+Supported: unknownAMRTP/AVP 
+Privacy: 
+Security-
+Expires: 
+a=rtpmap:
+m=video 
+m=audio 
+s= false
+a=conf:;expires=
+Route: 
+a=fmtp:
+a=curr:Client: Verify: 
+a=des:
+RAck: 
+RSeq: BYE cnonce=100reluri=qop=TCPUDPqosxml;lr
+Via: SIP/2.0/TCP 408 Request Timeoutimerpsip:
+Content-Length: Oct 
+Via: SIP/2.0/UDP ;comp=sigcomprobationack;branch=z9hG4bK
+Max-Forwards: Apr SCTPRACK INVITE 
+Call-ID: 
+Contact: 200 OK
+From: 
+CSeq: 
+To: ;tag=İ1
+¹şáNNJJ²y"Uk`²q‡÷	®¹–ŠŠ	×
+	lf	l
+lÆÆHH¿¿Uô±¦	P£
+´6ÖùøÙê	S
+Kä5	ä?á¬•vë
+®++zI¸	>xm	G‚öb‡jxÍ®]˜  à´£4Vô¯4	'›Ÿ	Yr	5
+!
+ã©¬½ÁÁ	ör†dÕ	ÿü]0	¤$;C	’	›ËòáŞ
+ìãÔÉ	:
+å
+#:	«ú	o
+	v
+_â¨
+…Ö	¹
+zÛÁÇÓJŒaHô0‘Ê	
+q	‡˜n›››££˜	˜sx}¹‚‡äD@xX?mòX©¶	Œ
+
+
+ÄZ
+
+ºEŒ­
+ÚB	÷	É†Ï
+M¢æ
+›
+µ×	”
+â²g·;
+	¡…ƒn	=®æ¾
+	0ò!ªÅ
+–¸•u=ÜÑ #'}™Ú´ÇøWşNéÅ{ñDû	¾0Y¦®–š
+
+°
+2	k*
+…	
+
+¦	êtÒ	B	[	±	J
+S
+G	
+÷	Ç
+;ii	ãR
+
+ØWW	ã
+é0	
+name:           ccci_md_all
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

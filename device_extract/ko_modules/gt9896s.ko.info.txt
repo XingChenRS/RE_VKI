@@ -1,0 +1,8 @@
+filename:       /storage/emulated/0/ko_modules_20260207_030740/gt9896s.ko
+license:        GPL v2
+author:         Goodix, Inc.
+description:    Goodix THP Driver
+alias:          platform:mtk-tpd
+depends:        mtk_disp_notify,mtk_panel_ext
+name:           gt9896s
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64

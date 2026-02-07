@@ -1,0 +1,10 @@
+filename:       /vendor_dlkm/lib/modules/aw8601cam2pd2339.ko
+license:        GPL v2
+author:         Po-Hao Huang <Po-Hao.Huang@mediatek.com>
+description:    AW8601CAM2PD2339 VCM driver
+alias:          i2c:aw8601cam2pd2339
+alias:          of:N*T*Cmediatek,aw8601cam2pd2339
+alias:          of:N*T*Cmediatek,aw8601cam2pd2339C*
+depends:        
+name:           aw8601cam2pd2339
+vermagic:       6.1.124-android14-11-maybe-dirty SMP preempt mod_unload modversions vivo aarch64
